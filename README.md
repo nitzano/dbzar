@@ -43,8 +43,8 @@ Will turn all documents into:
 
 ```json
 {
-  "firstName": "Fake FirstName1",
-  "lastName": "Fake LastName2",
+  "firstName": "John", // fake
+  "lastName": "Flowers", // fake
   "email": "mar*@****.com",
   "age": 33,
   "password": "REMOVED!"
