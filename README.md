@@ -13,12 +13,13 @@ collections:
     - users:
         - name: firstName
           provider: fake
-          faker: firstName
+          value: firstName
         - name: lastName
           provider: fake
-          faker: lastName
+          value: lastName
 	    - name: email
           provider: mask
+          value: "*"
           exclude: '@'
           excludeEnd: 4
           excludeStart: 3
