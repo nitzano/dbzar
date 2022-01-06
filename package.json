@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "git@github.com:nitzano/dbzar.git",
   "author": "Nitzan Ohana <16689354+nitzano@users.noreply.github.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
 }
