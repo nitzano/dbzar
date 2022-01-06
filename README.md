@@ -23,7 +23,7 @@ collections:
           excludeEnd: 4
           excludeStart: 3
         - name: age
-          provider: randomNumber
+          provider: random_number
           min: 20
           max: 99
         - name: password
@@ -53,13 +53,12 @@ Will turn all documents into:
 ## Providers
 
 1. `fake` - generate fake strings,
-   1. `faker`
-      1. `firstName`
-   2. ` lastName`
-      1. `alphaNumeric`
-   3. ` number`
-      1. `start`
-      2. `end`
+   1. `firstName`
+   2. `lastName`
+   3. `alphaNumeric`
+   4. ` number`
+   5. `start`
+   6. `end`
 2. `mask` - replaces all characters, default: `*`
    1. Options
       1. `exclude` - don't mask these chars
