@@ -32,13 +32,7 @@ collections:
 
 ```
 
-Running
-
-```
-dbzar
-```
-
-Will turn all documents into:
+Running `dbzar` will turn all documents into:
 
 ```json
 {
