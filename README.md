@@ -19,7 +19,6 @@ collections:
           value: lastName
 	    - name: email
           provider: mask
-          value: "*"
           exclude: '@'
           excludeEnd: 4
           excludeStart: 3
