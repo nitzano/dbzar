@@ -1,6 +1,6 @@
 {
   "name": "dbzar",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "main": "index.js",
   "repository": "git@github.com:nitzano/dbzar.git",
   "author": "Nitzan Ohana <16689354+nitzano@users.noreply.github.com>",
