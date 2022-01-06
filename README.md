@@ -22,6 +22,10 @@ collections:
           exclude: '@'
           excludeEnd: 4
           excludeStart: 3
+        - name: age
+          provider: randomNumber
+          min: 20
+          max: 99
 
 ```
 
@@ -31,7 +35,7 @@ Running
 dbzar
 ```
 
-Will turn all documents to something like:
+Will turn all documents into:
 
 ```json
 {
@@ -42,13 +46,14 @@ Will turn all documents to something like:
 }
 ```
 
-## Policies
+## Providers
 
-1. `fake` - generate fake strings, options
-   1. `firstName`
-   2. `lastName`
-   3. `alphaNumeric`
-   4. `number`
+1. `fake` - generate fake strings,
+   1. `faker`
+      1. `firstName`
+   2. ` lastName`
+      1. `alphaNumeric`
+   3. ` number`
       1. `start`
       2. `end`
 2. `mask` - replaces all characters, default: `*`
