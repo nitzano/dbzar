@@ -10,6 +10,8 @@
     "typescript": "^4.5.4"
   },
   "scripts": {
-    "build": "tsc"
+    "prebuild": "yarn clean",
+    "build": "tsc",
+    "clean": "rimraf dist/**"
   }
 }
