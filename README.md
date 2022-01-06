@@ -19,6 +19,7 @@ collections:
           policy: mask
           exclude: '@'
           excludeEnd: 4
+          excludeStart: 3
 
 ```
 
@@ -28,13 +29,13 @@ Running
 dbzar
 ```
 
-Will turn all documents to
+Will turn all documents to something like:
 
 ```json
 {
   "firstName": "Fake FirstName1",
   "lastName": "Fake LastName2",
-  "email": "****@****.com",
+  "email": "mar*@****.com",
   "age": 33
 }
 ```
