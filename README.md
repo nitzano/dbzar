@@ -26,6 +26,9 @@ collections:
           provider: randomNumber
           min: 20
           max: 99
+        - name: password
+          provider: const
+          value: REMOVED!
 
 ```
 
@@ -42,7 +45,8 @@ Will turn all documents into:
   "firstName": "Fake FirstName1",
   "lastName": "Fake LastName2",
   "email": "mar*@****.com",
-  "age": 33
+  "age": 33,
+  "password": "REMOVED!"
 }
 ```
 
