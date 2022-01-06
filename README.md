@@ -10,13 +10,15 @@ Given the following `dbzar.config.yml` file:
 engine: "mongodb"
 connectionString: mongodb://mongodb0.example.com:27017
 collections:
-    users:
-        - property: firstName
-          policy: fake.firstNae
-        - property: lastName
-          policy: fake.lastName
-	    - property: email
-          policy: mask
+    - users:
+        - name: firstName
+          provider: fake
+          faker: firstName
+        - name: lastName
+          provider: fake
+          faker: lastName
+	    - name: email
+          provider: mask
           exclude: '@'
           excludeEnd: 4
           excludeStart: 3
@@ -39,3 +41,22 @@ Will turn all documents to something like:
   "age": 33
 }
 ```
+
+## Policies
+
+1. `fake` - generate fake strings, options
+   1. `firstName`
+   2. `lastName`
+   3. `alphaNumeric`
+   4. `number`
+      1. `start`
+      2. `end`
+2. `mask` - replaces all characters, default: `*`
+   1. Options
+      1. `exclude` - don't mask these chars
+      2. `excludeEnd` - don't exclude X chars from end
+      3. `excludeStart` - don't exclude X chars from start
+3. `scramble` - change the order randomly
+4. `hash` - replace with hash
+   1. `algo` (required): `sha1`, `sha256`
+5.
