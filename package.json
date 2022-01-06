@@ -6,6 +6,7 @@
   "author": "Nitzan Ohana <16689354+nitzano@users.noreply.github.com>",
   "license": "MIT",
   "devDependencies": {
+    "rimraf": "^3.0.2",
     "typescript": "^4.5.4"
   },
   "scripts": {
