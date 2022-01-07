@@ -55,19 +55,8 @@ Will turn all documents into:
 
 ## Providers
 
-1. `fake` - generate fake strings,
-   1. `firstName`
-   2. `lastName`
-   3. `alphaNumeric`
-   4. ` number`
-   5. `start`
-   6. `end`
-2. `mask` - replaces all characters, default: `*`
-   1. Options
-      1. `exclude` - don't mask these chars
-      2. `excludeEnd` - don't exclude X chars from end
-      3. `excludeStart` - don't exclude X chars from start
+1. `fake` - generate fake data,
+2. `mask` - replaces some or all characters (default: `"*"`)
 3. `scramble` - change the order randomly
 4. `hash` - replace with hash
-   1. `algo` (required): `sha1`, `sha256`
-5.
+5. `const` - replace with constant string/number
