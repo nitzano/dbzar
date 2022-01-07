@@ -55,7 +55,7 @@ Will turn all documents in the db to:
 
 ## Providers
 
-1. `fake` - generate fake data,
+1. `fake` - generate fake data
 2. `mask` - replaces some or all characters (default: `"*"`)
 3. `scramble` - change the order randomly
 4. `hash` - replace with hash
