@@ -9,7 +9,6 @@ Agnostic DB Anonymizer 👻
     - [Run `anon-db` to anonymize existing db](#run-anon-db-to-anonymize-existing-db)
     - [Result:](#result)
   - [Providers](#providers)
-  - [Other commands](#other-commands)
 
 ## Supported Databases
 
@@ -66,10 +65,8 @@ dbzar anon-db --uri mongodb://example:example@mongo:27017 --db test
 
 ## Providers
 
-1. `fake` - generate fake data
-2. `mask` - replaces some or all characters (default: `"*"`)
+1. `fake` - will generate fake data
+2. `mask` - will replaces some/all characters (default: `"*"`)
 3. `scramble` - change the order randomly
 4. `hash` - replace with hash
 5. `const` - replace with constant string/number
-
-## Other commands
