@@ -38,7 +38,7 @@ collections:
 Running
 
 ```
-dbzar --conectionUri mongodb://root:example@mongo:27017
+dbzar --conectionUri mongodb://example:example@mongo:27017
 ```
 
 Will turn all documents into:
