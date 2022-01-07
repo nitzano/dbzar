@@ -5,7 +5,11 @@ Agnostic DB Anonymizer 👻
 - [dbzar](#dbzar)
   - [Supported Databases](#supported-databases)
   - [Example](#example)
+    - [Create config file](#create-config-file)
+    - [Run `anon-db` to anonymize existing db](#run-anon-db-to-anonymize-existing-db)
+    - [Result:](#result)
   - [Providers](#providers)
+  - [Other commands](#other-commands)
 
 ## Supported Databases
 
@@ -13,6 +17,8 @@ Agnostic DB Anonymizer 👻
 - Postgres
 
 ## Example
+
+### Create config file
 
 ```yaml
 // dbzar.config.yml
@@ -40,13 +46,13 @@ collections:
 
 ```
 
-Running
+### Run `anon-db` to anonymize existing db
 
 ```
-dbzar anon-db --conectionUri mongodb://example:example@mongo:27017
+dbzar anon-db --uri mongodb://example:example@mongo:27017 --db test
 ```
 
-Will turn all documents in the db to:
+### Result:
 
 ```json
 {
@@ -65,3 +71,5 @@ Will turn all documents in the db to:
 3. `scramble` - change the order randomly
 4. `hash` - replace with hash
 5. `const` - replace with constant string/number
+
+## Other commands
