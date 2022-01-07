@@ -3,7 +3,7 @@ import 'dotenv/config'; // eslint-disable-line import/no-unassigned-import
 import mongoose from 'mongoose';
 import process from 'node:process';
 
-(async function () {
+async function run() {
 	const connectionString = process.env.DB_URI;
 
 	if (connectionString) {
@@ -17,5 +17,7 @@ import process from 'node:process';
 			console.error('could not connect to db');
 		}
 	}
-})();
+}
+
+void run();
 
