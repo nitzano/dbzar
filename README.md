@@ -11,6 +11,7 @@ Agnostic DB Anonymizer 👻
 
 ```yaml
 // dbzar.config.yml
+
 engine: "mongodb"
 connectionString: mongodb://mongodb0.example.com:27017
 collections:
