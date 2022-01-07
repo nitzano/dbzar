@@ -11,9 +11,7 @@ Agnostic DB Anonymizer 👻
 
 ```yaml
 // dbzar.config.yml
-
 engine: "mongodb"
-connectionString: mongodb://mongodb0.example.com:27017
 collections:
     - users:
         - firstName:
@@ -37,12 +35,18 @@ collections:
 
 ```
 
-Running `dbzar` will turn all documents into:
+Running
+
+```
+dbzar --conectionUri mongodb://root:example@mongo:27017
+```
+
+Will turn all documents into:
 
 ```json
 {
-  "firstName": "John", // fake
-  "lastName": "Flowers", // fake
+  "firstName": "Fake1",
+  "lastName": "Fake2",
   "email": "mar*@****.com",
   "age": 33,
   "password": "REMOVED!"
