@@ -38,10 +38,10 @@ collections:
 Running
 
 ```
-dbzar --conectionUri mongodb://example:example@mongo:27017
+dbzar anon-db --conectionUri mongodb://example:example@mongo:27017
 ```
 
-Will turn all documents into:
+Will turn all documents in the db to:
 
 ```json
 {
