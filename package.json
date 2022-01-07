@@ -22,5 +22,8 @@
   },
   "lint-staged": {
     "*.{ts}": "xo --fix"
+  },
+  "dependencies": {
+    "chance": "^1.1.8"
   }
 }
