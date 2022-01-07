@@ -2,6 +2,11 @@
 
 Agnostic DB Anonymizer 👻
 
+- [dbzar](#dbzar)
+  - [Supported Databases](#supported-databases)
+  - [Example](#example)
+  - [Providers](#providers)
+
 ## Supported Databases
 
 - MongoDB
