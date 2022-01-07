@@ -8,7 +8,7 @@ import process from 'node:process';
 
 	if (connectionString) {
 		try {
-			console.info('connecting...');
+			console.info(`connecting to: ${connectionString}`);
 			const db = await mongoose.connect(connectionString);
 			console.log('connected!');
 			await db.connection.close();
