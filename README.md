@@ -2,11 +2,15 @@
 
 Agnostic DB Anonymizer 👻
 
+## Supported Databases
+
+- MongoDB
+- Postgres
+
 ## Example
 
-Given the following `dbzar.config.yml` file:
-
 ```yaml
+// dbzar.config.yml
 engine: "mongodb"
 connectionString: mongodb://mongodb0.example.com:27017
 collections:
@@ -43,12 +47,6 @@ Running `dbzar` will turn all documents into:
   "password": "REMOVED!"
 }
 ```
-
-## Engines
-
-- MongoDB
-- Postgres
-- More soon
 
 ## Providers
 
