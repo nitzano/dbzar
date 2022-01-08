@@ -3,8 +3,10 @@ import {Factory} from 'rosie';
 
 const chance = Chance(); // eslint-disable-line new-cap
 
-export const userFactory = Factory.define('user').sequence('id').attr('name', () => chance.name());
+export const userFactory = Factory.define('user').sequence('id').attr('firstName', () => chance.first()).attr('lastName', () => chance.last());
 export interface User {
 	id: number;
-	name: string;
+	firstName: string;
+	lastName: string;
+	age: number;
 }
