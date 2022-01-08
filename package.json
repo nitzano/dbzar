@@ -25,7 +25,7 @@
     "clean": "rimraf dist/**",
     "lint": "xo --fix",
     "prepare": "husky install",
-    "db:seed:mongo": "yarn ts-node ./src/scripts/mongo-db-seed.ts"
+    "db:seed:mongo": "yarn ts-node ./src/scripts/mongo-db-seed.ts dotenv_config_path=.dev.env"
   },
   "lint-staged": {
     "*.{ts}": "xo --fix"
