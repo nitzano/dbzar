@@ -10,4 +10,8 @@ export interface User {
 	email: string;
 }
 
-export const userFactory = Factory.define<User>('user').attr('firstName', () => chance.first()).attr('lastName', () => chance.last()).attr('age', () => chance.age()).attr('email', () => chance.email());
+export const userFactory = Factory.define<User>('user')
+	.attr('firstName', () => chance.first())
+	.attr('lastName', () => chance.last())
+	.attr('age', () => chance.age())
+	.attr('email', () => chance.email());
