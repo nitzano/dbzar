@@ -1,13 +1,8 @@
 // Create a fake mongo db
 import 'dotenv/config'; // eslint-disable-line import/no-unassigned-import
-import process from 'node:process';
 import {MongoClient} from 'mongodb';
-import {userFactory} from '../factories/user';
-
-interface User {
-	id: number;
-	name: string;
-}
+import process from 'node:process';
+import {User, userFactory} from '../factories/user';
 
 async function run() {
 	const connectionString = process.env.DB_URI;
