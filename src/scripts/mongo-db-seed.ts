@@ -14,7 +14,7 @@ async function run() {
 			await db.dropDatabase();
 			// User
 			const users = db.collection<User>('users');
-			await users.insertMany(userFactory.buildList(5));
+			await users.insertMany(userFactory.buildList(50));
 		} catch (error: unknown) {
 			console.error(error);
 		} finally {
