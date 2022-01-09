@@ -30,7 +30,7 @@ collections:
         - lastName:
             provider: fake
             value: lastName
-	    - email:
+	      - email:
             provider: mask
             exclude: '@'
             excludeEnd: 4
