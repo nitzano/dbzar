@@ -9,6 +9,8 @@ export function anonymizeField(field: FieldType, provider: Provider): FieldType 
 				return 'firstName';
 			case 'lastName':
 				return 'lastName';
+			case 'age':
+				return 'age';
 			default:
 				break;
 		}

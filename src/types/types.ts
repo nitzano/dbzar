@@ -4,7 +4,7 @@ export interface BaseProvider {
 	type: ProviderType;
 }
 
-export type FakeType = 'firstName' | 'lastName';
+export type FakeType = 'firstName' | 'lastName' | 'age';
 
 export interface FakeProvider extends BaseProvider {
 	type: 'fake';
