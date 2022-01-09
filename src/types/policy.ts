@@ -1,7 +1,7 @@
-export type PolicyType = 'mask' | 'fake' | 'const';
+export type Provider = 'mask' | 'fake' | 'const';
 
 export interface Policy {
-	provider: PolicyType;
+	provider: Provider;
 }
 
 export type FakeType = 'firstName' | 'lastName';
