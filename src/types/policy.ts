@@ -7,5 +7,6 @@ export interface Policy {
 export type FakeType = 'firstName' | 'lastName';
 
 export interface FakePolicy extends Policy {
+	provider: 'fake';
 	value: FakeType;
 }
