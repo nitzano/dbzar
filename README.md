@@ -23,26 +23,27 @@ Agnostic DB Anonymizer 👻
 // dbzar.config.yml
 engine: "mongodb"
 collections:
-    - users:
-        - firstName:
-            provider: fake
-            value: firstName
-        - lastName:
-            provider: fake
-            value: lastName
-	      - email:
-            provider: mask
-            exclude: '@'
-            excludeEnd: 4
-            excludeStart: 3
-        - age:
-            provider: random_number
-            min: 20
-            max: 99
-        - password:
-            provider: const
-            value: REMOVED!
-
+    - name: users
+      properties:
+        - name: firstName
+          provider: fake
+          fakeValue: firstName
+        - name: lastName
+          provider: fake
+          fakeValue: lastName
+        - name: email
+          provider: mask
+          maskType: middle
+          exclude: '@'
+          excludeEnd: 4
+          excludeStart: 3
+        - name: age
+          provider: random_number
+          min: 20
+          max: 99
+        - name: password:
+          provider: const
+          value: REMOVED!
 ```
 
 ### Run `anon-db` to anonymize existing db
