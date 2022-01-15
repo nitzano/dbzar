@@ -4,10 +4,10 @@ Agnostic DB Anonymizer 👻
 
 - [dbzar](#dbzar)
   - [Supported Databases](#supported-databases)
-  - [Example](#example)
-    - [Create config file](#create-config-file)
-    - [Run `anon-db` to anonymize existing db](#run-anon-db-to-anonymize-existing-db)
-    - [Result:](#result)
+  - [Usage](#usage)
+    - [Anonymize existing db](#anonymize-existing-db)
+    - [Anonymize backup files (TBD)](#anonymize-backup-files-tbd)
+  - [Configuration](#configuration)
   - [Providers](#providers)
 
 ## Supported Databases
@@ -15,9 +15,34 @@ Agnostic DB Anonymizer 👻
 - MongoDB
 - Postgres
 
-## Example
+## Usage
 
-### Create config file
+### Anonymize existing db
+
+```
+// mongo
+dbzar anon-db --uri mongodb://example:example@mongo:27017
+
+// postgres
+dbzar anon-db --uri postgresql://user:password@localhost/mydb
+```
+
+### Anonymize backup files (TBD)
+
+```
+// mongo
+dbzar anon-dump --engine mongo --folder ./db-backup
+dbzar anon-dump --engine mongo --file ./backup-file.gz
+
+// postgres
+dbzar anon-dump --uri postgresql://user:password@localhost/mydb --db test
+```
+
+## Configuration
+
+1. `dbzar.config.yaml` file
+
+Example:
 
 ```yaml
 // dbzar.config.yml
@@ -46,13 +71,7 @@ collections:
           value: REMOVED!
 ```
 
-### Run `anon-db` to anonymize existing db
-
-```
-dbzar anon-db --uri mongodb://example:example@mongo:27017 --db test
-```
-
-### Result:
+Will change all records to:
 
 ```json
 {
