@@ -42,7 +42,7 @@ tables:
         - name: email
           provider: mask
           options: { exclude: '@', excludeEnd: 4, excludeStart: 3}
-        - name: password:
+        - name: password
           provider: const
           options: { value: "RESERVED!"}
     - name: products
