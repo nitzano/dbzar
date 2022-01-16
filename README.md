@@ -6,7 +6,6 @@ Agnostic DB Anonymizer 👻
   - [Supported Databases](#supported-databases)
   - [Usage](#usage)
     - [Anonymize existing db](#anonymize-existing-db)
-    - [Anonymize backup files (TBD)](#anonymize-backup-files-tbd)
   - [Configuration](#configuration)
   - [Providers](#providers)
 
@@ -25,17 +24,6 @@ dbzar anon-db --uri mongodb://example:example@mongo:27017
 
 // postgres
 dbzar anon-db --uri postgresql://user:password@localhost/mydb
-```
-
-### Anonymize backup files (TBD)
-
-```
-// mongo
-dbzar anon-dump --engine mongo --folder ./db-backup
-dbzar anon-dump --engine mongo --file ./backup-file.gz
-
-// postgres
-dbzar anon-dump --uri postgresql://user:password@localhost/mydb --db test
 ```
 
 ## Configuration
