@@ -40,23 +40,20 @@ collections:
       properties:
         - name: firstName
           provider: fake
-          fakeValue: firstName
+          options: { fakeValue: firstName }
         - name: lastName
           provider: fake
-          fakeValue: lastName
+          options: { fakeValue: lastName }
         - name: email
           provider: mask
           maskType: middle
-          exclude: '@'
-          excludeEnd: 4
-          excludeStart: 3
+          options: { exclude: '@', excludeEnd: 4, excludeStart: 3}
         - name: age
           provider: random_number
-          min: 20
-          max: 99
+          options: { min: 20, max: 99 }
         - name: password:
           provider: const
-          value: REMOVED!
+          options: { value: "RESERVED!"}
 ```
 
 Will change all records to:
