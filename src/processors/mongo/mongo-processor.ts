@@ -4,7 +4,7 @@ import {CollectionConfig, Config} from '../../config/types';
 export class MongoProcessor {
 	private readonly client: MongoClient;
 
-	constructor(private readonly config: Config, private readonly uri: string) {
+	constructor(private readonly uri: string, private readonly config: Config) {
 		this.client = new MongoClient(this.uri);
 	}
 
