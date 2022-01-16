@@ -46,7 +46,6 @@ collections:
           options: { fakeValue: lastName }
         - name: email
           provider: mask
-          maskType: middle
           options: { exclude: '@', excludeEnd: 4, excludeStart: 3}
         - name: age
           provider: random_number
