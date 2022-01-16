@@ -32,25 +32,27 @@ away.
 
 ```yaml
 // dbzar.config.yml
-engine: "mongodb"
-collections:
+tables:
     - name: users
-      properties:
-        - name: firstName
+      columns:
+        - name: name
           provider: fake
-          options: { fakeValue: firstName }
-        - name: lastName
-          provider: fake
-          options: { fakeValue: lastName }
+          options: { fakeValue: name }
         - name: email
           provider: mask
           options: { exclude: '@', excludeEnd: 4, excludeStart: 3}
-        - name: age
-          provider: random_number
-          options: { min: 20, max: 99 }
         - name: password:
           provider: const
           options: { value: "RESERVED!"}
+    - name: products
+      columns:
+        - name: product_name
+          provider: fake
+          options: { fakeValue: alphaNumeric, min: 5, max: 10 }
+        - name: price
+          provider: random_number
+          options: { min: 20, max: 99 }
+
 ```
 
 ### Anonymize existing db
