@@ -23,4 +23,15 @@ export class FakeAnonymizer extends BaseAnonymizer {
 
 		return value;
 	}
+
+	anonymizeNumber(value: number): number {
+		switch (this.options.fakeValue) {
+			case 'age':
+				return 55;
+			default:
+				break;
+		}
+
+		return value;
+	}
 }
