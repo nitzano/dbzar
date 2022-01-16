@@ -1,2 +1,2 @@
 
-export type FakeType = 'firstName' | 'first' | 'lastName' | 'last' | 'name' | 'age';
+export type FakeType = 'firstName' | 'first' | 'lastName' | 'last' | 'name' | 'age' | 'letter';

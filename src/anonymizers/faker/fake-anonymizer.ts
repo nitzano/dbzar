@@ -1,18 +1,3 @@
-import {Chance} from 'chance';
-import {FakeType} from '../../types/types';
+import {BaseAnonymizer} from '../base/base-anonymizer';
 
-const chance = new Chance();
-
-const fakeMapper: Record<FakeType, () => any > = {
-	firstName: () => chance.first,
-	lastName: () => chance.last,
-	age: () => chance.age,
-	first: () => chance.first,
-	last: () => chance.last,
-};
-
-export const fakeAnonymizer = {
-	fakeData(fakeType: FakeType): any {
-		return fakeMapper[fakeType]();
-	},
-};
+export class FakeAnonymizer extends BaseAnonymizer {}
