@@ -16,8 +16,6 @@
 
 ### Create Configuration file
 
-Example:
-
 ```yaml
 // dbzar.config.yml
 engine: "mongodb"
