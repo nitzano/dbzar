@@ -51,7 +51,7 @@ tables:
           options: { fakeValue: alphaNumeric, min: 5, max: 10 }
         - name: price
           provider: random_number
-          options: { min: 20, max: 99 }
+          options: { min: 100, max: 999 }
 
 ```
 
