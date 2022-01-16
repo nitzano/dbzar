@@ -46,7 +46,7 @@ tables:
           options: { value: "RESERVED!"}
     - name: products
       columns:
-        - name: product_name
+        - name: productName
           provider: fake
           options: { fakeValue: alphaNumeric, min: 5, max: 10 }
         - name: price
@@ -67,13 +67,22 @@ dbzar anon-db --uri postgresql://user:password@localhost/mydb
 
 Will change all records to:
 
+Users:
+
 ```json
 {
-  "firstName": "Fake1",
-  "lastName": "Fake2",
-  "email": "mar*@****.com",
-  "age": 33,
-  "password": "REMOVED!"
+  "name": "Fake1 Fake2",    // fake
+  "email": "mar*@****.com", // masked
+  "password": "REMOVED!"    // const
+}
+```
+
+Products:
+
+```json
+{
+  "productName": "az5sA",  // fake
+  "price": 533             // random 
 }
 ```
 
