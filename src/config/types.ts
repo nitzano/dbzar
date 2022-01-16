@@ -1,4 +1,6 @@
-import {Provider} from '../types/types';
+import {FakeOptions} from '../anonymizers/fake/fake-options';
+import {MaskOptions} from '../anonymizers/mask/mask-options';
+import {Provider, ProviderType} from '../types/types';
 
 type EngineType = 'mongodb' | 'postgres';
 
@@ -6,6 +8,7 @@ export interface Config {
 	engine: EngineType;
 	collections?: Collection[];
 	tables?: Table[];
+
 }
 
 interface Collection {
@@ -15,7 +18,8 @@ interface Collection {
 
 interface Property {
 	name: string;
-	provider: Provider;
+	provider: ProviderType;
+	options: MaskOptions | FakeOptions;
 }
 
 interface Table {
