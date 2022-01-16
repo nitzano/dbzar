@@ -1,13 +1,11 @@
-# dbzar
+<h1 align="center">DBZar</h1>
+<h2 align="center">Agnostic DB Anonymizer 👻</h2>
 
-Agnostic DB Anonymizer 👻
-
-- [dbzar](#dbzar)
-  - [Supported Databases](#supported-databases)
-  - [Usage](#usage)
-    - [Anonymize existing db](#anonymize-existing-db)
-  - [Configuration](#configuration)
-  - [Providers](#providers)
+- [Supported Databases](#supported-databases)
+- [Usage](#usage)
+  - [Create Configuration file](#create-configuration-file)
+  - [Anonymize existing db](#anonymize-existing-db)
+- [Providers](#providers)
 
 ## Supported Databases
 
@@ -16,19 +14,7 @@ Agnostic DB Anonymizer 👻
 
 ## Usage
 
-### Anonymize existing db
-
-```
-// mongo
-dbzar anon-db --uri mongodb://example:example@mongo:27017
-
-// postgres
-dbzar anon-db --uri postgresql://user:password@localhost/mydb
-```
-
-## Configuration
-
-1. `dbzar.config.yaml` file
+### Create Configuration file
 
 Example:
 
@@ -53,6 +39,16 @@ collections:
         - name: password:
           provider: const
           options: { value: "RESERVED!"}
+```
+
+### Anonymize existing db
+
+```
+// mongo
+dbzar anon-db --uri mongodb://example:example@mongo:27017
+
+// postgres
+dbzar anon-db --uri postgresql://user:password@localhost/mydb
 ```
 
 Will change all records to:
