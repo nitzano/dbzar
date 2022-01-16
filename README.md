@@ -44,7 +44,7 @@ tables:
           options: { exclude: '@', excludeEnd: 4, excludeStart: 3}
         - name: password
           provider: const
-          options: { value: "RESERVED!"}
+          options: { value: "REMOVED!"}
     - name: products
       columns:
         - name: productName
