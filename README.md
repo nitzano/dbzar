@@ -1,11 +1,25 @@
 <h1 align="center">DBZar</h1>
 <h2 align="center">Agnostic DB Anonymizer 👻</h2>
 
+- [Why?](#why)
 - [Supported Databases](#supported-databases)
 - [Usage](#usage)
   - [Create Configuration file](#create-configuration-file)
   - [Anonymize existing db](#anonymize-existing-db)
 - [Providers](#providers)
+
+## Why?
+
+When anonymizing databases (either for local development or other reasons) usually we write the same script again and again:
+
+1. Connect to the DB
+2. Scramble parts of the DB
+3. Save the DB in a new file
+
+DBZar (Database + "Foreign" in Hebrew) let's you scramble some or all
+of the fields in a given database, no matter what it is:
+Just setup a configuration file, add your connection URI and scramble
+away.
 
 ## Supported Databases
 
