@@ -32,6 +32,7 @@ away.
 
 ```yaml
 // dbzar.config.yml
+
 tables:
     - name: users
       columns:
@@ -59,10 +60,10 @@ tables:
 
 ```
 // mongo
-dbzar anon-db --uri mongodb://example:example@mongo:27017
+dbzar anon-db --uri mongodb://example:example@mongo:27017 --db test1
 
 // postgres
-dbzar anon-db --uri postgresql://user:password@localhost/mydb
+dbzar anon-db --uri postgresql://user:password@localhost/mydb --db test2
 ```
 
 Will change all records to:
@@ -71,9 +72,9 @@ Users:
 
 ```json
 {
-  "name": "Fake1 Fake2",    // fake
+  "name": "Fake1 Fake2", // fake
   "email": "mar*@****.com", // masked
-  "password": "REMOVED!"    // const
+  "password": "REMOVED!" // const
 }
 ```
 
@@ -81,8 +82,8 @@ Products:
 
 ```json
 {
-  "productName": "az5sA",  // fake
-  "price": 533             // random 
+  "productName": "az5sA", // fake
+  "price": 533 // random
 }
 ```
 
