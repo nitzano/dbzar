@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "chance": "^1.1.8",
+    "connection-string": "^4.3.5",
     "dotenv": "^10.0.0",
     "lodash": "^4.17.21",
     "mongodb": "^4.3.0"

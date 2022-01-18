@@ -864,6 +864,11 @@ confusing-browser-globals@1.0.10:
   resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.10.tgz#30d1e7f3d1b882b25ec4933d1d1adac353d20a59"
   integrity sha512-gNld/3lySHwuhaVluJUKLePYirM3QNCKzVxqAdhJII9/WXKVX5PURzMVJspS1jTslSqjeuG4KMVTSouit5YPHA==
 
+connection-string@^4.3.5:
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/connection-string/-/connection-string-4.3.5.tgz#02f725bc3f67a1f764c5fe5d8b986959ca3d9de5"
+  integrity sha512-ayXcReF4FoYTUCKxN8Z4bXDKek6O2w5/udkXH42Sv17k9saPW9XkMUJc4nE2CgQRRvBTqkmVsQstXYb9f99j4w==
+
 convert-source-map@^1.7.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.8.0.tgz#f3373c32d21b4d780dd8004514684fb791ca4369"
