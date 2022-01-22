@@ -1,18 +1,19 @@
+import {FakeOptions} from '../anonymizers/fake/fake-options';
+
 export type ProviderType = 'mask' | 'fake' | 'const';
 
 export interface BaseProvider {
 	type: ProviderType;
 }
 
-export type FakeType = 'firstName' | 'lastName' | 'age';
-
 export interface FakeProvider extends BaseProvider {
 	type: 'fake';
-	fakeType: FakeType;
+	options: FakeOptions;
 }
 
 export interface MaskProvider extends BaseProvider {
 	type: 'mask';
+	options: FakeOptions;
 }
 
 export type Provider = FakeProvider | MaskProvider;
