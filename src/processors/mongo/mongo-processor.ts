@@ -10,6 +10,13 @@ export class MongoProcessor extends BaseProcessor implements Processor {
 		this.client = new MongoClient(this.uri);
 	}
 
+	/**
+	 * Process the mongo db name
+	 *
+	 * @param {string} dbName
+	 * @return {*}  {Promise<void>}
+	 * @memberof MongoProcessor
+	 */
 	async processDb(dbName: string): Promise<void> {
 		try {
 			await this.client.connect();

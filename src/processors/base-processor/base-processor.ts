@@ -1,9 +1,9 @@
 import {ColumnConfig, Config, TableConfig} from '../../config/types';
 
 export interface Processor {
-	processDb(dbName: string): Promise<void>;
-	processTable(tableConfig: TableConfig): Promise<void>;
-	processColumn(columnConfig: ColumnConfig): Promise<void>;
+	processDb(dbName: string): void;
+	processTable(tableConfig: TableConfig): void;
+	processColumn(columnConfig: ColumnConfig): void;
 }
 
 export class BaseProcessor {
