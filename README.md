@@ -3,6 +3,7 @@
 
 - [Why?](#why)
 - [Supported Databases](#supported-databases)
+  - [Future support](#future-support)
 - [Usage](#usage)
   - [Create Configuration file](#create-configuration-file)
   - [Anonymize existing db](#anonymize-existing-db)
@@ -25,6 +26,12 @@ away.
 
 - MongoDB
 - Postgres
+
+### Future support
+
+- MariaDB / MySQL
+- SQLIte
+- CSV
 
 ## Usage
 
