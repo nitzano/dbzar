@@ -1,10 +1,12 @@
 import {MongoClient} from 'mongodb';
 import {ColumnConfig, Config, TableConfig} from '../../config/types';
+import {BaseProcessor, Processor} from '../base-processor/base-processor';
 
-export class MongoProcessor {
+export class MongoProcessor extends BaseProcessor implements Processor {
 	private readonly client: MongoClient;
 
-	constructor(private readonly uri: string, private readonly config: Config) {
+	constructor(readonly config: Config, readonly uri: string) {
+		super(config);
 		this.client = new MongoClient(this.uri);
 	}
 
