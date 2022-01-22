@@ -5,7 +5,7 @@ import {BaseProcessor, Processor} from '../base-processor/base-processor';
 export class MongoProcessor extends BaseProcessor implements Processor {
 	private readonly client: MongoClient;
 
-	constructor(readonly config: Config, readonly uri: string) {
+	constructor(config: Config, readonly uri: string) {
 		super(config);
 		this.client = new MongoClient(this.uri);
 	}

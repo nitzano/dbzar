@@ -7,5 +7,5 @@ export interface Processor {
 }
 
 export class BaseProcessor {
-	constructor(readonly config: Config) {}
+	constructor(private readonly config: Config) {}
 }
