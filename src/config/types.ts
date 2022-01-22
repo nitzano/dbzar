@@ -7,29 +7,28 @@ type EngineType = 'mongodb' | 'postgres';
 
 export interface Config {
 	engine: EngineType;
-	collections?: CollectionConfig[];
 	tables?: TableConfig[];
 
 }
 
-interface CollectionConfig {
+export interface CollectionConfig {
 	name: string;
 	documents: DocumentConfig[];
 }
 
-interface DocumentConfig {
+export interface DocumentConfig {
 	name: string;
 	provider: ProviderType;
 	options: MaskOptions | FakeOptions;
 }
 
-interface TableConfig {
+export interface TableConfig {
 	name: string;
 	provider: Provider;
 	columns: ColumnConfig;
 }
 
-interface ColumnConfig {
+export interface ColumnConfig {
 	name: string;
 	provider: ProviderType;
 	options: Options;
