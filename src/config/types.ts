@@ -1,6 +1,4 @@
-import {Options} from '../anonymizers';
-import {FakeOptions} from '../anonymizers/fake/fake-options';
-import {MaskOptions} from '../anonymizers/mask/mask-options';
+import {Option} from 'commander';
 import {Provider, ProviderType} from '../types/types';
 
 type EngineType = 'mongodb' | 'postgres';
@@ -11,25 +9,14 @@ export interface Config {
 
 }
 
-export interface CollectionConfig {
-	name: string;
-	documents: DocumentConfig[];
-}
-
-export interface DocumentConfig {
-	name: string;
-	provider: ProviderType;
-	options: MaskOptions | FakeOptions;
-}
-
 export interface TableConfig {
 	name: string;
 	provider: Provider;
-	columns: ColumnConfig;
+	columns: ColumnConfig[];
 }
 
 export interface ColumnConfig {
 	name: string;
 	provider: ProviderType;
-	options: Options;
+	options: Option;
 }
