@@ -1,5 +1,5 @@
 import {MongoClient} from 'mongodb';
-import {CollectionConfig, Config} from '../../config/types';
+import {ColumnConfig, Config, TableConfig} from '../../config/types';
 
 export class MongoProcessor {
 	private readonly client: MongoClient;
@@ -24,11 +24,26 @@ export class MongoProcessor {
 		}
 	}
 
-	async processCollection(collectionName: string, collectionConfig: CollectionConfig) {
+	/**
+	 * Process a table (collection) in mongo db
+	 *
+	 * @param {TableConfig} tableConfig
+	 * @memberof MongoProcessor
+	 */
+	async processTable(tableConfig: TableConfig) {
 		// Get the collection from the config
-		console.log(collectionName);
-		console.log(collectionConfig.name);
+		console.log(tableConfig.name);
 
 		// Process every document
+	}
+
+	/**
+	 * Process a column (document)
+	 *
+	 * @param {ColumnConfig} columnConfig
+	 * @memberof MongoProcessor
+	 */
+	async processColumn(columnConfig: ColumnConfig) {
+		console.log(columnConfig.name);
 	}
 }
