@@ -24,8 +24,8 @@ export class MongoProcessor extends BaseProcessor implements Processor {
 
 			const db = this.client.db(dbName);
 
-			const collections = db.listCollections();
-			console.log(`collections = ${JSON.stringify(collections.map(({name}) => name))}`);
+			const collections = (await db.listCollections().toArray());
+			console.log(`collections = ${JSON.stringify(collections)}`);
 		} catch (error: unknown) {
 			console.error(error);
 		} finally {
