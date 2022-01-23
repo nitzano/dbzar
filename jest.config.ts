@@ -1,12 +1,10 @@
 import type {Config} from '@jest/types';
+import {defaults as tsjPreset} from 'ts-jest/presets';
 
-// Sync object
 const config: Config.InitialOptions = {
 	roots: ['<rootDir>/src'],
 	preset: '@shelf/jest-mongodb',
-	transform: {
-		'.+\\.ts$': 'ts-jest',
-	},
+	transform: tsjPreset.transform,
 	testEnvironment: 'node',
 };
 export default config;
