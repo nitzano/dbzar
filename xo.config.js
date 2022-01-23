@@ -8,7 +8,6 @@ module.exports = {
 
 	globals: {
 		__MONGO_URI__: true,
-		__MONGO_DB_NAME__: true,
 	},
 
 };

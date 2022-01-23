@@ -112,3 +112,6 @@ dist
 
 # dbzar
 db-backup
+
+# jest
+globalConfig.json
