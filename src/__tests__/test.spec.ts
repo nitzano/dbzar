@@ -16,7 +16,6 @@ describe('insert', () => {
 	});
 
 	afterAll(async () => {
-		await db.dropDatabase();
 		await connection.close();
 	});
 
