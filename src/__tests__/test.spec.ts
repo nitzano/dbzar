@@ -16,8 +16,8 @@ describe('insert', () => {
 	});
 
 	afterAll(async () => {
+		await db.dropDatabase();
 		await connection.close();
-		// Await db.close();
 	});
 
 	it('should insert a doc into collection', async () => {
