@@ -25,7 +25,7 @@ describe('mongo-processor', () => {
 		const users = db.collection('users');
 
 		// Insert a document
-		const mockUser: any = {name: 'test'};
+		const mockUser: any = {firstName: 'test'};
 		await users.insertOne(mockUser);
 
 		const config: Config = {
@@ -51,7 +51,7 @@ describe('mongo-processor', () => {
 		// Anonymize the users database
 
 		// Find the document again
-		const insertedUser: any = await users.findOne({});
+		const insertedUser: any = await users.findOne();
 		expect(insertedUser.firstName as string).toEqual('****');
 	});
 });
