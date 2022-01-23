@@ -3,9 +3,8 @@ import {defaults as tsjPreset} from 'ts-jest/presets';
 
 const config: Config.InitialOptions = {
 	roots: ['<rootDir>/src'],
-	preset: '@shelf/jest-mongodb',
 	transform: tsjPreset.transform,
-	testEnvironment: 'node',
+	preset: '@shelf/jest-mongodb',
 };
 export default config;
 
