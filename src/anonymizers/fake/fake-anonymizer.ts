@@ -2,12 +2,8 @@ import {BaseAnonymizer} from '../base/base-anonymizer';
 import {FakeOptions} from './fake-options';
 
 export class FakeAnonymizer extends BaseAnonymizer {
-	constructor(private readonly options: FakeOptions) {
-		super();
-	}
-
-	anonymizeString(value: string): string {
-		switch (this.options.fakeValue) {
+	anonymizeString(value: string, options?: FakeOptions): string {
+		switch (options?.fakeValue) {
 			case 'firstName':
 			case 'first':
 				return 'firstName';
@@ -24,8 +20,8 @@ export class FakeAnonymizer extends BaseAnonymizer {
 		return value;
 	}
 
-	anonymizeNumber(value: number): number {
-		switch (this.options.fakeValue) {
+	anonymizeNumber(value: number, options?: FakeOptions): number {
+		switch (options?.fakeValue) {
 			case 'age':
 				return 55;
 			default:

@@ -1,7 +1,12 @@
-type InputValue = number | string | boolean;
 
-export class BaseAnonymizer {
-	anonymize(value: InputValue): InputValue {
+interface Anonymizer {
+	anonymizeString(value: string): string;
+	anonymizeNumber(value: number): number;
+	anonymizeBoolean(value: boolean): boolean;
+}
+
+export class BaseAnonymizer implements Anonymizer {
+	anonymize(value: any): any {
 		switch (typeof (value)) {
 			case 'string':
 				return this.anonymizeString(value);
