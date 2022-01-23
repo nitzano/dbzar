@@ -1,9 +1,10 @@
-import {MongoClient} from 'mongodb';
+import {Db, MongoClient} from 'mongodb';
 import {ColumnConfig, Config, TableConfig} from '../../config/types';
 import {BaseProcessor, Processor} from '../base-processor/base-processor';
 
 export class MongoProcessor extends BaseProcessor implements Processor {
 	private readonly client: MongoClient;
+	private db: Db | undefined;
 
 	constructor(config: Config, readonly uri: string) {
 		super(config);
@@ -20,12 +21,15 @@ export class MongoProcessor extends BaseProcessor implements Processor {
 	async processDb(dbName: string): Promise<void> {
 		try {
 			await this.client.connect();
-			console.log('Connected to server');
+			this.db = this.client.db(dbName);
 
-			const db = this.client.db(dbName);
-
-			const collections = (await db.listCollections().toArray());
-			console.log(`collections = ${JSON.stringify(collections)}`);
+			// Read collection from config
+			if (this?.config?.tables && this.config.tables.length > 0) {
+				for await (const table of this.config.tables) {
+					console.log(`processing ${table.name}`);
+					await this.processTable(table);
+				}
+			}
 		} catch (error: unknown) {
 			console.error(error);
 		} finally {
@@ -41,9 +45,12 @@ export class MongoProcessor extends BaseProcessor implements Processor {
 	 */
 	async processTable(tableConfig: TableConfig) {
 		// Get the collection from the config
-		console.log(tableConfig.name);
-
-		// Process every document
+		if (this.db) {
+			const table = this.db.collection(tableConfig.name);
+			console.log(tableConfig.name);
+			console.log(table.dbName);
+			// Process every document
+		}
 	}
 
 	/**
