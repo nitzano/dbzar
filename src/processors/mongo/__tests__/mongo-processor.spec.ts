@@ -51,7 +51,7 @@ describe('mongo-processor', () => {
 		// Anonymize the users database
 
 		// Find the document again
-		const insertedUser = await users.findOne({firstName: 'test'});
-		expect(insertedUser).toEqual(mockUser);
+		const insertedUser: any = await users.findOne({});
+		expect(insertedUser.firstName as string).toEqual('****');
 	});
 });
