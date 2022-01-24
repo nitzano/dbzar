@@ -1,3 +1,4 @@
+import {ValueAnonymizer} from '../../anonymizers/value-anonymizer/value-anonymizer';
 import {ColumnConfig, Config, TableConfig} from '../../config/types';
 
 export interface Processor {
@@ -7,5 +8,7 @@ export interface Processor {
 }
 
 export class BaseProcessor {
+	protected valueAnonymizer: ValueAnonymizer = new ValueAnonymizer();
+
 	constructor(protected readonly config: Config) {}
 }
