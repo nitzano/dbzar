@@ -3,8 +3,8 @@ import {ColumnConfig, Config, TableConfig} from '../../config/types';
 
 export interface Processor {
 	processDb(dbName: string): void;
-	processTable(tableConfig: TableConfig): void;
-	processColumn(columnConfig: ColumnConfig): void;
+	processCollection?(tableConfig: TableConfig): void;
+	processDocument?(columnConfig: ColumnConfig): void;
 }
 
 export class BaseProcessor {

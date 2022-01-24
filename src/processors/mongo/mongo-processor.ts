@@ -1,8 +1,8 @@
-import {Db, MongoClient} from 'mongodb';
-import {ColumnConfig, Config, TableConfig} from '../../config/types';
-import {BaseProcessor, Processor} from '../base-processor/base-processor';
+import { Db, MongoClient } from 'mongodb';
+import { ColumnConfig, Config, TableConfig } from '../../config/types';
+import { BaseProcessor } from '../base-processor/base-processor';
 
-export class MongoProcessor extends BaseProcessor implements Processor {
+export class MongoProcessor extends BaseProcessor {
 	private readonly client: MongoClient;
 	private db: Db | undefined;
 
@@ -27,7 +27,7 @@ export class MongoProcessor extends BaseProcessor implements Processor {
 			if (this?.config?.tables && this.config.tables.length > 0) {
 				for await (const table of this.config.tables) {
 					console.log(`processing ${table.name}`);
-					await this.processTable(table);
+					await this.processCollection(table);
 				}
 			}
 		} catch (error: unknown) {
@@ -43,14 +43,14 @@ export class MongoProcessor extends BaseProcessor implements Processor {
 	 * @param {TableConfig} tableConfig
 	 * @memberof MongoProcessor
 	 */
-	async processTable(tableConfig: TableConfig) {
+	async processCollection(tableConfig: TableConfig) {
 		// Get the collection from the config
 		if (this.db) {
 			const table = this.db.collection(tableConfig.name);
 			console.log(tableConfig.name);
 			console.log(table.dbName);
 
-			await Promise.all(tableConfig.columns.map(async col => this.processColumn(col)));
+			await Promise.all(tableConfig.columns.map(async col => this.processDocument(tableConfig?.name, col)));
 		}
 	}
 
@@ -60,7 +60,15 @@ export class MongoProcessor extends BaseProcessor implements Processor {
 	 * @param {ColumnConfig} columnConfig
 	 * @memberof MongoProcessor
 	 */
-	async processColumn(columnConfig: ColumnConfig) {
-		console.log(columnConfig.name);
+	async processDocument(tableName: string, columnConfig: ColumnConfig) {
+		const cursor = this.db?.collection(tableName).find({});
+		const columnName: string = columnConfig.name;
+
+		if (cursor) {
+			for await (const doc of cursor) {
+				const anonymizedValue: unknown = this.valueAnonymizer.anonymize(doc[columnName], columnConfig.provider) as string;
+				await this.db?.collection(tableName).updateOne({_id: doc._id}, {$set: {[columnName]: anonymizedValue}});
+			}
+		}
 	}
 }
