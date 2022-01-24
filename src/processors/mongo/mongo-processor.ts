@@ -45,7 +45,11 @@ export class MongoProcessor extends BaseProcessor {
 	async processCollection(tableConfig: TableConfig) {
 		// Get the collection from the config
 		if (this.db && tableConfig.name) {
-			await Promise.all(tableConfig.columns.map(async col => this.processDocument(tableConfig.name, col)));
+			await Promise.all(
+				tableConfig.columns.map(async (col) =>
+					this.processDocument(tableConfig.name, col),
+				),
+			);
 		}
 	}
 
@@ -61,8 +65,13 @@ export class MongoProcessor extends BaseProcessor {
 
 		if (cursor) {
 			for await (const doc of cursor) {
-				const anonymizedValue: unknown = this.valueAnonymizer.anonymize(doc[columnName], columnConfig.provider) as string;
-				await this.db?.collection(tableName).updateOne({_id: doc._id}, {$set: {[columnName]: anonymizedValue}});
+				const anonymizedValue: unknown = this.valueAnonymizer.anonymize(
+					doc[columnName],
+					columnConfig.provider,
+				) as string;
+				await this.db
+					?.collection(tableName)
+					.updateOne({_id: doc._id}, {$set: {[columnName]: anonymizedValue}});
 			}
 		}
 	}

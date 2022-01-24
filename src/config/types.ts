@@ -6,7 +6,6 @@ type EngineType = 'mongodb' | 'postgres';
 export interface Config {
 	engine: EngineType;
 	tables?: TableConfig[];
-
 }
 
 export interface TableConfig {

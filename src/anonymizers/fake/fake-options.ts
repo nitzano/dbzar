@@ -1,4 +1,3 @@
-
 import {FakeType} from './types';
 
 export interface FakeOptions {

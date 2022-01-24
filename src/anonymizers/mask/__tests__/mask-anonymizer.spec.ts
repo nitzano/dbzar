@@ -12,4 +12,3 @@ describe('MaskAnonymizer', () => {
 		expect(result).toBe('****');
 	});
 });
-

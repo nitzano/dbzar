@@ -8,4 +8,3 @@ const config: Config.InitialOptions = {
 	watchPathIgnorePatterns: ['globalConfig'],
 };
 export default config;
-

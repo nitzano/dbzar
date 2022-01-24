@@ -1,4 +1,3 @@
-
 export interface MaskOptions {
 	character: string;
 	exclude?: string;

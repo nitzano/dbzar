@@ -1,4 +1,3 @@
-
 import {FakeAnonymizer} from './fake/fake-anonymizer';
 import {FakeOptions} from './fake/fake-options';
 import {MaskAnonymizer} from './mask/mask-anonymizer';

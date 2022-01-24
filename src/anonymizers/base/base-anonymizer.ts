@@ -1,11 +1,10 @@
-
 export abstract class BaseAnonymizer {
 	anonymizeString?(value: string): string;
 	anonymizeNumber?(value: number): number;
 	anonymizeBoolean?(value: boolean): boolean;
 
 	anonymize(value: any): any {
-		switch (typeof (value)) {
+		switch (typeof value) {
 			case 'string':
 				if (this.anonymizeString) {
 					return this.anonymizeString(value);

@@ -10,5 +10,5 @@ module.exports = {
 	globals: {
 		__MONGO_URI__: true,
 	},
-
+	prettier: true,
 };
