@@ -49,7 +49,8 @@ export class MongoProcessor extends BaseProcessor implements Processor {
 			const table = this.db.collection(tableConfig.name);
 			console.log(tableConfig.name);
 			console.log(table.dbName);
-			// Process every document
+
+			await Promise.all(tableConfig.columns.map(async col => this.processColumn(col)));
 		}
 	}
 
