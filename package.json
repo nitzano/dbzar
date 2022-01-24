@@ -38,7 +38,7 @@
     "db:seed:mongo": "yarn ts-node ./src/scripts/mongo-db-seed.ts dotenv_config_path=.dev.env"
   },
   "lint-staged": {
-    "*.{ts}": "xo --fix"
+    "*.ts": "xo --fix"
   },
   "dependencies": {
     "chance": "^1.1.8",
