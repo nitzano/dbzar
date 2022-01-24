@@ -31,6 +31,7 @@
     "clean": "rimraf dist/**",
     "lint": "xo --fix",
     "test": "jest",
+    "test:watch": "yarn test --watch",
     "prepare": "husky install",
     "db:seed:mongo": "yarn ts-node ./src/scripts/mongo-db-seed.ts dotenv_config_path=.dev.env"
   },
