@@ -1,6 +1,7 @@
 import process from 'node:process';
 import {Command} from 'commander';
 
+// Config 2
 const program = new Command();
 
 program
