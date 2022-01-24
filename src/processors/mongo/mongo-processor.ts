@@ -26,7 +26,6 @@ export class MongoProcessor extends BaseProcessor {
 			// Read collection from config
 			if (this?.config?.tables && this.config.tables.length > 0) {
 				for await (const table of this.config.tables) {
-					console.debug(`processing ${table.name}`);
 					await this.processCollection(table);
 				}
 			}
