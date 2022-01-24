@@ -1,6 +1,6 @@
-import {Command} from 'commander';
 import process from 'node:process';
-
+import {Command} from 'commander';
+// Change
 const program = new Command();
 
 program
