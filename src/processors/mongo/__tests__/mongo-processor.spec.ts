@@ -17,6 +17,10 @@ describe('mongo-processor', () => {
 		}
 	});
 
+	afterEach(async () => {
+		await db.dropDatabase();
+	});
+
 	afterAll(async () => {
 		await connection.close();
 	});
@@ -43,15 +47,49 @@ describe('mongo-processor', () => {
 			],
 		};
 
+		// Anonymize the users database
 		if (process.env.MONGO_URL) {
 			const mongoProcessor = new MongoProcessor(config, process.env.MONGO_URL);
 			await mongoProcessor.processDb(db.databaseName);
 		}
 
-		// Anonymize the users database
-
 		// Find the document again
 		const insertedUser: any = await users.findOne();
 		expect(insertedUser.firstName as string).toEqual('****');
+	});
+
+	it('should process multiple docs', async () => {
+		const users = db.collection('users');
+
+		// Insert a document
+		await users.insertMany([{firstName: 'aaaa'}, {firstName: 'bbbb'}]);
+
+		const config: Config = {
+			engine: 'mongodb',
+			tables: [
+				{
+					name: 'users',
+					columns: [
+						{
+							name: 'firstName',
+							provider: 'mask',
+						},
+					],
+				},
+			],
+		};
+
+		// Anonymize the users database
+		if (process.env.MONGO_URL) {
+			const mongoProcessor = new MongoProcessor(config, process.env.MONGO_URL);
+			await mongoProcessor.processDb(db.databaseName);
+		}
+
+		// Find the document again
+		const cursor = users.find();
+
+		for await (const doc of cursor) {
+			expect(doc.firstName as string).toEqual('****');
+		}
 	});
 });
