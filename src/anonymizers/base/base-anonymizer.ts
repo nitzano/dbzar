@@ -1,16 +1,10 @@
 
-export interface Anonymizer {
-	anonymizeString?: (value: string) => string;
-	anonymizeNumber?(value: number): number;
-	anonymizeBoolean?(value: boolean): boolean;
-}
-
 export abstract class BaseAnonymizer {
 	anonymizeString?(value: string): string;
 	anonymizeNumber?(value: number): number;
 	anonymizeBoolean?(value: boolean): boolean;
 
-	protected anonymize(value: any): any {
+	anonymize(value: any): any {
 		switch (typeof (value)) {
 			case 'string':
 				if (this.anonymizeString) {
