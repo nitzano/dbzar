@@ -1,65 +1,96 @@
-# dbzar
+<h1 align="center">DBZar</h1>
+<h2 align="center">Agnostic DB Anonymizer 👻</h2>
 
-Agnostic DB Anonymizer 👻
+- [Why?](#why)
+- [Supported Databases](#supported-databases)
+  - [Future support](#future-support)
+- [Usage](#usage)
+  - [Create Configuration file](#create-configuration-file)
+  - [Anonymize existing db](#anonymize-existing-db)
+- [Providers](#providers)
 
-- [dbzar](#dbzar)
-  - [Supported Databases](#supported-databases)
-  - [Example](#example)
-    - [Create config file](#create-config-file)
-    - [Run `anon-db` to anonymize existing db](#run-anon-db-to-anonymize-existing-db)
-    - [Result:](#result)
-  - [Providers](#providers)
+## Why?
+
+When anonymizing databases (either for local development or other reasons) usually we write the same script again and again:
+
+1. Connect to the DB
+2. Scramble parts of the DB
+3. Save the DB in a new file
+
+DBZar (Database + "Foreign" in Hebrew) let's you scramble some or all
+of the fields in a given database, no matter what it is:
+Just setup a configuration file, add your connection URI and scramble
+away.
 
 ## Supported Databases
 
 - MongoDB
 - Postgres
 
-## Example
+### Future support
 
-### Create config file
+- MariaDB / MySQL
+- SQLIte
+- CSV
+
+## Usage
+
+### Create Configuration file
 
 ```yaml
 // dbzar.config.yml
-engine: "mongodb"
-collections:
-    - users:
-        - firstName:
-            provider: fake
-            value: firstName
-        - lastName:
-            provider: fake
-            value: lastName
-	    - email:
-            provider: mask
-            exclude: '@'
-            excludeEnd: 4
-            excludeStart: 3
-        - age:
-            provider: random_number
-            min: 20
-            max: 99
-        - password:
-            provider: const
-            value: REMOVED!
+
+tables:
+    - name: users
+      columns:
+        - name: name
+          provider: fake
+          options: { fakeValue: name }
+        - name: email
+          provider: mask
+          options: { exclude: '@', excludeEnd: 4, excludeStart: 3}
+        - name: password
+          provider: const
+          options: { value: "REMOVED!"}
+    - name: products
+      columns:
+        - name: productName
+          provider: fake
+          options: { fakeValue: alphaNumeric, min: 5, max: 10 }
+        - name: price
+          provider: random_number
+          options: { min: 100, max: 999 }
 
 ```
 
-### Run `anon-db` to anonymize existing db
+### Anonymize existing db
 
 ```
-dbzar anon-db --uri mongodb://example:example@mongo:27017 --db test
+// mongo
+dbzar anon-db --uri mongodb://example:example@mongo:27017 --db test1
+
+// postgres
+dbzar anon-db --uri postgresql://user:password@localhost/mydb --db test2
 ```
 
-### Result:
+Will change all records to:
+
+Users:
 
 ```json
 {
-  "firstName": "Fake1",
-  "lastName": "Fake2",
-  "email": "mar*@****.com",
-  "age": 33,
-  "password": "REMOVED!"
+  "name": "Fake1 Fake2", // fake
+  "email": "mar*@****.com", // masked
+  "password": "REMOVED!" // const
+}
+```
+
+Products:
+
+```json
+{
+  "productName": "az5sA", // fake
+  "price": 533 // random
 }
 ```
 
