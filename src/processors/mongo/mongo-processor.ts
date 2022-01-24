@@ -1,6 +1,6 @@
-import { Db, MongoClient } from 'mongodb';
-import { ColumnConfig, Config, TableConfig } from '../../config/types';
-import { BaseProcessor } from '../base-processor/base-processor';
+import {Db, MongoClient} from 'mongodb';
+import {ColumnConfig, Config, TableConfig} from '../../config/types';
+import {BaseProcessor} from '../base-processor/base-processor';
 
 export class MongoProcessor extends BaseProcessor {
 	private readonly client: MongoClient;
@@ -26,7 +26,7 @@ export class MongoProcessor extends BaseProcessor {
 			// Read collection from config
 			if (this?.config?.tables && this.config.tables.length > 0) {
 				for await (const table of this.config.tables) {
-					console.log(`processing ${table.name}`);
+					console.debug(`processing ${table.name}`);
 					await this.processCollection(table);
 				}
 			}
@@ -45,12 +45,8 @@ export class MongoProcessor extends BaseProcessor {
 	 */
 	async processCollection(tableConfig: TableConfig) {
 		// Get the collection from the config
-		if (this.db) {
-			const table = this.db.collection(tableConfig.name);
-			console.log(tableConfig.name);
-			console.log(table.dbName);
-
-			await Promise.all(tableConfig.columns.map(async col => this.processDocument(tableConfig?.name, col)));
+		if (this.db && tableConfig.name) {
+			await Promise.all(tableConfig.columns.map(async col => this.processDocument(tableConfig.name, col)));
 		}
 	}
 
