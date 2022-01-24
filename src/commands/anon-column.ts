@@ -1,6 +1,6 @@
 import process from 'node:process';
 import {Command} from 'commander';
-// Change1
+
 const program = new Command();
 
 program
