@@ -1,59 +1,59 @@
 {
-  "name": "dbzar",
-  "version": "0.0.0-development",
-  "main": "index.js",
-  "repository": "git@github.com:nitzano/dbzar.git",
-  "author": "Nitzan Ohana <16689354+nitzano@users.noreply.github.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "@commitlint/cli": "^16.1.0",
-    "@commitlint/config-conventional": "^16.0.0",
-    "@shelf/jest-mongodb": "^2.2.0",
-    "@types/chance": "^1.1.3",
-    "@types/jest": "^27.4.0",
-    "@types/lodash": "^4.14.178",
-    "@types/node": "^17.0.8",
-    "@types/rosie": "^0.0.40",
-    "commitizen": "^4.2.4",
-    "cz-emoji": "^1.3.1",
-    "husky": "^7.0.4",
-    "jest": "^27.4.7",
-    "lint-staged": "^12.1.5",
-    "mongoose": "^6.1.7",
-    "nodemon": "^2.0.15",
-    "prettier": "^2.5.1",
-    "rimraf": "^3.0.2",
-    "rosie": "^2.1.0",
-    "ts-jest": "^27.1.3",
-    "ts-node": "^10.4.0",
-    "typescript": "^4.5.4",
-    "xo": "^0.47.0"
-  },
-  "scripts": {
-    "prebuild": "yarn clean",
-    "build": "tsc",
-    "clean": "rimraf dist/**",
-    "lint": "xo --fix",
-    "test": "jest",
-    "test:watch": "yarn test --watch",
-    "prepare": "husky install",
-    "db:seed:mongo": "yarn ts-node ./src/scripts/mongo-db-seed.ts dotenv_config_path=.dev.env",
-    "commit": "cz"
-  },
-  "lint-staged": {
-    "*.ts": "xo --fix"
-  },
-  "dependencies": {
-    "chance": "^1.1.8",
-    "commander": "^8.3.0",
-    "connection-string": "^4.3.5",
-    "dotenv": "^14.2.0",
-    "lodash": "^4.17.21",
-    "mongodb": "^4.3.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-emoji"
+    "name": "dbzar",
+    "version": "0.0.0-development",
+    "main": "index.js",
+    "repository": "git@github.com:nitzano/dbzar.git",
+    "author": "Nitzan Ohana <16689354+nitzano@users.noreply.github.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "@commitlint/cli": "^16.1.0",
+        "@commitlint/config-conventional": "^16.0.0",
+        "@shelf/jest-mongodb": "^2.2.0",
+        "@types/chance": "^1.1.3",
+        "@types/jest": "^27.4.0",
+        "@types/lodash": "^4.14.178",
+        "@types/node": "^17.0.8",
+        "@types/rosie": "^0.0.40",
+        "commitizen": "^4.2.4",
+        "cz-conventional-changelog": "3.3.0",
+        "husky": "^7.0.4",
+        "jest": "^27.4.7",
+        "lint-staged": "^12.1.5",
+        "mongoose": "^6.1.7",
+        "nodemon": "^2.0.15",
+        "prettier": "^2.5.1",
+        "rimraf": "^3.0.2",
+        "rosie": "^2.1.0",
+        "ts-jest": "^27.1.3",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.5.4",
+        "xo": "^0.47.0"
+    },
+    "scripts": {
+        "prebuild": "yarn clean",
+        "build": "tsc",
+        "clean": "rimraf dist/**",
+        "lint": "xo --fix",
+        "test": "jest",
+        "test:watch": "yarn test --watch",
+        "prepare": "husky install",
+        "db:seed:mongo": "yarn ts-node ./src/scripts/mongo-db-seed.ts dotenv_config_path=.dev.env",
+        "commit": "cz"
+    },
+    "lint-staged": {
+        "*.ts": "xo --fix"
+    },
+    "dependencies": {
+        "chance": "^1.1.8",
+        "commander": "^8.3.0",
+        "connection-string": "^4.3.5",
+        "dotenv": "^14.2.0",
+        "lodash": "^4.17.21",
+        "mongodb": "^4.3.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "cz-conventional-changelog"
+        }
     }
-  }
 }
