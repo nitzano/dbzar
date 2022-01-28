@@ -21,8 +21,13 @@ describe('PostgresProcessor', () => {
 	});
 
 	it('should process a single doc', async () => {
-		const result = await pool.query('SELECT NOW()');
-		console.info(JSON.stringify(result, null, 2));
+		await pool.query(
+			'CREATE TABLE IF NOT EXISTS users(id SERIAL PRIMARY KEY, name VARCHAR(255) )',
+		);
+		await pool.query("INSERT INTO users (name) VALUES ('test')");
+
+		const result = await pool.query('SELECT * from USERS');
+		console.info(JSON.stringify(result.rows, null, 2));
 
 		// Const config: Config = {
 		// 	engine: 'postgres',
