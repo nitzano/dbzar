@@ -52,12 +52,5 @@
         "lodash": "^4.17.21",
         "mongodb": "^4.3.0",
         "pg": "^8.7.1"
-    },
-    "config": {
-        "commitizen": {
-            "path": "cz-conventional-changelog",
-            "defaultType": "chore",
-            "defaultScope": "general"
-        }
     }
 }

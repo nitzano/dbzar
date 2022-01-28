@@ -24,10 +24,10 @@ describe('PostgresProcessor', () => {
 		await pool.query(
 			'CREATE TABLE IF NOT EXISTS users(id SERIAL PRIMARY KEY, name VARCHAR(255) )',
 		);
-		await pool.query("INSERT INTO users (name) VALUES ('test')");
+		await pool.query("INSERT INTO users (name) VALUES ('John')");
 
-		const result = await pool.query('SELECT * from USERS');
-		console.info(JSON.stringify(result.rows, null, 2));
+		const {rows: rows1} = await pool.query('SELECT * from USERS');
+		expect(rows1[0].name).toBe('John');
 
 		// Const config: Config = {
 		// 	engine: 'postgres',

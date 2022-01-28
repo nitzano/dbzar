@@ -1,0 +1,6 @@
+{
+    "path": "cz-conventional-changelog",
+    "defaultType": "chore",
+    "defaultScope": "general",
+    "skipQuestions": ["issues", "breaking"]
+}
