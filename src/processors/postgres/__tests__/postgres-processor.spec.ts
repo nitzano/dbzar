@@ -1,14 +1,12 @@
-import type {Pool as PoolType} from 'pg';
+import {Knex} from 'knex';
 import {newDb} from 'pg-mem';
 
 describe('PostgresProcessor', () => {
-	let pool: PoolType;
+	let knex: Knex;
 
 	beforeAll(async () => {
-		// eslint-disable-next-line @typescript-eslint/naming-convention, @typescript-eslint/no-unsafe-assignment
-		const {Pool} = newDb().adapters.createPg();
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-assignment
-		pool = new Pool();
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+		knex = newDb().adapters.createKnex();
 	});
 
 	afterEach(async () => {
@@ -17,17 +15,18 @@ describe('PostgresProcessor', () => {
 
 	afterAll(async () => {
 		// Close the connection
-		await pool.end();
 	});
 
 	it('should process a single doc', async () => {
-		await pool.query(
-			'CREATE TABLE IF NOT EXISTS users(id SERIAL PRIMARY KEY, name VARCHAR(255) )',
-		);
-		await pool.query("INSERT INTO users (name) VALUES ('John')");
+		await knex.schema.createTable('users', (table) => {
+			table.increments('id');
+			table.string('name');
+		});
 
-		const {rows: rows1} = await pool.query('SELECT * from USERS');
-		expect(rows1[0].name).toBe('John');
+		await knex('users').insert({name: 'John'});
+
+		const selectedRows1 = await knex('users').select('name');
+		expect(selectedRows1[0].name).toBe('John');
 
 		// Const config: Config = {
 		// 	engine: 'postgres',
@@ -45,6 +44,10 @@ describe('PostgresProcessor', () => {
 		// };
 
 		// Anonymize the users database
+
+		// check again
+		const selectedRows2 = await knex('users').select('name');
+		expect(selectedRows2[0].name).toBe('****');
 	});
 
 	it.todo('should process multiple docs');
