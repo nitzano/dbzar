@@ -1,6 +1,6 @@
 import {Knex} from 'knex';
 import {newDb} from 'pg-mem';
-import {Config} from '../../../config/types';
+import {Config, EngineType} from '../../../config/types';
 import {PostgresProcessor} from '../postgres-processor';
 
 describe('PostgresProcessor', () => {
@@ -27,7 +27,7 @@ describe('PostgresProcessor', () => {
 		expect(selectedRows1[0].firstName).toBe('John');
 
 		const config: Config = {
-			engine: 'postgres',
+			engine: EngineType.PostGres,
 			tables: [
 				{
 					name: 'users',
@@ -69,7 +69,7 @@ describe('PostgresProcessor', () => {
 		await knex('users').insert([{firstName: 'test1'}, {firstName: 'test2'}]);
 
 		const config: Config = {
-			engine: 'postgres',
+			engine: EngineType.PostGres,
 			tables: [
 				{
 					name: 'users',

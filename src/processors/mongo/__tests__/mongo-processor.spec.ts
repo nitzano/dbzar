@@ -1,6 +1,6 @@
 import process from 'process';
 import {Db, MongoClient, MongoClientOptions} from 'mongodb';
-import {Config} from '../../../config/types';
+import {Config, EngineType} from '../../../config/types';
 import {MongoProcessor} from '../mongo-processor';
 
 describe('mongo-processor', () => {
@@ -33,7 +33,7 @@ describe('mongo-processor', () => {
 		await users.insertOne(mockUser);
 
 		const config: Config = {
-			engine: 'mongodb',
+			engine: EngineType.Mongo,
 			tables: [
 				{
 					name: 'users',
@@ -65,7 +65,7 @@ describe('mongo-processor', () => {
 		await users.insertMany([{firstName: 'aaaa'}, {firstName: 'bbbb'}]);
 
 		const config: Config = {
-			engine: 'mongodb',
+			engine: EngineType.Mongo,
 			tables: [
 				{
 					name: 'users',
