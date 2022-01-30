@@ -1,13 +1,24 @@
 {
     "name": "dbzar",
     "version": "0.0.0-development",
-    "main": "index.js",
+    "main": "dist/index.js",
     "repository": "git@github.com:nitzano/dbzar.git",
     "author": "Nitzan Ohana <16689354+nitzano@users.noreply.github.com>",
     "license": "MIT",
     "bin": {
-        "dbzar": "./dist/cl/dbzar.js"
+        "dbzar": "./dist/cli/dbzar.js"
     },
+    "files": [
+        "dist"
+    ],
+    "keywords": [
+        "db",
+        "database",
+        "anonymizer",
+        "postgres",
+        "pg",
+        "mongodb"
+    ],
     "devDependencies": {
         "@commitlint/cli": "^16.1.0",
         "@commitlint/config-conventional": "^16.0.0",

@@ -1,75 +1,67 @@
 <h1 align="center">DBZar</h1>
 <h2 align="center">Agnostic DB Anonymizer 🔁👻</h2>
+<br/>
+<div align="center">
 
-- [👻 DBZar](#-dbzar)
-- [🔁 Basic Usage](#-basic-usage)
-  - [Anonymizing a single column](#anonymizing-a-single-column)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+
+</div>
+
+- [Install](#install)
+- [👻 Usage](#-usage)
+  - [`anon-col` : anonymize a single column in a table](#anon-col--anonymize-a-single-column-in-a-table)
+  - [`anon-db`: anonymize entire database (future Version)](#anon-db-anonymize-entire-database-future-version)
 - [✅ Supported Databases](#-supported-databases)
-  - [Future support](#future-support)
-- [😎 Advanced Usage](#-advanced-usage)
-  - [Anonymize entire database](#anonymize-entire-database)
 - [🔧 Providers](#-providers)
-  - [Current](#current)
-  - [Future](#future)
 
-## 👻 DBZar
+**DBZar** (Database + "Foreign" in Hebrew) let you mask/scramble/fake fields in any given database, just add a connection string and anonymize away!
 
-DBZar (Database + "Foreign" in Hebrew) let you mask/scramble/fake some or all
-of the fields in a given database, no matter if it's mongodb/postgres or anything else.
-<br/><br/>
+Great for:
 
-Just add a connection string URI and anonymize away!
+1. Anonymizing production servers for local development.
+2. General utility to manipulate existing database easily.
 
-## 🔁 Basic Usage
+## Install
 
-### Anonymizing a single column
+```
+npm i --save-dev dbzar
+// OR
+yarn add -D dbzar
+```
+
+## 👻 Usage
+
+### `anon-col` : anonymize a single column in a table
 
 For example: mask the `name` column in `users` table:
 
+```bash
+Usage: dbzar anon-col [options] <uri> <db> <table> <column>
+```
+
 ```
 // postgres
-yarn dbzar anon-col mongodb://example:example@localhost test users firstName
+yarn dbzar anon-col mongodb://example:example@localhost test users firstName --provider mask
 
 // mongo
-yarn dbzar anon-col postgresql://example:example@localhost test users firstName
+yarn dbzar anon-col postgresql://example:example@localhost test users firstName --provider mask
 ```
 
-Will change `users` records from:
+Will change `users` table accordingly:
 
 ```json
-{
-  "name": "John Doe"
-}
+{ "firstName": "John" } => { "firstName": "****"  }
 ```
 
-To:
+### `anon-db`: anonymize entire database (future Version)
 
-```json
-{
-  "name": "**** ***" // mask
-}
-```
-
-## ✅ Supported Databases
-
-- MongoDB
-- Postgres
-
-### Future support
-
-- MariaDB / MySQL
-- SQLIte
-- CSV
-
-## 😎 Advanced Usage
-
-### Anonymize entire database
-
-1. Create Configuration file
+1. Create Configuration file:
 
 ```yaml
 // dbzar.config.yml
-
 tables:
     - name: users
       columns:
@@ -93,25 +85,33 @@ tables:
 
 ```
 
-Run:
+
+
+1. Run the anonymizer
 
 ```
 // mongo
-dbzar dbzar anon-db --uri mongodb://example:example@mongo:27017 --db test1
+dbzar dbzar anon-db mongodb://example:example@mongo:27017 test1
 
 // postgres
-dbzar dbzar anon-db --uri postgresql://user:password@localhost/mydb --db test2
+dbzar dbzar anon-db postgresql://example:example@localhost test2
 ```
+
+## ✅ Supported Databases
+
+- MongoDB
+- Postgres
+- Future support
+  - MariaDB / MySQL
+  - SQLIte
+  - CSV
 
 ## 🔧 Providers
 
-### Current
-
 1. `mask` - will replaces some/all characters (default: `"*"`)
-
-### Future
-
-2. `fake` - will generate fake data
-3. `scramble` - change the order randomly
-4. `hash` - replace with hash
-5. `const` - replace with constant string/number
+1. Future
+   1. `scramble` - change the order randomly
+   2. `hash` - replace with hash
+   3. `fake` - will generate fake data
+   4. `const` - replace with constant string/number
+   5. `remove` - remove the field from the table
