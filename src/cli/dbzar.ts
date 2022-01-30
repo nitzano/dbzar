@@ -9,7 +9,9 @@ program.version('0.0.1');
 program
 	.command('anon-col')
 	.description('anonymize a single column in a table')
-	.option('-uri, --connection-uri', 'db connection string')
-	.option('-db, --db-name', 'database name');
+	.requiredOption('-uri, --connection-uri', 'db connection string')
+	.requiredOption('-db, --db-name', 'database name')
+	.requiredOption('-table, --table', 'table name')
+	.requiredOption('-column, --columnName', 'table name');
 
 program.parse(process.argv);

@@ -26,9 +26,9 @@ export async function anonymizeColumn(
 			default:
 				break;
 		}
+	}
 
-		if (processor) {
-			await processor.processColumn(tableName, columnName, provider);
-		}
+	if (processor) {
+		await processor.processColumn(tableName, columnName, provider);
 	}
 }
