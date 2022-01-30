@@ -16,6 +16,7 @@
 
 DBZar (Database + "Foreign" in Hebrew) let you mask/scramble/fake some or all
 of the fields in a given database, no matter if it's mongodb/postgres or anything else.
+<br/><br/>
 
 Just add a connection string URI and anonymize away!
 
@@ -23,14 +24,14 @@ Just add a connection string URI and anonymize away!
 
 ### Anonymizing a single column
 
-For example: Mask the `name` column in `users` table:
+For example: mask the `name` column in `users` table:
 
 ```
 // postgres
-anon-col --uri postgresql://localhost/db1 --table users --column name --provider mask
+dbzar anon-col --uri postgresql://localhost/db1 --table users --column name --provider mask
 
 // mongo
-anon-col --uri mongodb://user:password@mongo/db1 --table users --column name --provider mask
+dbzar anon-col --uri mongodb://user:password@mongo/db1 --table users --column name --provider mask
 ```
 
 Will change `users` records from:
@@ -96,10 +97,10 @@ Run:
 
 ```
 // mongo
-dbzar anon-db --uri mongodb://example:example@mongo:27017 --db test1
+dbzar dbzar anon-db --uri mongodb://example:example@mongo:27017 --db test1
 
 // postgres
-dbzar anon-db --uri postgresql://user:password@localhost/mydb --db test2
+dbzar dbzar anon-db --uri postgresql://user:password@localhost/mydb --db test2
 ```
 
 ## 🔧 Providers
