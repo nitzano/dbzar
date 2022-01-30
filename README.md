@@ -1,7 +1,6 @@
 <h1 align="center">DBZar</h1>
 <h2 align="center">Agnostic DB Anonymizer 🔁👻</h2>
 
-- [DBZar](#dbzar)
 - [Install](#install)
 - [Usage](#usage)
   - [`anon-col` : anonymize a single column](#anon-col--anonymize-a-single-column)
@@ -11,8 +10,7 @@
   - [Current](#current)
   - [Future](#future)
 
-## DBZar
-
+<br/>
 DBZar (Database + "Foreign" in Hebrew) let you mask/scramble/fake some or all
 of the fields in a given database.<br/>
 
