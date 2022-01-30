@@ -2,7 +2,7 @@
 import 'dotenv/config'; // eslint-disable-line import/no-unassigned-import
 import process from 'node:process';
 import {MongoClient} from 'mongodb';
-import {User, userFactory} from '../test/factories/user';
+import {User, userFactory} from '../factories/user';
 
 async function run() {
 	const connectionString = process.env.DB_URI;
