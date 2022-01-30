@@ -11,6 +11,10 @@ describe('PostgresProcessor', () => {
 		knex = newDb().adapters.createKnex();
 	});
 
+	afterEach(async () => {
+		await knex.destroy();
+	});
+
 	it('should process a single doc', async () => {
 		await knex.schema.createTable('users', (table) => {
 			table.increments('id');
