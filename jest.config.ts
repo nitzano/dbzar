@@ -6,5 +6,6 @@ const config: Config.InitialOptions = {
 	transform: tsjPreset.transform,
 	preset: '@shelf/jest-mongodb',
 	watchPathIgnorePatterns: ['globalConfig'],
+	setupFiles: ['<rootDir>/jest/setup-envs.ts'],
 };
 export default config;

@@ -2,9 +2,9 @@ import {ValueAnonymizer} from '../../anonymizers/value-anonymizer/value-anonymiz
 import {ColumnConfig, Config, TableConfig} from '../../config/types';
 
 export interface Processor {
-	processDb(dbName: string): void;
-	processCollection?(tableConfig: TableConfig): void;
-	processDocument?(columnConfig: ColumnConfig): void;
+	processDb(dbName?: string): void;
+	processTable?(tableConfig: TableConfig): void;
+	processColumn?(tableName: string, columnConfig: ColumnConfig): void;
 }
 
 export class BaseProcessor {
