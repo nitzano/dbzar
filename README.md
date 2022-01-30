@@ -5,7 +5,6 @@
 - [🔁 Basic Usage](#-basic-usage)
   - [Anonymizing a single column](#anonymizing-a-single-column)
 - [✅ Supported Databases](#-supported-databases)
-  - [Future support](#future-support)
 - [😎 Advanced Usage](#-advanced-usage)
   - [Anonymize entire database](#anonymize-entire-database)
 - [🔧 Providers](#-providers)
@@ -54,12 +53,10 @@ To:
 
 - MongoDB
 - Postgres
-
-### Future support
-
-- MariaDB / MySQL
-- SQLIte
-- CSV
+- Future support
+  - MariaDB / MySQL
+  - SQLIte
+  - CSV
 
 ## 😎 Advanced Usage
 
