@@ -3,13 +3,13 @@ import {Config} from '../../config/types';
 import {ProviderType} from '../../types/types';
 
 export interface Processor {
-	processDb(config: Config, dbName?: string): void;
-	processTable?(config: Config, tableName: string): void;
+	processDb?(config: Config, dbName?: string): void;
+	processTable?(config: Config, tableName: string, dbName?: string): void;
 	processColumn(
-		dbName: string,
 		tableName: string,
 		columnName: string,
 		provider: ProviderType,
+		dbName?: string,
 	): void;
 }
 
