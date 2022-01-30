@@ -1,28 +1,56 @@
 <h1 align="center">DBZar</h1>
-<h2 align="center">Agnostic DB Anonymizer 👻</h2>
+<h2 align="center">Agnostic DB Anonymizer 🔁👻</h2>
 
-- [Why?](#why)
-- [Supported Databases](#supported-databases)
+- [👻 DBZar](#-dbzar)
+- [🔁 Basic Usage](#-basic-usage)
+  - [Anonymizing a single column](#anonymizing-a-single-column)
+- [✅ Supported Databases](#-supported-databases)
   - [Future support](#future-support)
-- [Usage](#usage)
-  - [Create Configuration file](#create-configuration-file)
-  - [Anonymize existing db](#anonymize-existing-db)
-- [Providers](#providers)
+- [😎 Advanced Usage](#-advanced-usage)
+  - [Anonymize entire database](#anonymize-entire-database)
+- [🔧 Providers](#-providers)
+  - [Current](#current)
+  - [Future](#future)
 
-## Why?
+## 👻 DBZar
 
-When anonymizing databases (either for local development or other reasons) usually we write the same script again and again:
+DBZar (Database + "Foreign" in Hebrew) let you mask/scramble/fake some or all
+of the fields in a given database, no matter if it's mongodb/postgres or anything else.
+<br/><br/>
 
-1. Connect to the DB
-2. Scramble parts of the DB
-3. Save the DB in a new file
+Just add a connection string URI and anonymize away!
 
-DBZar (Database + "Foreign" in Hebrew) let's you scramble some or all
-of the fields in a given database, no matter what it is:
-Just setup a configuration file, add your connection URI and scramble
-away.
+## 🔁 Basic Usage
 
-## Supported Databases
+### Anonymizing a single column
+
+For example: mask the `name` column in `users` table:
+
+```
+// postgres
+yarn dbzar anon-col mongodb://example:example@localhost test users firstName
+
+// mongo
+yarn dbzar anon-col postgresql://example:example@localhost test users firstName
+```
+
+Will change `users` records from:
+
+```json
+{
+  "name": "John Doe"
+}
+```
+
+To:
+
+```json
+{
+  "name": "**** ***" // mask
+}
+```
+
+## ✅ Supported Databases
 
 - MongoDB
 - Postgres
@@ -33,9 +61,11 @@ away.
 - SQLIte
 - CSV
 
-## Usage
+## 😎 Advanced Usage
 
-### Create Configuration file
+### Anonymize entire database
+
+1. Create Configuration file
 
 ```yaml
 // dbzar.config.yml
@@ -63,41 +93,25 @@ tables:
 
 ```
 
-### Anonymize existing db
+Run:
 
 ```
 // mongo
-dbzar anon-db --uri mongodb://example:example@mongo:27017 --db test1
+dbzar dbzar anon-db --uri mongodb://example:example@mongo:27017 --db test1
 
 // postgres
-dbzar anon-db --uri postgresql://user:password@localhost/mydb --db test2
+dbzar dbzar anon-db --uri postgresql://user:password@localhost/mydb --db test2
 ```
 
-Will change all records to:
+## 🔧 Providers
 
-Users:
+### Current
 
-```json
-{
-  "name": "Fake1 Fake2", // fake
-  "email": "mar*@****.com", // masked
-  "password": "REMOVED!" // const
-}
-```
+1. `mask` - will replaces some/all characters (default: `"*"`)
 
-Products:
+### Future
 
-```json
-{
-  "productName": "az5sA", // fake
-  "price": 533 // random
-}
-```
-
-## Providers
-
-1. `fake` - will generate fake data
-2. `mask` - will replaces some/all characters (default: `"*"`)
+2. `fake` - will generate fake data
 3. `scramble` - change the order randomly
 4. `hash` - replace with hash
 5. `const` - replace with constant string/number

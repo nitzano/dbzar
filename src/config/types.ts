@@ -1,7 +1,10 @@
 import {Option} from 'commander';
 import {ProviderType} from '../types/types';
 
-type EngineType = 'mongodb' | 'postgres';
+export enum EngineType {
+	PostGres = 'postgres',
+	Mongo = 'mongo',
+}
 
 export interface Config {
 	engine: EngineType;

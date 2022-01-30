@@ -1,16 +1,11 @@
 import {Db, MongoClient} from 'mongodb';
-import {ColumnConfig, Config, TableConfig} from '../../config/types';
-import {BaseProcessor} from '../base-processor/base-processor';
+import {Config, TableConfig} from '../../config/types';
+import {debugLogger} from '../../services/loggers/debug-logger';
+import {ProviderType} from '../../types/types';
+import {BaseProcessor, Processor} from '../base-processor/base-processor';
 
-export class MongoProcessor extends BaseProcessor {
-	private readonly client: MongoClient;
-	private db: Db | undefined;
-
-	constructor(config: Config, readonly uri: string) {
-		super(config);
-		this.client = new MongoClient(this.uri);
-	}
-
+const logger = debugLogger.extend('mongo-processor');
+export class MongoProcessor extends BaseProcessor implements Processor {
 	/**
 	 * Process the mongo db name
 	 *
@@ -18,21 +13,23 @@ export class MongoProcessor extends BaseProcessor {
 	 * @return {*}  {Promise<void>}
 	 * @memberof MongoProcessor
 	 */
-	async processDb(dbName?: string): Promise<void> {
+	async processDb(config: Config, dbName?: string): Promise<void> {
+		const client = new MongoClient(this.uri);
+		let db: Db | undefined;
 		try {
-			await this.client.connect();
-			this.db = this.client.db(dbName);
+			await client.connect();
+			db = client.db(dbName);
 
 			// Read collection from config
-			if (this?.config?.tables && this.config.tables.length > 0) {
-				for await (const table of this.config.tables) {
-					await this.processCollection(table);
+			if (config?.tables && config.tables.length > 0) {
+				for await (const table of config.tables) {
+					await this.processCollection(db, table);
 				}
 			}
 		} catch (error: unknown) {
 			console.error(error);
 		} finally {
-			await this.client.close();
+			await client.close();
 		}
 	}
 
@@ -42,12 +39,12 @@ export class MongoProcessor extends BaseProcessor {
 	 * @param {TableConfig} tableConfig
 	 * @memberof MongoProcessor
 	 */
-	async processCollection(tableConfig: TableConfig) {
+	async processCollection(db: Db, tableConfig: TableConfig) {
 		// Get the collection from the config
-		if (this.db && tableConfig.name) {
+		if (db && tableConfig.name) {
 			await Promise.all(
 				tableConfig.columns.map(async (col) =>
-					this.processDocument(tableConfig.name, col),
+					this.processDocument(db, tableConfig.name, col.name, col.provider),
 				),
 			);
 		}
@@ -59,20 +56,46 @@ export class MongoProcessor extends BaseProcessor {
 	 * @param {ColumnConfig} columnConfig
 	 * @memberof MongoProcessor
 	 */
-	async processDocument(tableName: string, columnConfig: ColumnConfig) {
-		const cursor = this.db?.collection(tableName).find({});
-		const columnName: string = columnConfig.name;
+	async processDocument(
+		db: Db,
+		tableName: string,
+		columnName: string,
+		provider: ProviderType,
+	) {
+		const cursor = db?.collection(tableName).find({});
 
 		if (cursor) {
 			for await (const doc of cursor) {
 				const anonymizedValue: unknown = this.valueAnonymizer.anonymize(
 					doc[columnName],
-					columnConfig.provider,
+					provider,
 				) as string;
-				await this.db
+				await db
 					?.collection(tableName)
 					.updateOne({_id: doc._id}, {$set: {[columnName]: anonymizedValue}});
 			}
+		}
+	}
+
+	async processColumn(
+		tableName: string,
+		columnName: string,
+		provider: ProviderType,
+		dbName?: string,
+	) {
+		logger('processColumn');
+		const client = new MongoClient(this.uri);
+		let db: Db | undefined;
+		try {
+			await client.connect();
+			db = client.db(dbName);
+
+			// Process column
+			await this.processDocument(db, tableName, columnName, provider);
+		} catch (error: unknown) {
+			console.error(error);
+		} finally {
+			await client.close();
 		}
 	}
 }
