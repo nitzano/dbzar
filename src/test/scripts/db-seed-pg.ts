@@ -15,6 +15,13 @@ async function run() {
 		});
 		try {
 			await client.schema.dropTableIfExists(sampleTableName);
+			await client.schema.createTable(sampleTableName, (table) => {
+				table.increments('id');
+				table.string('firstName');
+				table.string('lastName');
+				table.integer('age');
+				table.string('email');
+			});
 			// Insert random users
 			await client(sampleTableName).insert(userFactory.buildList(10));
 		} catch (error: unknown) {
