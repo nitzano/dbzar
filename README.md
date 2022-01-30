@@ -18,7 +18,7 @@
 - [🔧 Providers](#-providers)
   - [Current](#current)
 
-**DBZar** (Database + "Foreign" in Hebrew) let you mask/scramble/fake some or all of the fields in a given database regardless if it's mongodb/postgres or anything else - Just add a connection string and anonymize away!
+**DBZar** (Database + "Foreign" in Hebrew) let you mask/scramble/fake fields in a given database regardless if it's mongodb/postgres or anything else - Just add a connection string and anonymize away!
 
 Great for:
 
