@@ -2,13 +2,12 @@
 <h2 align="center">Agnostic DB Anonymizer 🔁👻</h2>
 
 - [Install](#install)
-- [Usage](#usage)
+- [👻 Usage](#-usage)
   - [`anon-col` : anonymize a single column](#anon-col--anonymize-a-single-column)
   - [`anon-db`: anonymize entire database (future Version)](#anon-db-anonymize-entire-database-future-version)
-- [Supported Databases](#supported-databases)
+- [✅ Supported Databases](#-supported-databases)
 - [🔧 Providers](#-providers)
   - [Current](#current)
-  - [Future](#future)
 
 <br/>
 DBZar (Database + "Foreign" in Hebrew) let you mask/scramble/fake some or all
@@ -22,7 +21,7 @@ It doesn't matter if it's mongodb/postgres or anything else - Just add a connect
 npm i --save-dev dbzar
 ```
 
-## Usage
+## 👻 Usage
 
 ### `anon-col` : anonymize a single column
 
@@ -85,7 +84,7 @@ dbzar dbzar anon-db mongodb://example:example@mongo:27017 test1
 dbzar dbzar anon-db postgresql://user:password@localhost test2
 ```
 
-## Supported Databases
+## ✅ Supported Databases
 
 - MongoDB
 - Postgres
@@ -99,11 +98,9 @@ dbzar dbzar anon-db postgresql://user:password@localhost test2
 ### Current
 
 1. `mask` - will replaces some/all characters (default: `"*"`)
-
-### Future
-
-1. `scramble` - change the order randomly
-2. `hash` - replace with hash
-3. `fake` - will generate fake data
-4. `const` - replace with constant string/number
-5. `remove` - remove the field from the table
+1. Future
+   1. `scramble` - change the order randomly
+   2. `hash` - replace with hash
+   3. `fake` - will generate fake data
+   4. `const` - replace with constant string/number
+   5. `remove` - remove the field from the table
