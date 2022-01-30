@@ -28,10 +28,10 @@ For example: mask the `name` column in `users` table:
 
 ```
 // postgres
-dbzar anon-col --uri postgresql://localhost/db1 --table users --column name --provider mask
+yarn dbzar anon-col mongodb://example:example@localhost test users firstName
 
 // mongo
-dbzar anon-col --uri mongodb://user:password@mongo/db1 --table users --column name --provider mask
+yarn dbzar anon-col postgresql://example:example@localhost test users firstName
 ```
 
 Will change `users` records from:
