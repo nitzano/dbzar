@@ -50,10 +50,10 @@ yarn dbzar anon-col mongodb://example:example@localhost test users firstName --p
 yarn dbzar anon-col postgresql://example:example@localhost test users firstName --provider mask
 ```
 
-Will change `users` records accordingly:
+Will change `users` table accordingly:
 
 ```json
-{ "name": "John Doe" } => { "name": "**** ***"  }
+{ "firstName": "John" } => { "firstName": "****"  }
 ```
 
 ### `anon-db`: anonymize entire database (future Version)
