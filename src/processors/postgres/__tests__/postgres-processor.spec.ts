@@ -61,7 +61,7 @@ describe('PostgresProcessor', () => {
 
 		// Check again
 		const selectedRows2 = await knex('users').select('firstName');
-		expect(selectedRows2[0].name).toBe('****');
+		expect(selectedRows2[0].firstName).toBe('****');
 	});
 
 	it.todo('should process multiple docs');
