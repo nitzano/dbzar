@@ -22,35 +22,7 @@ export class PostgresProcessor extends BaseProcessor implements Processor {
 
 		logger(`processing column`);
 		try {
-			// TODO: update in bulk
-			logger(`processing column: ${tableName}.${columnName}`);
-
-			const rows = await client(tableName).select([
-				`id`,
-				`${columnName} as ${columnName}`,
-			]);
-			logger(`rows = ${JSON.stringify(rows, null, 2)}`);
-
-			await Promise.all(
-				rows.map(async ({id, [columnName]: col}) => {
-					const rowId: string = id as string;
-
-					logger(`anonymizing ${col as string} provider=${provider}`);
-					const anonymizedValue: unknown = this.valueAnonymizer.anonymize(
-						col,
-						provider,
-					) as string;
-					if (!client) return;
-					logger(
-						`updating ${tableName}.${columnName}.${rowId} to ${
-							anonymizedValue as string
-						}`,
-					);
-					await client(tableName)
-						.where({id: rowId})
-						.update({[columnName]: anonymizedValue});
-				}),
-			);
+			await this.updateColumn(client, tableName, columnName, provider);
 		} finally {
 			await client.destroy();
 		}

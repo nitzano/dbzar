@@ -25,7 +25,12 @@ describe('PostgresProcessor', () => {
 		const selectedRows1 = await knex('users').select('firstName');
 		expect(selectedRows1[0].firstName).toBe('John');
 
-		const spy = jest
+		const spy1 = jest
+			.spyOn(knex.client, 'destroy')
+			.mockImplementationOnce(async () => {
+				// Do nothing
+			});
+		const spy2 = jest
 			.spyOn(PostgresProcessor.prototype as any, 'buildClient')
 			.mockImplementationOnce(() => knex);
 
@@ -36,7 +41,8 @@ describe('PostgresProcessor', () => {
 
 		await processor.processColumn('users', 'firstName', 'mask');
 
-		spy.mockRestore();
+		spy1.mockRestore();
+		spy2.mockRestore();
 
 		// Check again
 		const selectedRows2 = await knex('users').select('firstName');
@@ -51,7 +57,12 @@ describe('PostgresProcessor', () => {
 
 		await knex('users').insert([{firstName: 'test1'}, {firstName: 'test2'}]);
 
-		const spy = jest
+		const spy1 = jest
+			.spyOn(knex.client, 'destroy')
+			.mockImplementationOnce(async () => {
+				// Do nothing
+			});
+		const spy2 = jest
 			.spyOn(PostgresProcessor.prototype as any, 'buildClient')
 			.mockImplementationOnce(() => knex);
 
@@ -62,7 +73,8 @@ describe('PostgresProcessor', () => {
 
 		await processor.processColumn('users', 'firstName', 'mask');
 
-		spy.mockRestore();
+		spy1.mockRestore();
+		spy2.mockRestore();
 
 		// Check again
 		const selectedRows2 = await knex('users').select('firstName');
