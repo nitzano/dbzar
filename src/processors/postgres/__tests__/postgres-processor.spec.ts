@@ -1,5 +1,7 @@
 import {Knex} from 'knex';
 import {newDb} from 'pg-mem';
+import {Config} from '../../../config/types';
+import {PostgresProcessor} from '../postgres-processor';
 
 describe('PostgresProcessor', () => {
 	let knex: Knex;
@@ -20,33 +22,45 @@ describe('PostgresProcessor', () => {
 	it('should process a single doc', async () => {
 		await knex.schema.createTable('users', (table) => {
 			table.increments('id');
-			table.string('name');
+			table.string('firstName');
 		});
 
-		await knex('users').insert({name: 'John'});
+		await knex('users').insert({firstName: 'John'});
 
-		const selectedRows1 = await knex('users').select('name');
-		expect(selectedRows1[0].name).toBe('John');
+		const selectedRows1 = await knex('users').select('firstName');
+		expect(selectedRows1[0].firstName).toBe('John');
 
-		// Const config: Config = {
-		// 	engine: 'postgres',
-		// 	tables: [
-		// 		{
-		// 			name: 'users',
-		// 			columns: [
-		// 				{
-		// 					name: 'firstName',
-		// 					provider: 'mask',
-		// 				},
-		// 			],
-		// 		},
-		// 	],
-		// };
+		const config: Config = {
+			engine: 'postgres',
+			tables: [
+				{
+					name: 'users',
+					columns: [
+						{
+							name: 'firstName',
+							provider: 'mask',
+						},
+					],
+				},
+			],
+		};
 
-		// Anonymize the users database
+		const spy = jest
+			.spyOn(PostgresProcessor.prototype as any, 'buildClient')
+			.mockImplementationOnce(() => knex);
 
-		// check again
-		const selectedRows2 = await knex('users').select('name');
+		// Anonymize the db
+		const processor: PostgresProcessor = new PostgresProcessor(
+			config,
+			'postgresql://localhost',
+		);
+
+		await processor.processDb();
+
+		spy.mockRestore();
+
+		// Check again
+		const selectedRows2 = await knex('users').select('firstName');
 		expect(selectedRows2[0].name).toBe('****');
 	});
 
