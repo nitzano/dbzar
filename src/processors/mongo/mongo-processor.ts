@@ -76,10 +76,10 @@ export class MongoProcessor extends BaseProcessor implements Processor {
 	}
 
 	async processColumn(
-		dbName: string,
 		tableName: string,
 		columnName: string,
 		provider: ProviderType,
+		dbName?: string,
 	) {
 		const client = new MongoClient(this.uri);
 		let db: Db | undefined;

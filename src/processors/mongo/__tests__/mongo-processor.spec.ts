@@ -1,6 +1,5 @@
 import process from 'process';
 import {Db, MongoClient, MongoClientOptions} from 'mongodb';
-import {Config, EngineType} from '../../../config/types';
 import {MongoProcessor} from '../mongo-processor';
 
 describe('mongo-processor', () => {
@@ -32,25 +31,10 @@ describe('mongo-processor', () => {
 		const mockUser: any = {firstName: 'test'};
 		await users.insertOne(mockUser);
 
-		const config: Config = {
-			engine: EngineType.Mongo,
-			tables: [
-				{
-					name: 'users',
-					columns: [
-						{
-							name: 'firstName',
-							provider: 'mask',
-						},
-					],
-				},
-			],
-		};
-
 		// Anonymize the users database
 		if (process.env.MONGO_URL) {
 			const mongoProcessor = new MongoProcessor(process.env.MONGO_URL);
-			await mongoProcessor.processDb(config, db.databaseName);
+			await mongoProcessor.processColumn('users', 'firstName', 'mask');
 		}
 
 		// Find the document again
@@ -64,25 +48,10 @@ describe('mongo-processor', () => {
 		// Insert a document
 		await users.insertMany([{firstName: 'aaaa'}, {firstName: 'bbbb'}]);
 
-		const config: Config = {
-			engine: EngineType.Mongo,
-			tables: [
-				{
-					name: 'users',
-					columns: [
-						{
-							name: 'firstName',
-							provider: 'mask',
-						},
-					],
-				},
-			],
-		};
-
 		// Anonymize the users database
 		if (process.env.MONGO_URL) {
 			const mongoProcessor = new MongoProcessor(process.env.MONGO_URL);
-			await mongoProcessor.processDb(config, db.databaseName);
+			await mongoProcessor.processColumn('users', 'firstName', 'mask');
 		}
 
 		// Find the document again
