@@ -2,7 +2,7 @@
 <h2 align="center">Agnostic DB Anonymizer 🔁👻</h2>
 
 - [👻 DBZar](#-dbzar)
-- [🔁 Usage](#-usage)
+- [Usage](#usage)
   - [Anonymizing a single column](#anonymizing-a-single-column)
 - [✅ Supported Databases](#-supported-databases)
 - [😎 Advanced Usage](#-advanced-usage)
@@ -14,12 +14,12 @@
 ## 👻 DBZar
 
 DBZar (Database + "Foreign" in Hebrew) let you mask/scramble/fake some or all
-of the fields in a given database, no matter if it's mongodb/postgres or anything else.
+of the fields in a given database.<br/>
+
+It doesn't matter if it's mongodb/postgres or anything else - Just add a connection string and anonymize away!
 <br/><br/>
 
-Just add a connection string URI and anonymize away!
-
-## 🔁 Usage
+## Usage
 
 ### Anonymizing a single column
 
