@@ -2,6 +2,7 @@
 <h2 align="center">Agnostic DB Anonymizer 🔁👻</h2>
 
 - [DBZar](#dbzar)
+- [Install](#install)
 - [Usage](#usage)
   - [`anon-col` : anonymize a single column](#anon-col--anonymize-a-single-column)
   - [`anon-db`: anonymize entire database (future Version)](#anon-db-anonymize-entire-database-future-version)
@@ -17,6 +18,12 @@ of the fields in a given database.<br/>
 
 It doesn't matter if it's mongodb/postgres or anything else - Just add a connection string and anonymize away!
 <br/><br/>
+
+## Install
+
+```
+npm i dbzar
+```
 
 ## Usage
 
