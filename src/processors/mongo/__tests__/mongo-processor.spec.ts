@@ -49,8 +49,8 @@ describe('mongo-processor', () => {
 
 		// Anonymize the users database
 		if (process.env.MONGO_URL) {
-			const mongoProcessor = new MongoProcessor(config, process.env.MONGO_URL);
-			await mongoProcessor.processDb(db.databaseName);
+			const mongoProcessor = new MongoProcessor(process.env.MONGO_URL);
+			await mongoProcessor.processDb(config, db.databaseName);
 		}
 
 		// Find the document again
@@ -81,8 +81,8 @@ describe('mongo-processor', () => {
 
 		// Anonymize the users database
 		if (process.env.MONGO_URL) {
-			const mongoProcessor = new MongoProcessor(config, process.env.MONGO_URL);
-			await mongoProcessor.processDb(db.databaseName);
+			const mongoProcessor = new MongoProcessor(process.env.MONGO_URL);
+			await mongoProcessor.processDb(config, db.databaseName);
 		}
 
 		// Find the document again
