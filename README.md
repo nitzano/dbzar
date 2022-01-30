@@ -53,8 +53,8 @@ yarn dbzar anon-col postgresql://example:example@localhost test users firstName 
 
 Will change `users` table accordingly:
 
-```json
-{ "firstName": "John" } => { "firstName": "****"  }
+```
+{ "firstName": "John" } => { "firstName": "****" }
 ```
 
 ### `anon-db`: anonymize entire database (future Version)
