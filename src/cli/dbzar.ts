@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import process from 'node:process';
 import {Command} from 'commander';
 import {anonymizeColumn} from './commands/anon-column';
