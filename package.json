@@ -8,6 +8,9 @@
     "bin": {
         "dbzar": "./dist/cli/dbzar.js"
     },
+    "files": [
+        "dist"
+    ],
     "keywords": [
         "db",
         "anonymizer",

@@ -85,7 +85,9 @@ tables:
 
 ```
 
-2. Run the anonymizer
+
+
+1. Run the anonymizer
 
 ```
 // mongo
