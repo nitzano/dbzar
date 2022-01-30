@@ -8,6 +8,13 @@
     "bin": {
         "dbzar": "./dist/cl/dbzar.js"
     },
+    "keywords": [
+        "db",
+        "anonymizer",
+        "postgres",
+        "pg",
+        "mongodb"
+    ],
     "devDependencies": {
         "@commitlint/cli": "^16.1.0",
         "@commitlint/config-conventional": "^16.0.0",
