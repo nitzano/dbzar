@@ -5,8 +5,7 @@
 - [Usage](#usage)
   - [Anonymizing a single column](#anonymizing-a-single-column)
 - [✅ Supported Databases](#-supported-databases)
-- [😎 Advanced Usage](#-advanced-usage)
-  - [Anonymize entire database](#anonymize-entire-database)
+- [Anonymize Databases (Future Version)](#anonymize-databases-future-version)
 - [🔧 Providers](#-providers)
   - [Current](#current)
   - [Future](#future)
@@ -24,6 +23,22 @@ It doesn't matter if it's mongodb/postgres or anything else - Just add a connect
 ### Anonymizing a single column
 
 For example: mask the `name` column in `users` table:
+
+```bash
+Usage: dbzar anon-col [options] <uri> <db> <table> <column>
+
+anonymize a single column in a table
+
+Arguments:
+  uri                       connection string
+  db                        database name
+  table                     table name
+  column                    column name
+
+Options:
+  -p --provider <provider>  provider to be used for column (default: "mask")
+  -h, --help                display help for command
+```
 
 ```
 // postgres
@@ -58,11 +73,9 @@ To:
   - SQLIte
   - CSV
 
-## 😎 Advanced Usage
+## Anonymize Databases (Future Version)
 
-### Anonymize entire database
-
-1. Create Configuration file
+1. Create Configuration file:
 
 ```yaml
 // dbzar.config.yml
@@ -94,10 +107,10 @@ Run:
 
 ```
 // mongo
-dbzar dbzar anon-db --uri mongodb://example:example@mongo:27017 --db test1
+dbzar dbzar anon-db mongodb://example:example@mongo:27017 test1
 
 // postgres
-dbzar dbzar anon-db --uri postgresql://user:password@localhost/mydb --db test2
+dbzar dbzar anon-db postgresql://user:password@localhost/mydb test2
 ```
 
 ## 🔧 Providers
@@ -108,7 +121,8 @@ dbzar dbzar anon-db --uri postgresql://user:password@localhost/mydb --db test2
 
 ### Future
 
-2. `fake` - will generate fake data
-3. `scramble` - change the order randomly
-4. `hash` - replace with hash
-5. `const` - replace with constant string/number
+1. `scramble` - change the order randomly
+2. `hash` - replace with hash
+3. `fake` - will generate fake data
+4. `const` - replace with constant string/number
+5. `remove` - remove the field from the table
