@@ -58,6 +58,7 @@ export class PostgresProcessor extends BaseProcessor implements Processor {
 	 * @memberof MongoProcessor
 	 */
 	async processColumn(tableName: string, columnConfig: ColumnConfig) {
+		// TODO: update in bulk
 		if (this.knexClient) {
 			const columnName: string = columnConfig.name;
 
