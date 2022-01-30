@@ -2,11 +2,12 @@
 <h2 align="center">Agnostic DB Anonymizer 👻</h2>
 
 - [Why?](#why)
+- [Usage](#usage)
+- [Anonymize single column](#anonymize-single-column)
 - [Supported Databases](#supported-databases)
   - [Future support](#future-support)
-- [Usage](#usage)
-  - [Create Configuration file](#create-configuration-file)
-  - [Anonymize existing db](#anonymize-existing-db)
+- [Advanced Usage](#advanced-usage)
+  - [Anonymize entire database](#anonymize-entire-database)
 - [Providers](#providers)
 
 ## Why?
@@ -22,6 +23,20 @@ of the fields in a given database, no matter what it is:
 Just setup a configuration file, add your connection URI and scramble
 away.
 
+## Usage
+
+## Anonymize single column
+
+Mask the `firstName` column in `users` table:
+
+```
+// postgres
+anon-col --uri postgresql://localhost/db1 --table users --column firstName --provider mask
+
+// mongo
+anon-col --uri mongodb://user:password@mongo/db1 --table users --column firstName --provider mask
+```
+
 ## Supported Databases
 
 - MongoDB
@@ -33,9 +48,11 @@ away.
 - SQLIte
 - CSV
 
-## Usage
+## Advanced Usage
 
-### Create Configuration file
+### Anonymize entire database
+
+1. Create Configuration file
 
 ```yaml
 // dbzar.config.yml
@@ -63,7 +80,7 @@ tables:
 
 ```
 
-### Anonymize existing db
+Run:
 
 ```
 // mongo
