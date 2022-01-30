@@ -2,7 +2,7 @@
 <h2 align="center">Agnostic DB Anonymizer 🔁👻</h2>
 
 - [👻 DBZar](#-dbzar)
-- [🔁 Basic Usage](#-basic-usage)
+- [🔁 Usage](#-usage)
   - [Anonymizing a single column](#anonymizing-a-single-column)
 - [✅ Supported Databases](#-supported-databases)
 - [😎 Advanced Usage](#-advanced-usage)
@@ -19,7 +19,7 @@ of the fields in a given database, no matter if it's mongodb/postgres or anythin
 
 Just add a connection string URI and anonymize away!
 
-## 🔁 Basic Usage
+## 🔁 Usage
 
 ### Anonymizing a single column
 
