@@ -12,7 +12,7 @@
 
 - [Install](#install)
 - [👻 Usage](#-usage)
-  - [`anon-col` : anonymize a single column](#anon-col--anonymize-a-single-column)
+  - [`anon-col` : anonymize a single column in a table](#anon-col--anonymize-a-single-column-in-a-table)
   - [`anon-db`: anonymize entire database (future Version)](#anon-db-anonymize-entire-database-future-version)
 - [✅ Supported Databases](#-supported-databases)
 - [🔧 Providers](#-providers)
@@ -32,7 +32,7 @@ npm i --save-dev dbzar
 
 ## 👻 Usage
 
-### `anon-col` : anonymize a single column
+### `anon-col` : anonymize a single column in a table
 
 For example: mask the `name` column in `users` table:
 
@@ -42,10 +42,10 @@ Usage: dbzar anon-col [options] <uri> <db> <table> <column>
 
 ```
 // postgres
-yarn dbzar anon-col mongodb://example:example@localhost test users firstName
+yarn dbzar anon-col mongodb://example:example@localhost test users firstName --provider mask
 
 // mongo
-yarn dbzar anon-col postgresql://example:example@localhost test users firstName
+yarn dbzar anon-col postgresql://example:example@localhost test users firstName --provider mask
 ```
 
 Will change `users` records:
