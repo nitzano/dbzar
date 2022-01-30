@@ -6,7 +6,7 @@
     "author": "Nitzan Ohana <16689354+nitzano@users.noreply.github.com>",
     "license": "MIT",
     "bin": {
-        "dbzar": "./dist/cl/dbzar.js"
+        "dbzar": "./dist/cli/dbzar.js"
     },
     "keywords": [
         "db",
