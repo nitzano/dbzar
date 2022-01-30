@@ -10,7 +10,7 @@ export async function anonymizeColumn(
 	tableName: string,
 	columnName: string,
 	provider: ProviderType,
-	_dbName?: string,
+	dbName?: string,
 ) {
 	// Parse the engine
 	const engine = getConnectionStringEngine(connectionStringUri);
@@ -30,6 +30,6 @@ export async function anonymizeColumn(
 	}
 
 	if (processor) {
-		await processor.processColumn(tableName, columnName, provider);
+		await processor.processColumn(tableName, columnName, provider, dbName);
 	}
 }
