@@ -1,16 +1,16 @@
 <h1 align="center">DBZar</h1>
 <h2 align="center">Agnostic DB Anonymizer 🔁👻</h2>
 
-- [👻 DBZar](#-dbzar)
+- [DBZar](#dbzar)
 - [Usage](#usage)
   - [Anonymizing a single column](#anonymizing-a-single-column)
-- [✅ Supported Databases](#-supported-databases)
+- [Supported Databases](#supported-databases)
 - [Anonymize Databases (Future Version)](#anonymize-databases-future-version)
 - [🔧 Providers](#-providers)
   - [Current](#current)
   - [Future](#future)
 
-## 👻 DBZar
+## DBZar
 
 DBZar (Database + "Foreign" in Hebrew) let you mask/scramble/fake some or all
 of the fields in a given database.<br/>
@@ -64,7 +64,7 @@ To:
 }
 ```
 
-## ✅ Supported Databases
+## Supported Databases
 
 - MongoDB
 - Postgres
