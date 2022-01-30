@@ -3,7 +3,7 @@
 
 - [Why?](#why)
 - [Usage](#usage)
-- [Anonymize single column](#anonymize-single-column)
+- [Anonymize a single column](#anonymize-a-single-column)
 - [Supported Databases](#supported-databases)
   - [Future support](#future-support)
 - [Advanced Usage](#advanced-usage)
@@ -25,7 +25,7 @@ away.
 
 ## Usage
 
-## Anonymize single column
+## Anonymize a single column
 
 Mask the `firstName` column in `users` table:
 
