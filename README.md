@@ -16,7 +16,6 @@
   - [`anon-db`: anonymize entire database (future Version)](#anon-db-anonymize-entire-database-future-version)
 - [✅ Supported Databases](#-supported-databases)
 - [🔧 Providers](#-providers)
-  - [Current](#current)
 
 **DBZar** (Database + "Foreign" in Hebrew) let you mask/scramble/fake fields in a given database regardless if it's mongodb/postgres or anything else - Just add a connection string and anonymize away!
 
@@ -104,8 +103,6 @@ dbzar dbzar anon-db postgresql://example:example@localhost test2
   - CSV
 
 ## 🔧 Providers
-
-### Current
 
 1. `mask` - will replaces some/all characters (default: `"*"`)
 1. Future
