@@ -39,6 +39,8 @@ npx dbzar
 
 ### `anon-col` : anonymize a single column in a table
 
+( ⚠ This command: changes whichever db provided so use with caution )
+
 For example: mask the `name` column in `users` table:
 
 ```bash
