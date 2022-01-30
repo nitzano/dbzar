@@ -10,7 +10,7 @@ export interface Processor {
 		columnName: string,
 		provider: ProviderType,
 		dbName?: string,
-	): Promise<void>;
+	): void;
 }
 
 export class BaseProcessor {
