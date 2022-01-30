@@ -10,6 +10,7 @@ export async function anonymizeColumn(
 	tableName: string,
 	columnName: string,
 	provider: ProviderType,
+	_dbName?: string,
 ) {
 	// Parse the engine
 	const engine = getConnectionStringEngine(connectionStringUri);
