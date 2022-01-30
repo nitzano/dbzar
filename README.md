@@ -1,6 +1,5 @@
 <h1 align="center">DBZar</h1>
 <h2 align="center">Agnostic DB Anonymizer 🔁👻</h2>
-<br/>
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -84,8 +83,6 @@ tables:
           options: { min: 100, max: 999 }
 
 ```
-
-
 
 1. Run the anonymizer
 
