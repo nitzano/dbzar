@@ -3,9 +3,9 @@
 
 - [DBZar](#dbzar)
 - [Usage](#usage)
-  - [Anonymizing a single column](#anonymizing-a-single-column)
+  - [`anon-col` : anonymize a single column](#anon-col--anonymize-a-single-column)
+  - [`anon-db`: anonymize entire database (future Version)](#anon-db-anonymize-entire-database-future-version)
 - [Supported Databases](#supported-databases)
-- [Anonymize Databases (Future Version)](#anonymize-databases-future-version)
 - [🔧 Providers](#-providers)
   - [Current](#current)
   - [Future](#future)
@@ -20,24 +20,12 @@ It doesn't matter if it's mongodb/postgres or anything else - Just add a connect
 
 ## Usage
 
-### Anonymizing a single column
+### `anon-col` : anonymize a single column
 
 For example: mask the `name` column in `users` table:
 
 ```bash
 Usage: dbzar anon-col [options] <uri> <db> <table> <column>
-
-anonymize a single column in a table
-
-Arguments:
-  uri                       connection string
-  db                        database name
-  table                     table name
-  column                    column name
-
-Options:
-  -p --provider <provider>  provider to be used for column (default: "mask")
-  -h, --help                display help for command
 ```
 
 ```
@@ -48,32 +36,13 @@ yarn dbzar anon-col mongodb://example:example@localhost test users firstName
 yarn dbzar anon-col postgresql://example:example@localhost test users firstName
 ```
 
-Will change `users` records from:
+Will change `users` records:
 
 ```json
-{
-  "name": "John Doe"
-}
+{ "name": "John Doe" } => { "name": "**** ***"  }
 ```
 
-To:
-
-```json
-{
-  "name": "**** ***" // mask
-}
-```
-
-## Supported Databases
-
-- MongoDB
-- Postgres
-- Future support
-  - MariaDB / MySQL
-  - SQLIte
-  - CSV
-
-## Anonymize Databases (Future Version)
+### `anon-db`: anonymize entire database (future Version)
 
 1. Create Configuration file:
 
@@ -102,15 +71,24 @@ tables:
 
 ```
 
-2. Run:
+2. Run the anonymizer
 
 ```
 // mongo
 dbzar dbzar anon-db mongodb://example:example@mongo:27017 test1
 
 // postgres
-dbzar dbzar anon-db postgresql://user:password@localhost/mydb test2
+dbzar dbzar anon-db postgresql://user:password@localhost test2
 ```
+
+## Supported Databases
+
+- MongoDB
+- Postgres
+- Future support
+  - MariaDB / MySQL
+  - SQLIte
+  - CSV
 
 ## 🔧 Providers
 
