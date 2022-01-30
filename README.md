@@ -81,7 +81,7 @@ tables:
 dbzar dbzar anon-db mongodb://example:example@mongo:27017 test1
 
 // postgres
-dbzar dbzar anon-db postgresql://user:password@localhost test2
+dbzar dbzar anon-db postgresql://example:example@localhost test2
 ```
 
 ## ✅ Supported Databases
