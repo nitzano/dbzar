@@ -1,8 +1,10 @@
 import {Db, MongoClient} from 'mongodb';
 import {Config, TableConfig} from '../../config/types';
+import {debugLogger} from '../../services/loggers/debug-logger';
 import {ProviderType} from '../../types/types';
 import {BaseProcessor, Processor} from '../base-processor/base-processor';
 
+const logger = debugLogger.extend('mongo-processor');
 export class MongoProcessor extends BaseProcessor implements Processor {
 	/**
 	 * Process the mongo db name
@@ -81,6 +83,7 @@ export class MongoProcessor extends BaseProcessor implements Processor {
 		provider: ProviderType,
 		dbName?: string,
 	) {
+		logger('processColumn');
 		const client = new MongoClient(this.uri);
 		let db: Db | undefined;
 		try {
