@@ -31,6 +31,8 @@ Great for:
 npm i --save-dev dbzar
 // OR
 yarn add -D dbzar
+// OR
+npx dbzar
 ```
 
 ## 👻 Usage
@@ -45,10 +47,10 @@ Usage: dbzar anon-col [options] <uri> <db> <table> <column>
 
 ```
 // postgres
-yarn dbzar anon-col mongodb://example:example@localhost test users firstName --provider mask
+npx dbzar anon-col mongodb://example:example@localhost test users firstName --provider mask
 
 // mongo
-yarn dbzar anon-col postgresql://example:example@localhost test users firstName --provider mask
+npx dbzar anon-col postgresql://example:example@localhost test users firstName --provider mask
 ```
 
 Will change `users` table accordingly:
@@ -90,10 +92,10 @@ tables:
 
 ```
 // mongo
-dbzar dbzar anon-db mongodb://example:example@mongo:27017 test1
+npx dbzar anon-db mongodb://example:example@mongo:27017 test1
 
 // postgres
-dbzar dbzar anon-db postgresql://example:example@localhost test2
+npx dbzar anon-db postgresql://example:example@localhost test2
 ```
 
 ## ✅ Supported Databases
