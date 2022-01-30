@@ -22,7 +22,7 @@ It doesn't matter if it's mongodb/postgres or anything else - Just add a connect
 ## Install
 
 ```
-npm i dbzar
+npm i --save-dev dbzar
 ```
 
 ## Usage
