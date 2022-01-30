@@ -1,7 +1,7 @@
 <h1 align="center">DBZar</h1>
 <h2 align="center">Agnostic DB Anonymizer 🔁👻</h2>
 <br/>
-<div align="left">
+<div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
@@ -17,11 +17,12 @@
 - [🔧 Providers](#-providers)
   - [Current](#current)
 
-<br/>
-DBZar (Database + "Foreign" in Hebrew) let you mask/scramble/fake some or all
-of the fields in a given database.<br/>
+**DBZar** (Database + "Foreign" in Hebrew) let you mask/scramble/fake some or all of the fields in a given database regardless if it's mongodb/postgres or anything else - Just add a connection string and anonymize away!
 
-It doesn't matter if it's mongodb/postgres or anything else - Just add a connection string and anonymize away!
+Great for:
+
+1. Anonymizing production servers for local development.
+2. General utility to manipulate existing database easily.
 
 ## Install
 
