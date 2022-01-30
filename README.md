@@ -79,7 +79,6 @@ To:
 
 ```yaml
 // dbzar.config.yml
-
 tables:
     - name: users
       columns:
@@ -103,7 +102,7 @@ tables:
 
 ```
 
-Run:
+2. Run:
 
 ```
 // mongo
