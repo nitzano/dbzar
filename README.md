@@ -18,7 +18,7 @@
 - [✅ Supported Databases](#-supported-databases)
 - [🔧 Providers](#-providers)
 
-**DBZar** (Database + "Foreign" in Hebrew) let you mask/scramble/fake fields in any given database, just add a connection string and anonymize away!
+**DBZar** (Database + "stranger" in Hebrew) let you mask/scramble/fake fields in any given database, just add a connection string and anonymize away!
 
 Great for:
 
@@ -31,13 +31,17 @@ Great for:
 npm i --save-dev dbzar
 // OR
 yarn add -D dbzar
+// OR
+npx dbzar
 ```
 
 ## 👻 Usage
 
 ### `anon-col` : anonymize a single column in a table
 
-For example: mask the `name` column in `users` table:
+(⚠ Changes whichever db provided so use with caution)
+
+For example: mask the `firstName` column in `users` table:
 
 ```bash
 Usage: dbzar anon-col [options] <uri> <db> <table> <column>
@@ -45,16 +49,16 @@ Usage: dbzar anon-col [options] <uri> <db> <table> <column>
 
 ```
 // postgres
-yarn dbzar anon-col mongodb://example:example@localhost test users firstName --provider mask
+npx dbzar anon-col postgresql://example:example@localhost test users firstName --provider mask
 
 // mongo
-yarn dbzar anon-col postgresql://example:example@localhost test users firstName --provider mask
+npx dbzar anon-col mongodb://example:example@localhost test users firstName --provider mask
 ```
 
 Will change `users` table accordingly:
 
-```json
-{ "firstName": "John" } => { "firstName": "****"  }
+```
+{ "firstName": "John" } => { "firstName": "****" }
 ```
 
 ### `anon-db`: anonymize entire database (future Version)
@@ -89,11 +93,11 @@ tables:
 1. Run the anonymizer
 
 ```
-// mongo
-dbzar dbzar anon-db mongodb://example:example@mongo:27017 test1
-
 // postgres
-dbzar dbzar anon-db postgresql://example:example@localhost test2
+npx dbzar anon-db postgresql://example:example@localhost test2
+
+// mongo
+npx dbzar anon-db mongodb://example:example@mongo:27017 test1
 ```
 
 ## ✅ Supported Databases
