@@ -5731,9 +5731,9 @@ pg-int8@1.0.1:
   integrity sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==
 
 pg-mem@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/pg-mem/-/pg-mem-2.2.2.tgz#ced325b33420a6483eb1fc4ee1bf68a2f57ae4d4"
-  integrity sha512-g0QmbHVh0sZV/153bDcSCgVufCB95FLpafDFON8n2i8FQieHUS911YtHgKuBXyF65D1eQhDOfYuYBBK/3MpTWA==
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/pg-mem/-/pg-mem-2.3.0.tgz#7dc15f9fbb6910ac80ca888427954c8ce60342e8"
+  integrity sha512-QJ/CcHIO5NNk6XNLr+5CtqHfuW2urn5jJYIV/jc29SHOgjEzG6nZc83aBgM8TTYgqd0dDh2Ml/o9QDgHvRZwSQ==
   dependencies:
     "@mikro-orm/core" "^4.5.3"
     "@mikro-orm/postgresql" "^4.5.3"
@@ -5742,7 +5742,7 @@ pg-mem@^2.2.2:
     lru-cache "^6.0.0"
     moment "^2.27.0"
     object-hash "^2.0.3"
-    pgsql-ast-parser "^9.2.2"
+    pgsql-ast-parser "^9.3.2"
 
 pg-pool@^3.3.0, pg-pool@^3.4.1:
   version "3.4.1"
@@ -5798,10 +5798,10 @@ pgpass@1.x:
   dependencies:
     split2 "^4.1.0"
 
-pgsql-ast-parser@^9.2.2:
-  version "9.2.2"
-  resolved "https://registry.yarnpkg.com/pgsql-ast-parser/-/pgsql-ast-parser-9.2.2.tgz#0559b0fc75bc015135c8b0538a4b24c9f6810b72"
-  integrity sha512-cnRX2y8YvrLedx0gM095sOe+tpzQYl9SGr9nnBkQumSE+/0v5+1Md0euHRH290XQhk4aKMK06OMfss9jfpLPjA==
+pgsql-ast-parser@^9.3.2:
+  version "9.3.2"
+  resolved "https://registry.yarnpkg.com/pgsql-ast-parser/-/pgsql-ast-parser-9.3.2.tgz#ad70a46254a7e422a16f3240b74849728f6700e6"
+  integrity sha512-fm6lysCuxnw4/mC1Cg23B6ROokZO+lBc/TSnwYfha4p5DcngAbIlsevKF9bXuaE8MWdiH1BKYLmytOsqRGAoDQ==
   dependencies:
     moo "^0.5.1"
     nearley "^2.19.5"
