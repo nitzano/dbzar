@@ -25,7 +25,7 @@
 Great for:
 
 1. Anonymizing production servers for local development.
-2. General utility to manipulate existing database easily.
+2. General utility to manipulate existing databases easily.
 
 ## 💻 Install
 
