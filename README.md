@@ -11,7 +11,7 @@
 
 </div>
 
-- [Install](#install)
+- [💻 Install](#-install)
 - [👻 Usage](#-usage)
   - [`anon-col` : anonymize a single column in a table](#anon-col--anonymize-a-single-column-in-a-table)
   - [`anon-db`: anonymize entire database (future Version)](#anon-db-anonymize-entire-database-future-version)
@@ -25,7 +25,7 @@ Great for:
 1. Anonymizing production servers for local development.
 2. General utility to manipulate existing database easily.
 
-## Install
+## 💻 Install
 
 ```
 npm i --save-dev dbzar
