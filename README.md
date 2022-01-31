@@ -11,19 +11,21 @@
 
 </div>
 
-**DBZar** (Database + "stranger" in Hebrew) let you mask/scramble/fake fields in any given database, just add a connection string and anonymize away!
-
-Great for:
-
-1. Anonymizing production servers for local development.
-2. General utility to manipulate existing database easily.
-
 - [💻 Install](#-install)
 - [👻 Usage](#-usage)
   - [`anon-col` : anonymize a single column in a table](#anon-col--anonymize-a-single-column-in-a-table)
   - [`anon-db`: anonymize entire database (future Version)](#anon-db-anonymize-entire-database-future-version)
 - [✅ Supported Databases](#-supported-databases)
 - [🔧 Providers](#-providers)
+
+<br/>
+
+**DBZar** (Database + "stranger" in Hebrew) let you mask/scramble/fake fields in any given database, just add a connection string and anonymize away!
+
+Great for:
+
+1. Anonymizing production servers for local development.
+2. General utility to manipulate existing database easily.
 
 ## 💻 Install
 
