@@ -6,8 +6,6 @@ import {anonymizeColumn} from './commands/anon-column';
 
 const program = new Command();
 
-program.version('0.0.1');
-
 // Anon column
 program
 	.command('anon-col')
