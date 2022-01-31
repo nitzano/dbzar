@@ -18,7 +18,7 @@
 - [✅ Supported Databases](#-supported-databases)
 - [🔧 Providers](#-providers)
 
-**DBZar** (Database + "Foreign" in Hebrew) let you mask/scramble/fake fields in any given database, just add a connection string and anonymize away!
+**DBZar** (Database + "stranger" in Hebrew) let you mask/scramble/fake fields in any given database, just add a connection string and anonymize away!
 
 Great for:
 
@@ -49,10 +49,10 @@ Usage: dbzar anon-col [options] <uri> <db> <table> <column>
 
 ```
 // postgres
-npx dbzar anon-col mongodb://example:example@localhost test users firstName --provider mask
+npx dbzar anon-col postgresql://example:example@localhost test users firstName --provider mask
 
 // mongo
-npx dbzar anon-col postgresql://example:example@localhost test users firstName --provider mask
+npx dbzar anon-col mongodb://example:example@localhost test users firstName --provider mask
 ```
 
 Will change `users` table accordingly:
@@ -93,11 +93,11 @@ tables:
 1. Run the anonymizer
 
 ```
-// mongo
-npx dbzar anon-db mongodb://example:example@mongo:27017 test1
-
 // postgres
 npx dbzar anon-db postgresql://example:example@localhost test2
+
+// mongo
+npx dbzar anon-db mongodb://example:example@mongo:27017 test1
 ```
 
 ## ✅ Supported Databases
