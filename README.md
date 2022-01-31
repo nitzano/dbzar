@@ -41,7 +41,7 @@ npx dbzar
 
 (⚠ Changes whichever db provided so use with caution)
 
-For example: mask the `name` column in `users` table:
+For example: mask the `firstName` column in `users` table:
 
 ```bash
 Usage: dbzar anon-col [options] <uri> <db> <table> <column>
