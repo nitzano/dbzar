@@ -106,8 +106,9 @@ npx dbzar anon-db mongodb://example:example@mongo:27017 test1
 
 - MongoDB
 - Postgres
+- MariaDB
 - Future support
-  - MariaDB / MySQL
+  - MySQL
   - SQLIte
   - CSV
 
