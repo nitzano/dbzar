@@ -49,6 +49,7 @@
     "scripts": {
         "prebuild": "yarn clean",
         "build": "tsc",
+        "build:prod": "yarn build -p tsconfig.prod.json",
         "clean": "rimraf dist/**",
         "lint": "xo",
         "lint:fix": "yarn lint --fix",
