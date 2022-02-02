@@ -18,7 +18,9 @@
         "anonymizer",
         "postgres",
         "pg",
-        "mongodb"
+        "mongodb",
+        "mariadb",
+        "mysql"
     ],
     "devDependencies": {
         "@commitlint/cli": "^16.1.0",
