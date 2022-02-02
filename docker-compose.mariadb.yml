@@ -2,13 +2,12 @@ version: "3.9"
 
 services:
   db:
-    image: postgres
+    image: mariadb
     restart: always
     environment:
-      POSTGRES_PASSWORD: example
-      POSTGRES_DB: test
-    ports:
-      - 5432:5432
+      MARIADB_ROOT_PASSWORD: example
+      MARIADB_DATABASE: test
+      MARIADB_USER: root
 
   adminer:
     image: adminer
