@@ -5,7 +5,9 @@ services:
     image: mariadb
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: example
+      MYSQL_ROOT_PASSWORD: example123
+      MYSQL_USER: test
+      MYSQL_PASSWORD: example
       MYSQL_DATABASE: test
     ports:
       - "3306:3306"
