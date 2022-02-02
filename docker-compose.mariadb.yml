@@ -9,7 +9,7 @@ services:
       MARIADB_DATABASE: test
       MARIADB_USER: root
     ports:
-      - "3306:3306"
+      - 3306:3306
 
   adminer:
     image: adminer
