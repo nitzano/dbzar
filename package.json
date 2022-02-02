@@ -35,7 +35,6 @@
         "husky": "^7.0.4",
         "jest": "^27.4.7",
         "lint-staged": "^12.1.5",
-        "mongoose": "^6.1.7",
         "nodemon": "^2.0.15",
         "pg-mem": "^2.2.2",
         "prettier": "^2.5.1",
