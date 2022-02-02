@@ -1915,6 +1915,11 @@ commander@^8.3.0:
   resolved "https://registry.npmjs.org/commander/-/commander-8.3.0.tgz"
   integrity sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==
 
+commander@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-9.0.0.tgz#86d58f24ee98126568936bd1d3574e0308a99a40"
+  integrity sha512-JJfP2saEKbQqvW+FI93OYUB4ByV5cizMpFMiiJI8xDbBvQvSkIk0VvQdn1CZ8mqAO8Loq2h0gYTYtDFUZUeERw==
+
 commitizen@^4.0.3:
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/commitizen/-/commitizen-4.2.4.tgz#a3e5b36bd7575f6bf6e7aa19dbbf06b0d8f37165"
@@ -4703,9 +4708,9 @@ knex@0.21.19:
     v8flags "^3.2.0"
 
 knex@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/knex/-/knex-1.0.1.tgz#0916dc2b79375cd15bfbf0d70bf3c5ef5f411a33"
-  integrity sha512-pusgMo74lEbUxmri+YfWV8x/LJacP/2KcemTCKH7WnXFYz5RoMi+8WM4OJ05b0glfF+aWB4nkFsxsXxJ8qioLQ==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/knex/-/knex-1.0.2.tgz#1b79273f39f587a631c1a5515482c203d5971781"
+  integrity sha512-RuDKTylj6X/3nYomnsFV8sOdxTcehLHczOd3yrUdULE4pQR8jVlZxYt3vvIU04otJF0Cw9DCtRt05S4PN4kDpw==
   dependencies:
     colorette "2.0.16"
     commander "^8.3.0"
@@ -4781,9 +4786,9 @@ lines-and-columns@^1.1.6:
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
 
 lint-staged@^12.1.5:
-  version "12.3.2"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-12.3.2.tgz#c87fe59dca475b7d1cb56863c5faa03c145e1446"
-  integrity sha512-gtw4Cbj01SuVSfAOXC6ivd/7VKHTj51yj5xV8TgktFmYNMsZzXuSd5/brqJEA93v63wL7R6iDlunMANOechC0A==
+  version "12.3.3"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-12.3.3.tgz#0a465962fe53baa2b4b9da50801ead49a910e03b"
+  integrity sha512-OqcLsqcPOqzvsfkxjeBpZylgJ3SRG1RYqc9LxC6tkt6tNsq1bNVkAixBwX09f6CobcHswzqVOCBpFR1Fck0+ag==
   dependencies:
     cli-truncate "^3.1.0"
     colorette "^2.0.16"
@@ -5199,20 +5204,19 @@ mongodb@^4.3.0:
     saslprep "^1.0.3"
 
 mongoose@^6.1.7:
-  version "6.1.7"
-  resolved "https://registry.npmjs.org/mongoose/-/mongoose-6.1.7.tgz"
-  integrity sha512-GqU/G/5yu/CWBHdW24cfGPsW4rADER+eeXj+bwvb6mLjg6uAASl8GnE6pmEbafZJ4Uv9V7jf5LaBMJMNwvQEtg==
+  version "6.1.10"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-6.1.10.tgz#ad2131fe92d7397897b3fede5fccb251ac2806ca"
+  integrity sha512-OELTPFun6+UHv+A7Fvig8bdOWFXcuD1nPeU86lsnIBadGbwduJAGKmCYDGIS6bt9oQtyUayHlndfVgzQF3AaUA==
   dependencies:
     "@types/node" "< 17.0.6"
     bson "^4.2.2"
     kareem "2.3.3"
     mongodb "4.2.2"
     mpath "0.8.4"
-    mquery "4.0.0"
+    mquery "4.0.2"
     ms "2.1.2"
     regexp-clone "1.0.0"
     sift "13.5.2"
-    sliced "1.0.1"
 
 moo@^0.5.0, moo@^0.5.1:
   version "0.5.1"
@@ -5224,14 +5228,12 @@ mpath@0.8.4:
   resolved "https://registry.npmjs.org/mpath/-/mpath-0.8.4.tgz"
   integrity sha512-DTxNZomBcTWlrMW76jy1wvV37X/cNNxPW1y2Jzd4DZkAaC5ZGsm8bfGfNOthcDuRJujXLqiuS6o3Tpy0JEoh7g==
 
-mquery@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/mquery/-/mquery-4.0.0.tgz"
-  integrity sha512-nGjm89lHja+T/b8cybAby6H0YgA4qYC/lx6UlwvHGqvTq8bDaNeCwl1sY8uRELrNbVWJzIihxVd+vphGGn1vBw==
+mquery@4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/mquery/-/mquery-4.0.2.tgz#a13add5ecd7c2e5a67e0f814b3c7acdfb6772804"
+  integrity sha512-oAVF0Nil1mT3rxty6Zln4YiD6x6QsUWYz927jZzjMxOK2aqmhEz5JQ7xmrKK7xRFA2dwV+YaOpKU/S+vfNqKxA==
   dependencies:
     debug "4.x"
-    regexp-clone "^1.0.0"
-    sliced "1.0.1"
 
 ms@2.0.0:
   version "2.0.0"
@@ -5731,9 +5733,9 @@ pg-int8@1.0.1:
   integrity sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==
 
 pg-mem@^2.2.2:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/pg-mem/-/pg-mem-2.3.0.tgz#7dc15f9fbb6910ac80ca888427954c8ce60342e8"
-  integrity sha512-QJ/CcHIO5NNk6XNLr+5CtqHfuW2urn5jJYIV/jc29SHOgjEzG6nZc83aBgM8TTYgqd0dDh2Ml/o9QDgHvRZwSQ==
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/pg-mem/-/pg-mem-2.3.2.tgz#97ae726c001e52188d8fea06b44add7c8d76acfd"
+  integrity sha512-1uBe8lENJaUPwwdJtmiANcweY4UqC5Un45EGmY+5o2iSHwdAH2sSGqTWIPb7ULuZyxjS+PIiH+bZyq/2QMrhuQ==
   dependencies:
     "@mikro-orm/core" "^4.5.3"
     "@mikro-orm/postgresql" "^4.5.3"
@@ -6121,7 +6123,7 @@ regex-not@^1.0.0, regex-not@^1.0.2:
     extend-shallow "^3.0.2"
     safe-regex "^1.1.0"
 
-regexp-clone@1.0.0, regexp-clone@^1.0.0:
+regexp-clone@1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/regexp-clone/-/regexp-clone-1.0.0.tgz"
   integrity sha512-TuAasHQNamyyJ2hb97IuBEif4qBHGjPHBS64sZwytpLEqtBQ1gPJTnOaQ6qmpET16cK14kkjbazl6+p0RRv0yw==
@@ -6454,11 +6456,6 @@ slice-ansi@^5.0.0:
   dependencies:
     ansi-styles "^6.0.0"
     is-fullwidth-code-point "^4.0.0"
-
-sliced@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/sliced/-/sliced-1.0.1.tgz"
-  integrity sha1-CzpmK10Ewxd7GSa+qCsD+Dei70E=
 
 smart-buffer@^4.1.0:
   version "4.2.0"
