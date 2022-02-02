@@ -5,11 +5,10 @@ services:
     image: mariadb
     restart: always
     environment:
-      MARIADB_ROOT_PASSWORD: example
-      MARIADB_DATABASE: test
-      MARIADB_USER: root
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: test
     ports:
-      - 3306:3306
+      - "3306:3306"
 
   adminer:
     image: adminer
