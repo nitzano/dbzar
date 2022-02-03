@@ -20,7 +20,8 @@
         "pg",
         "mongodb",
         "mariadb",
-        "mysql"
+        "mysql",
+        "mock"
     ],
     "devDependencies": {
         "@commitlint/cli": "^16.1.0",
