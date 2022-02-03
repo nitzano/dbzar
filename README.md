@@ -107,10 +107,11 @@ npx dbzar anon-db mongodb://example:example@mongo:27017 test1
 
 ## ✅ Supported Databases
 
-- MongoDB
-- Postgres
-- MariaDB
-- MySQL
+1. MongoDB
+2. Postgres
+3. MariaDB
+4. MySQL
+
 - Future support
   - SQLIte
   - CSV
