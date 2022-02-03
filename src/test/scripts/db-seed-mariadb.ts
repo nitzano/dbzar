@@ -1,4 +1,4 @@
-// Create a fake pg db
+// Create a fake maria db
 import 'dotenv/config'; // eslint-disable-line import/no-unassigned-import
 import process from 'node:process';
 import knex, {Knex} from 'knex';
@@ -7,11 +7,11 @@ import {userFactory} from '../factories/user';
 const sampleTableName = 'users';
 
 async function run() {
-	const connectionString = process.env.POSTGRES_DB_URI;
+	const connectionString = process.env.MARIADB_DB_URI;
 	if (connectionString) {
 		const client: Knex = knex({
-			client: 'pg',
-			connection: {connectionString},
+			client: 'mysql',
+			connection: connectionString,
 		});
 		try {
 			await client.schema.dropTableIfExists(sampleTableName);

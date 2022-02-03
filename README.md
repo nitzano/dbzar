@@ -55,6 +55,9 @@ npx dbzar anon-col postgresql://example:example@localhost test users firstName -
 
 // mongo
 npx dbzar anon-col mongodb://example:example@localhost test users firstName --provider mask
+
+// mariadb / mysql
+npx dbzar anon-col mysql://example:example@localhost test users firstName --provider mask
 ```
 
 Will change `users` table accordingly:
@@ -104,10 +107,12 @@ npx dbzar anon-db mongodb://example:example@mongo:27017 test1
 
 ## ✅ Supported Databases
 
-- MongoDB
-- Postgres
+1. MongoDB
+2. Postgres
+3. MariaDB
+4. MySQL
+
 - Future support
-  - MariaDB / MySQL
   - SQLIte
   - CSV
 

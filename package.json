@@ -18,7 +18,9 @@
         "anonymizer",
         "postgres",
         "pg",
-        "mongodb"
+        "mongodb",
+        "mariadb",
+        "mysql"
     ],
     "devDependencies": {
         "@commitlint/cli": "^16.1.0",
@@ -57,6 +59,7 @@
         "prepare": "husky install",
         "db:seed:mongo": "ts-node src/test/scripts/mongo-db-seed.ts dotenv_config_path=.dev.env",
         "db:seed:pg": "ts-node src/test/scripts/db-seed-pg.ts dotenv_config_path=.dev.env",
+        "db:seed:maria": "ts-node src/test/scripts/db-seed-mariadb.ts dotenv_config_path=.dev.env",
         "commit": "cz",
         "dbzar": "ts-node src/cli/dbzar.ts"
     },
@@ -73,6 +76,7 @@
         "knex": "^1.0.1",
         "lodash": "^4.17.21",
         "mongodb": "^4.3.0",
+        "mysql": "^2.18.1",
         "pg": "^8.7.1"
     }
 }
