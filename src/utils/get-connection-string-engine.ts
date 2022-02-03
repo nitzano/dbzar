@@ -14,6 +14,10 @@ export function getConnectionStringEngine(
 					return EngineType.PostGres;
 				case 'mongodb':
 					return EngineType.Mongo;
+				case 'mariadb':
+					return EngineType.MariaDB;
+				case 'mysql':
+					return EngineType.MySQL;
 				default:
 					break;
 			}
