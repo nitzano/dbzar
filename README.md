@@ -55,6 +55,9 @@ npx dbzar anon-col postgresql://example:example@localhost test users firstName -
 
 // mongo
 npx dbzar anon-col mongodb://example:example@localhost test users firstName --provider mask
+
+// mariadb / mysql
+npx dbzar anon-col mysql://example:example@127.0.0.1 test users firstName --provider mask
 ```
 
 Will change `users` table accordingly:
