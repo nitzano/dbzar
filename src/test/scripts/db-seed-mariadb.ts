@@ -11,7 +11,7 @@ async function run() {
 	if (connectionString) {
 		const client: Knex = knex({
 			client: 'mysql',
-			connection: {connectionString},
+			connection: connectionString,
 		});
 		try {
 			await client.schema.dropTableIfExists(sampleTableName);
