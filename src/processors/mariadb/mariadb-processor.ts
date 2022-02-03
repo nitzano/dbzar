@@ -3,9 +3,9 @@ import {debugLogger} from '../../services/loggers/debug-logger';
 import {ProviderType} from '../../types/types';
 import {BaseProcessor, Processor} from '../base-processor/base-processor';
 
-const logger = debugLogger.extend('postgress-processor');
+const logger = debugLogger.extend('mariadb-processor');
 
-export class PostgresProcessor extends BaseProcessor implements Processor {
+export class MariaDbProcessor extends BaseProcessor implements Processor {
 	/**
 	 * Process a column (document)
 	 *
@@ -69,7 +69,7 @@ export class PostgresProcessor extends BaseProcessor implements Processor {
 
 	private buildClient(connectionString: string): Knex {
 		return knex({
-			client: 'pg',
+			client: 'mysql',
 			connection: connectionString,
 		});
 	}
