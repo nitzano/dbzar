@@ -4,6 +4,8 @@ import {ProviderType} from '../types/types';
 export enum EngineType {
 	PostGres = 'postgres',
 	Mongo = 'mongo',
+	MariaDB = 'mariadb',
+	MySQL = 'mysql',
 }
 
 export interface Config {
