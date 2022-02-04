@@ -1,4 +1,5 @@
 import {prompt} from 'enquirer';
+import ora from 'ora';
 import {anonymizeColumn} from './anon-column';
 
 export async function anonColAction(
@@ -24,5 +25,7 @@ export async function anonColAction(
 		throw new Error('could not receive answer');
 	}
 
+	const spinner = ora('Anonymizing column').start();
 	await anonymizeColumn(uri, table, column, options.provider, db);
+	spinner.stop();
 }

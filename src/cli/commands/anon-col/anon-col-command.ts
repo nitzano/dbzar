@@ -4,7 +4,6 @@ import {anonColAction} from './anon-col-action';
 export const anonColCommand = new Command('anon-col');
 
 anonColCommand
-	.command('anon-col')
 	.argument('<uri>', 'connection string')
 	.argument('<db>', 'database name')
 	.argument('<table>', 'table name')
