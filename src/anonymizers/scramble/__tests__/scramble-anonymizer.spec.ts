@@ -8,7 +8,8 @@ describe('ScrambleAnonymizer', () => {
 	});
 
 	it('should scramble a string', () => {
-		const result: string = anonymizer.anonymize('test') as string;
-		expect(result).not.toBe('test');
+		const word = 'hello';
+		const result: string = anonymizer.anonymize(word) as string;
+		expect(result).not.toBe(word);
 	});
 });
