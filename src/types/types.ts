@@ -1,6 +1,8 @@
 import {FakeOptions} from '../anonymizers/fake/fake-options';
 
-export type ProviderType = 'mask' | 'fake' | 'const';
+export const providers: string[] = ['mask', 'scramble'];
+
+export type ProviderType = 'mask' | 'fake' | 'const' | 'scramble';
 
 export interface BaseProvider {
 	type: ProviderType;
