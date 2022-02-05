@@ -5,6 +5,7 @@ import {anonColAction} from './anon-col-action';
 export const anonColCommand = new Command('anon-col');
 
 anonColCommand
+	.description('anonymize a single column in a table')
 	.argument('<uri>', 'connection string')
 	.argument('<db>', 'database name')
 	.argument('<table>', 'table name')
@@ -14,6 +15,5 @@ anonColCommand
 			.default('mask')
 			.choices(providers),
 	)
-	.option('-skip --skip-confirm', 'skip confirmation')
-	.description('anonymize a single column in a table')
+	.option('-Confirm --no-confirm', 'Do not wait for user confirmation')
 	.action(anonColAction);
