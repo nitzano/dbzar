@@ -1,5 +1,5 @@
 export interface MaskOptions {
-	// Charcter to replace
+	// Character to replace
 	character: string;
 	// Do not mask these charcters
 	excludeCharcters?: string[];
