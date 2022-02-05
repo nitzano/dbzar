@@ -68,6 +68,7 @@
         "*.ts": "xo --fix"
     },
     "dependencies": {
+        "chalk": "4.1.2",
         "chance": "^1.1.8",
         "commander": "^9.0.0",
         "connection-string": "^4.3.5",
