@@ -11,6 +11,6 @@ export class MaskAnonymizer extends BaseAnonymizer {
 	}
 
 	anonymizeString(value: string): string {
-		return replace(value, /./g, '*');
+		return replace(value, /./g, this.options.character);
 	}
 }
