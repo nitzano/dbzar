@@ -5,7 +5,7 @@ import {MongoClient} from 'mongodb';
 import {User, userFactory} from '../factories/user';
 
 async function run() {
-	const connectionString = process.env.DB_URI;
+	const connectionString = process.env.MONGO_DB_URI;
 	if (connectionString) {
 		const client = new MongoClient(connectionString);
 		try {
