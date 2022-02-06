@@ -115,15 +115,15 @@ npx dbzar anon-db mongodb://example:example@mongo:27017 test1
 
 ### 🎭 Mask
 
-Replaces some/all characters
+Masks word with the same character
 
 Options:
 
-1. `character` - charcter to replace (default `*`)
+1. `character` - Replacing character (default `*`)
 
 ### 🔀 Scramble
 
-Change the order randomly
+Changes the word order randomly
 
 ### 🐱‍👤 Fake
 
