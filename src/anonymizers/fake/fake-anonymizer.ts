@@ -1,18 +1,24 @@
+import {Chance} from 'chance';
 import {BaseAnonymizer} from '../base/base-anonymizer';
-import {FakeOptions} from './fake-options';
+import {defaultFakeOptions, FakeOptions} from './fake-options';
+
+const chance = new Chance();
 
 export class FakeAnonymizer extends BaseAnonymizer {
-	anonymizeString(value: string, options?: FakeOptions): string {
-		switch (options?.fakeValue) {
+	constructor(private readonly options: FakeOptions = defaultFakeOptions) {
+		super();
+	}
+
+	anonymizeString(value: string): string {
+		switch (this.options.fakeValue) {
 			case 'firstName':
 			case 'first':
-				return 'firstName';
-
+				return chance.first();
 			case 'lastName':
 			case 'last':
-				return 'lastName';
-			case 'age':
-				return 'age';
+				return chance.last();
+			case 'word':
+				return chance.word();
 			default:
 				break;
 		}
@@ -20,10 +26,10 @@ export class FakeAnonymizer extends BaseAnonymizer {
 		return value;
 	}
 
-	anonymizeNumber(value: number, options?: FakeOptions): number {
-		switch (options?.fakeValue) {
+	anonymizeNumber(value: number): number {
+		switch (this.options.fakeValue) {
 			case 'age':
-				return 55;
+				return chance.age();
 			default:
 				break;
 		}
