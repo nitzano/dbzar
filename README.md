@@ -115,8 +115,7 @@ npx dbzar anon-db mongodb://example:example@mongo:27017 test1
 2. `scramble` - change the order randomly
 3. `fake` - will generate fake data
 
-Future:
-
-- `hash` - replace with hash
-- `const` - replace with constant string/number
-- `remove` - remove the field from the table
+- Future Support:
+  - `hash` - replace with hash
+  - `const` - replace with constant string/number
+  - `remove` - remove the field from the table
