@@ -1,55 +1,10 @@
 import {Db, MongoClient} from 'mongodb';
 import {Anonymizer} from '../../anonymizers';
-import {Config, TableConfig} from '../../config/types';
 import {debugLogger} from '../../services/loggers/debug-logger';
 import {BaseProcessor, Processor} from '../base-processor/base-processor';
 
 const logger = debugLogger.extend('mongo-processor');
 export class MongoProcessor extends BaseProcessor implements Processor {
-	/**
-	 * Process the mongo db name
-	 *
-	 * @param {string} dbName
-	 * @return {*}  {Promise<void>}
-	 * @memberof MongoProcessor
-	 */
-	async processDb(config: Config, dbName?: string): Promise<void> {
-		const client = new MongoClient(this.uri);
-		let db: Db | undefined;
-		try {
-			await client.connect();
-			db = client.db(dbName);
-
-			// Read collection from config
-			if (config?.tables && config.tables.length > 0) {
-				for await (const table of config.tables) {
-					await this.processCollection(db, table);
-				}
-			}
-		} catch (error: unknown) {
-			console.error(error);
-		} finally {
-			await client.close();
-		}
-	}
-
-	/**
-	 * Process a table (collection) in mongo db
-	 *
-	 * @param {TableConfig} tableConfig
-	 * @memberof MongoProcessor
-	 */
-	async processCollection(db: Db, tableConfig: TableConfig) {
-		// Get the collection from the config
-		if (db && tableConfig.name) {
-			await Promise.all(
-				tableConfig.columns.map(async (col) =>
-					this.processDocument(db, tableConfig.name, col.name, col.provider),
-				),
-			);
-		}
-	}
-
 	/**
 	 * Process a column (document)
 	 *
