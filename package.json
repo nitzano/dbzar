@@ -35,6 +35,7 @@
         "@types/pg": "^8.6.4",
         "@types/rosie": "^0.0.40",
         "cz-conventional-changelog": "^3.3.0",
+        "eslint-plugin-unused-imports": "^2.0.0",
         "husky": "^7.0.4",
         "jest": "^27.4.7",
         "lint-staged": "^12.1.5",
