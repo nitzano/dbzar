@@ -21,7 +21,8 @@
         "mongodb",
         "mariadb",
         "mysql",
-        "mock"
+        "mock",
+        "fake"
     ],
     "devDependencies": {
         "@commitlint/cli": "^16.1.0",
