@@ -1,6 +1,6 @@
 import {Command} from 'commander';
 import {defaultMaskConfig} from '../../../../../anonymizers/mask/mask-options';
-import {maskAction} from './mask-action';
+import {maskAction} from './action';
 
 export const maskCommand = new Command('mask');
 
