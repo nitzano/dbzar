@@ -1,11 +1,11 @@
 import {Chance} from 'chance';
 import {BaseAnonymizer} from '../base/base-anonymizer';
-import {defaultFakeOptions, FakeOptions} from './fake-options';
+import {FakeOptions} from './fake-options';
 
 const chance = new Chance();
 
 export class FakeAnonymizer extends BaseAnonymizer {
-	constructor(private readonly options: FakeOptions = defaultFakeOptions) {
+	constructor(private readonly options: FakeOptions) {
 		super();
 	}
 
