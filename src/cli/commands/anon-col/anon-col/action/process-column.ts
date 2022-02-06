@@ -1,12 +1,12 @@
-import {EngineType} from '../../../config/types';
-import {Processor} from '../../../processors/base-processor/base-processor';
-import {MariaDbProcessor} from '../../../processors/mariadb/mariadb-processor';
-import {MongoProcessor} from '../../../processors/mongo/mongo-processor';
-import {PostgresProcessor} from '../../../processors/postgres/postgres-processor';
-import {ProviderType} from '../../../types/types';
-import {getConnectionStringEngine} from '../../../utils/get-connection-string-engine';
+import {EngineType} from '../../../../../config/types';
+import {Processor} from '../../../../../processors/base-processor/base-processor';
+import {MariaDbProcessor} from '../../../../../processors/mariadb/mariadb-processor';
+import {MongoProcessor} from '../../../../../processors/mongo/mongo-processor';
+import {PostgresProcessor} from '../../../../../processors/postgres/postgres-processor';
+import {ProviderType} from '../../../../../types/types';
+import {getConnectionStringEngine} from '../../../../../utils/get-connection-string-engine';
 
-export async function anonymizeColumn(
+export async function processColumn(
 	connectionStringUri: string,
 	tableName: string,
 	columnName: string,
