@@ -1,5 +1,5 @@
 import {Command} from 'commander';
-import {defaultMaskConfig} from '../../../../../anonymizers/mask/mask-options';
+import {defaultMaskOptions} from '../../../../../anonymizers/mask/mask-options';
 import {addConnectionArgs} from '../../helpers/add-connection-args';
 import {maskAction} from './mask-action';
 
@@ -10,7 +10,7 @@ maskCommand
 	.option(
 		'-c --character <char>',
 		'Character to mask with',
-		defaultMaskConfig.character,
+		defaultMaskOptions.character,
 	)
 	.action(maskAction);
 
