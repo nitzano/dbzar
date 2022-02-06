@@ -1,5 +1,7 @@
 import {Knex} from 'knex';
 import {newDb} from 'pg-mem';
+import {Anonymizer} from '../../../anonymizers';
+import {MaskAnonymizer} from '../../../anonymizers/mask/mask-anonymizer';
 import {PostgresProcessor} from '../postgres-processor';
 
 describe('PostgresProcessor', () => {
@@ -39,7 +41,8 @@ describe('PostgresProcessor', () => {
 			'postgresql://localhost',
 		);
 
-		await processor.processColumn('users', 'firstName', 'mask');
+		const anonymizer: Anonymizer = new MaskAnonymizer();
+		await processor.processColumn('users', 'firstName', anonymizer);
 
 		spy1.mockRestore();
 		spy2.mockRestore();
@@ -71,7 +74,8 @@ describe('PostgresProcessor', () => {
 			'postgresql://localhost',
 		);
 
-		await processor.processColumn('users', 'firstName', 'mask');
+		const anonymizer: Anonymizer = new MaskAnonymizer();
+		await processor.processColumn('users', 'firstName', anonymizer);
 
 		spy1.mockRestore();
 		spy2.mockRestore();

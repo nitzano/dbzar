@@ -1,5 +1,7 @@
 import process from 'process';
 import {Db, MongoClient, MongoClientOptions} from 'mongodb';
+import {Anonymizer} from '../../../anonymizers';
+import {MaskAnonymizer} from '../../../anonymizers/mask/mask-anonymizer';
 import {MongoProcessor} from '../mongo-processor';
 
 describe('mongo-processor', () => {
@@ -34,7 +36,8 @@ describe('mongo-processor', () => {
 		// Anonymize the users database
 		if (process.env.MONGO_URL) {
 			const mongoProcessor = new MongoProcessor(process.env.MONGO_URL);
-			await mongoProcessor.processColumn('users', 'firstName', 'mask');
+			const anonymizer: Anonymizer = new MaskAnonymizer();
+			await mongoProcessor.processColumn('users', 'firstName', anonymizer);
 		}
 
 		// Find the document again
@@ -51,7 +54,8 @@ describe('mongo-processor', () => {
 		// Anonymize the users database
 		if (process.env.MONGO_URL) {
 			const mongoProcessor = new MongoProcessor(process.env.MONGO_URL);
-			await mongoProcessor.processColumn('users', 'firstName', 'mask');
+			const anonymizer: Anonymizer = new MaskAnonymizer();
+			await mongoProcessor.processColumn('users', 'firstName', anonymizer);
 		}
 
 		// Find the document again

@@ -46,24 +46,17 @@ npx dbzar
 For example: mask the `firstName` column in `users` table:
 
 ```bash
-Usage: dbzar anon-col [options] <uri> <db> <table> <column>
+Usage: dbzar anon-col <command> [options] <uri> <db> <table> <column>
 ```
 
 ```
 // postgres
-npx dbzar anon-col postgresql://example:example@localhost test users firstName --provider mask
+npx dbzar anon-col mask postgresql://example:example@localhost test users firstName
+// { "firstName": "John" } => { "firstName": "****" }
 
 // mongo
-npx dbzar anon-col mongodb://example:example@localhost test users firstName --provider mask
-
-// mariadb / mysql
-npx dbzar anon-col mysql://example:example@localhost test users firstName --provider mask
-```
-
-Will change `users` table accordingly:
-
-```
-{ "firstName": "John" } => { "firstName": "****" }
+npx dbzar anon-col scramble mongodb://example:example@localhost test users firstName
+// { "firstName": "John" } => { "firstName": "nhJo" }
 ```
 
 ### `anon-db`: anonymize entire database (future Version)

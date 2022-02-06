@@ -1,10 +1,14 @@
 export interface MaskOptions {
+	// Character to replace
 	character: string;
-	exclude?: string;
-	excludeEnd?: number;
-	excludeStart?: number;
+	// Do not mask these charcters
+	excludeCharacters?: string[];
+	// Do not exclude from end
+	excludeEndCount?: number;
+	// Do not exclude from start
+	excludeStartCount?: number;
 }
 
-export const defaultMaskConfig: MaskOptions = {
+export const defaultMaskOptions: MaskOptions = {
 	character: '*',
 };

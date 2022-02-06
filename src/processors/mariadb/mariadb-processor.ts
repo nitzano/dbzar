@@ -1,6 +1,6 @@
 import knex, {Knex} from 'knex';
+import {Anonymizer} from '../../anonymizers';
 import {debugLogger} from '../../services/loggers/debug-logger';
-import {ProviderType} from '../../types/types';
 import {BaseProcessor, Processor} from '../base-processor/base-processor';
 
 const logger = debugLogger.extend('mariadb-processor');
@@ -15,14 +15,14 @@ export class MariaDbProcessor extends BaseProcessor implements Processor {
 	async processColumn(
 		tableName: string,
 		columnName: string,
-		provider: ProviderType,
+		anonymizer: Anonymizer,
 		_dbName?: string,
 	) {
 		const client: Knex = this.buildClient(this.uri);
 
 		logger(`processing column`);
 		try {
-			await this.updateColumn(client, tableName, columnName, provider);
+			await this.updateColumn(client, tableName, columnName, anonymizer);
 		} finally {
 			await client.destroy();
 		}
@@ -32,7 +32,7 @@ export class MariaDbProcessor extends BaseProcessor implements Processor {
 		client: Knex,
 		tableName: string,
 		columnName: string,
-		provider: ProviderType,
+		anonymizer: Anonymizer,
 		_dbName?: string,
 	) {
 		logger(`processing column`);
@@ -49,11 +49,8 @@ export class MariaDbProcessor extends BaseProcessor implements Processor {
 			rows.map(async ({id, [columnName]: col}) => {
 				const rowId: string = id as string;
 
-				logger(`anonymizing ${col as string} provider=${provider}`);
-				const anonymizedValue: unknown = this.valueAnonymizer.anonymize(
-					col,
-					provider,
-				) as string;
+				logger(`anonymizing ${col as string}`);
+				const anonymizedValue: unknown = anonymizer.anonymize(col) as string;
 				if (!client) return;
 				logger(
 					`updating ${tableName}.${columnName}.${rowId} to ${
