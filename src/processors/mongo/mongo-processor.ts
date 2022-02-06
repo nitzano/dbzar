@@ -1,5 +1,5 @@
 import {Db, MongoClient} from 'mongodb';
-import {Anonymizer} from '../../anonymizers';
+import {Anonymizer} from '../../anonymizers/types';
 import {debugLogger} from '../../services/loggers/debug-logger';
 import {BaseProcessor, Processor} from '../base-processor/base-processor';
 
