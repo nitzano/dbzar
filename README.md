@@ -136,5 +136,5 @@ Options:
 ### Future Support
 
 - `hash` - replace with hash
-- rock `const` - replace with constant string/number
+- `const` - replace with constant string/number
 - `remove` - remove the field from the table
