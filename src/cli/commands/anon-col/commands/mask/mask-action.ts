@@ -9,6 +9,7 @@ import {processColumn} from '../../helpers/process-column';
 export async function maskAction(this: Command) {
 	const maskOptions: MaskOptions = {
 		...defaultMaskOptions,
+		character: this.opts().character as string,
 	};
 
 	const [connectionString, dbName, tableName, columnName] = this.args;
