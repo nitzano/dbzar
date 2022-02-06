@@ -9,6 +9,6 @@ export interface MaskOptions {
 	excludeStartCount?: number;
 }
 
-export const defaultMaskConfig: MaskOptions = {
+export const defaultMaskOptions: MaskOptions = {
 	character: '*',
 };
