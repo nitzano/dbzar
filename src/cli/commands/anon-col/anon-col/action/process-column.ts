@@ -1,40 +1,12 @@
-import {EngineType} from '../../../../../config/types';
+import {Anonymizer} from '../../../../../anonymizers';
 import {Processor} from '../../../../../processors/base-processor/base-processor';
-import {MariaDbProcessor} from '../../../../../processors/mariadb/mariadb-processor';
-import {MongoProcessor} from '../../../../../processors/mongo/mongo-processor';
-import {PostgresProcessor} from '../../../../../processors/postgres/postgres-processor';
-import {ProviderType} from '../../../../../types/types';
-import {getConnectionStringEngine} from '../../../../../utils/get-connection-string-engine';
 
 export async function processColumn(
-	connectionStringUri: string,
+	processor: Processor,
+	anonymizer: Anonymizer,
 	tableName: string,
 	columnName: string,
-	provider: ProviderType,
 	dbName?: string,
 ) {
-	// Parse the engine
-	const engine = getConnectionStringEngine(connectionStringUri);
-	let processor: Processor | undefined;
-
-	if (engine) {
-		switch (engine) {
-			case EngineType.Mongo:
-				processor = new MongoProcessor(connectionStringUri);
-				break;
-			case EngineType.PostGres:
-				processor = new PostgresProcessor(connectionStringUri);
-				break;
-			case EngineType.MariaDB:
-			case EngineType.MySQL:
-				processor = new MariaDbProcessor(connectionStringUri);
-				break;
-			default:
-				break;
-		}
-	}
-
-	if (processor) {
-		await processor.processColumn(tableName, columnName, provider, dbName);
-	}
+	await processor.processColumn(tableName, columnName, anonymizer, dbName);
 }
