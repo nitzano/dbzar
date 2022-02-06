@@ -17,6 +17,10 @@
   - [`anon-db`: anonymize entire database (future Version)](#anon-db-anonymize-entire-database-future-version)
 - [✅ Supported Databases](#-supported-databases)
 - [🔧 Providers](#-providers)
+  - [🎭 Mask](#-mask)
+  - [🔀 Scramble](#-scramble)
+  - [🐱‍👤 Fake](#-fake)
+  - [Future Support](#future-support)
 
 <br/>
 
@@ -111,11 +115,28 @@ npx dbzar anon-db mongodb://example:example@mongo:27017 test1
 
 ## 🔧 Providers
 
-1. `mask` - will replaces some/all characters (default: `"*"`)
-2. `scramble` - change the order randomly
-3. `fake` - will generate fake data
+### 🎭 Mask
 
-- Future Support:
-  - `hash` - replace with hash
-  - `const` - replace with constant string/number
-  - `remove` - remove the field from the table
+Replaces some/all characters
+
+Options:
+
+1. `character` - charcter to replace (default `*`)
+
+### 🔀 Scramble
+
+Change the order randomly
+
+### 🐱‍👤 Fake
+
+Generates fake data
+
+Options:
+
+1. `fakeValue` - fake value to replace (default: random word)
+
+### Future Support
+
+- `hash` - replace with hash
+- rock `const` - replace with constant string/number
+- `remove` - remove the field from the table
