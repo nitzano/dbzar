@@ -4,7 +4,7 @@ import {
 	defaultMaskOptions,
 	MaskOptions,
 } from '../../../../../anonymizers/mask/mask-options';
-import {processColumn} from '../../anon-col/action/process-column';
+import {processColumn} from '../../helpers/process-column';
 
 export async function maskAction(this: Command) {
 	const maskOptions: MaskOptions = {
@@ -20,8 +20,9 @@ export async function maskAction(this: Command) {
 	await processColumn(
 		connectionString,
 		anonymizer,
+		dbName,
 		tableName,
 		columnName,
-		dbName,
+		this.optsWithGlobals().confirm,
 	);
 }
