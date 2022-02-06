@@ -1,8 +1,20 @@
+export const fakeTypes: string[] = [
+	'age',
+	'first',
+	'firstName',
+	'last',
+	'lastName',
+	'letter',
+	'name',
+	'word',
+];
+
 export type FakeType =
-	| 'firstName'
-	| 'first'
-	| 'lastName'
-	| 'last'
-	| 'name'
 	| 'age'
-	| 'letter';
+	| 'first'
+	| 'firstName'
+	| 'last'
+	| 'lastName'
+	| 'letter'
+	| 'name'
+	| 'word';

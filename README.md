@@ -113,8 +113,9 @@ npx dbzar anon-db mongodb://example:example@mongo:27017 test1
 
 1. `mask` - will replaces some/all characters (default: `"*"`)
 2. `scramble` - change the order randomly
-3. Future
-   1. `hash` - replace with hash
-   2. `fake` - will generate fake data
-   3. `const` - replace with constant string/number
-   4. `remove` - remove the field from the table
+3. `fake` - will generate fake data
+
+- Future Support:
+  - `hash` - replace with hash
+  - `const` - replace with constant string/number
+  - `remove` - remove the field from the table

@@ -1,7 +1,7 @@
 import {Knex} from 'knex';
 import {newDb} from 'pg-mem';
-import {Anonymizer} from '../../../anonymizers';
 import {MaskAnonymizer} from '../../../anonymizers/mask/mask-anonymizer';
+import {Anonymizer} from '../../../anonymizers/types';
 import {PostgresProcessor} from '../postgres-processor';
 
 describe('PostgresProcessor', () => {

@@ -1,4 +1,4 @@
-import {Anonymizer} from '../../anonymizers';
+import {Anonymizer} from '../../anonymizers/types';
 import {Config} from '../../config/types';
 
 export interface Processor {
