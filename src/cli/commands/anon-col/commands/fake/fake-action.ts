@@ -10,7 +10,9 @@ import {processColumn} from '../../helpers/process-column';
 export async function fakeAction(this: Command) {
 	const fakeOptions: FakeOptions = {
 		...defaultFakeOptions,
-		fakeValue: this.opts().value as FakeType,
+		fakeValue: (this.opts().fakeType as FakeType)
+			? (this.opts().fakeType as FakeType)
+			: defaultFakeOptions.fakeValue,
 	};
 
 	const [connectionString, dbName, tableName, columnName] = this.args;

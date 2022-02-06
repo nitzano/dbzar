@@ -9,7 +9,7 @@ export const fakeCommand = new Command('fake');
 fakeCommand
 	.description('fake a single column')
 	.addOption(
-		new Option('-f --fake <type>', 'Value to fake with')
+		new Option('-f --fake-type <type>', 'Value to fake with')
 			.choices(fakeTypes)
 			.default(defaultFakeOptions.fakeValue),
 	)
