@@ -1,7 +1,7 @@
 import {Db, MongoClient} from 'mongodb';
+import {Anonymizer} from '../../anonymizers';
 import {Config, TableConfig} from '../../config/types';
 import {debugLogger} from '../../services/loggers/debug-logger';
-import {ProviderType} from '../../types/types';
 import {BaseProcessor, Processor} from '../base-processor/base-processor';
 
 const logger = debugLogger.extend('mongo-processor');
@@ -60,15 +60,14 @@ export class MongoProcessor extends BaseProcessor implements Processor {
 		db: Db,
 		tableName: string,
 		columnName: string,
-		provider: ProviderType,
+		anonymizer: Anonymizer,
 	) {
 		const cursor = db?.collection(tableName).find({});
 
 		if (cursor) {
 			for await (const doc of cursor) {
-				const anonymizedValue: unknown = this.valueAnonymizer.anonymize(
+				const anonymizedValue: unknown = anonymizer.anonymize(
 					doc[columnName],
-					provider,
 				) as string;
 				await db
 					?.collection(tableName)
@@ -80,7 +79,7 @@ export class MongoProcessor extends BaseProcessor implements Processor {
 	async processColumn(
 		tableName: string,
 		columnName: string,
-		provider: ProviderType,
+		anonymizer: Anonymizer,
 		dbName?: string,
 	) {
 		logger('processColumn');
@@ -91,7 +90,7 @@ export class MongoProcessor extends BaseProcessor implements Processor {
 			db = client.db(dbName);
 
 			// Process column
-			await this.processDocument(db, tableName, columnName, provider);
+			await this.processDocument(db, tableName, columnName, anonymizer);
 		} catch (error: unknown) {
 			console.error(error);
 		} finally {
