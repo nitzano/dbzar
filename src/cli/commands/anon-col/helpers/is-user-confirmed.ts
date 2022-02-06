@@ -4,9 +4,9 @@ import {prompt} from 'enquirer';
 const color = chalk.cyan;
 
 export async function isUserConfirmed(
-	column: string,
 	db: string,
 	table: string,
+	column: string,
 ): Promise<boolean> {
 	try {
 		const answer = await prompt<{run: boolean}>({
