@@ -8,11 +8,13 @@ import {FakeType} from '../../../../../anonymizers/fake/types';
 import {processColumn} from '../../helpers/process-column';
 
 export async function fakeAction(this: Command) {
+	const fakeType: FakeType | undefined = this.opts().fakeType as
+		| FakeType
+		| undefined;
+
 	const fakeOptions: FakeOptions = {
 		...defaultFakeOptions,
-		fakeValue: (this.opts().fakeType as FakeType)
-			? (this.opts().fakeType as FakeType)
-			: defaultFakeOptions.fakeValue,
+		fakeValue: fakeType ? fakeType : defaultFakeOptions.fakeValue,
 	};
 
 	const [connectionString, dbName, tableName, columnName] = this.args;
