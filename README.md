@@ -115,19 +115,44 @@ npx dbzar anon-db mongodb://example:example@mongo:27017 test1
 
 ### 🎭 Mask
 
-Masks word with the same character
+```
+{ 'firstName': 'John'} => { 'firstName': '****'}
+```
+
+1. strings - Masks word with the same character
+2. numbers - does nothing
+3. boolean - does nothing
 
 Options:
 
-1. `character` - Replacing character (default `*`)
+1. `character` - Replacing character (default `*`).
+2. `excludeStart` - do not mask X chars from start.
+3. `excludeEnd` - do not mask X chars from end.
+4. `excludeCharacters` - do not mask these characters.
 
 ### 🔀 Scramble
 
+```
+{ 'firstName': 'John'} => { 'firstName': 'ohJn'}
+```
+
 Changes the word order randomly
+
+1. strings - scrambles letters inside
+2. numbers - scrambles digits
+3. boolean - generates random boolean
 
 ### 🐱‍👤 Fake
 
+```
+{ 'firstName': 'John'} => { 'firstName': 'Random'}
+```
+
 Generates fake data
+
+1. strings - generates fake strings
+2. numbers - generates random numbers
+3. boolean - generates random boolean
 
 Options:
 
