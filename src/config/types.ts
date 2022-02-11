@@ -1,4 +1,3 @@
-import {Option} from 'commander';
 import {ProviderType} from '../types/types';
 
 export enum EngineType {
@@ -31,5 +30,4 @@ export interface ColumnConfig {
 	 */
 	name: string;
 	provider: ProviderType;
-	options?: Option;
 }

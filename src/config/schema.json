@@ -7,9 +7,6 @@
                     "description": "Column Name",
                     "type": "string"
                 },
-                "options": {
-                    "$ref": "#/definitions/Option"
-                },
                 "provider": {
                     "$ref": "#/definitions/ProviderType"
                 }
@@ -17,68 +14,6 @@
             "required": [
                 "name",
                 "provider"
-            ],
-            "type": "object"
-        },
-        "Option": {
-            "properties": {
-                "argChoices": {
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "defaultValue": {},
-                "defaultValueDescription": {
-                    "type": "string"
-                },
-                "description": {
-                    "type": "string"
-                },
-                "flags": {
-                    "type": "string"
-                },
-                "hidden": {
-                    "type": "boolean"
-                },
-                "long": {
-                    "type": "string"
-                },
-                "mandatory": {
-                    "type": "boolean"
-                },
-                "negate": {
-                    "type": "boolean"
-                },
-                "optionFlags": {
-                    "type": "string"
-                },
-                "optional": {
-                    "type": "boolean"
-                },
-                "parseArg": {
-                    "type": "object"
-                },
-                "required": {
-                    "type": "boolean"
-                },
-                "short": {
-                    "type": "string"
-                },
-                "variadic": {
-                    "type": "boolean"
-                }
-            },
-            "required": [
-                "description",
-                "flags",
-                "hidden",
-                "mandatory",
-                "negate",
-                "optionFlags",
-                "optional",
-                "required",
-                "variadic"
             ],
             "type": "object"
         },
