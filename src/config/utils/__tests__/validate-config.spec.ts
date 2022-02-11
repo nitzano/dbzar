@@ -19,6 +19,7 @@ describe('validate-config', () => {
 		const isValid: boolean = validateConfig(validConfig);
 		expect(isValid).toBe(true);
 	});
+
 	it('should allow to revoke an invalid config', () => {
 		const invalidConfig: any = {
 			tables: [],
@@ -27,6 +28,7 @@ describe('validate-config', () => {
 		const isValid: boolean = validateConfig(invalidConfig);
 		expect(isValid).toBe(false);
 	});
+
 	it('should allow to fix  an invalid config', () => {
 		const config: any = {
 			tables: [
