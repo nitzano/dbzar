@@ -28,11 +28,26 @@ describe('validate-config', () => {
 		expect(isValid).toBe(false);
 	});
 	it('should allow to fix  an invalid config', () => {
-		const invalidConfig: any = {
-			tables: [],
+		const config: any = {
+			tables: [
+				{
+					name: 'table1',
+					columns: [
+						{
+							name: 'column1',
+							provider: 'mask!', // Invalid at first
+						},
+					],
+				},
+			],
 		};
 
-		const isValid: boolean = validateConfig(invalidConfig);
+		let isValid: boolean = validateConfig(config);
 		expect(isValid).toBe(false);
+
+		// Fix it
+		config.tables[0].columns[0].provider = 'mask';
+		isValid = validateConfig(config);
+		expect(isValid).toBe(true);
 	});
 });
