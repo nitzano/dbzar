@@ -1,0 +1,148 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "Column": {
+            "properties": {
+                "name": {
+                    "description": "Column Name",
+                    "type": "string"
+                },
+                "provider": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/FakeProvider"
+                        },
+                        {
+                            "$ref": "#/definitions/MaskProvider"
+                        },
+                        {
+                            "enum": [
+                                "const",
+                                "fake",
+                                "mask",
+                                "scramble"
+                            ],
+                            "type": "string"
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "name",
+                "provider"
+            ],
+            "type": "object"
+        },
+        "FakeOptions": {
+            "properties": {
+                "fakeValue": {
+                    "$ref": "#/definitions/FakeType"
+                }
+            },
+            "required": [
+                "fakeValue"
+            ],
+            "type": "object"
+        },
+        "FakeProvider": {
+            "properties": {
+                "options": {
+                    "$ref": "#/definitions/FakeOptions"
+                },
+                "type": {
+                    "enum": [
+                        "fake"
+                    ],
+                    "type": "string"
+                }
+            },
+            "required": [
+                "type"
+            ],
+            "type": "object"
+        },
+        "FakeType": {
+            "enum": [
+                "age",
+                "first",
+                "firstName",
+                "last",
+                "lastName",
+                "letter",
+                "name",
+                "word"
+            ],
+            "type": "string"
+        },
+        "MaskOptions": {
+            "properties": {
+                "character": {
+                    "type": "string"
+                },
+                "excludeCharacters": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "excludeEndCount": {
+                    "type": "number"
+                },
+                "excludeStartCount": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "character"
+            ],
+            "type": "object"
+        },
+        "MaskProvider": {
+            "properties": {
+                "options": {
+                    "$ref": "#/definitions/MaskOptions"
+                },
+                "type": {
+                    "enum": [
+                        "mask"
+                    ],
+                    "type": "string"
+                }
+            },
+            "required": [
+                "type"
+            ],
+            "type": "object"
+        },
+        "Table": {
+            "properties": {
+                "columns": {
+                    "items": {
+                        "$ref": "#/definitions/Column"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "Table name",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "columns",
+                "name"
+            ],
+            "type": "object"
+        }
+    },
+    "properties": {
+        "tables": {
+            "description": "Tables to be processed",
+            "items": {
+                "$ref": "#/definitions/Table"
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
+

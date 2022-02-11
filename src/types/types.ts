@@ -1,4 +1,5 @@
 import {FakeOptions} from '../anonymizers/fake/fake-options';
+import {MaskOptions} from '../anonymizers/mask/mask-options';
 
 export const providers: string[] = ['mask', 'scramble'];
 
@@ -10,12 +11,12 @@ export interface BaseProvider {
 
 export interface FakeProvider extends BaseProvider {
 	type: 'fake';
-	options: FakeOptions;
+	options?: FakeOptions;
 }
 
 export interface MaskProvider extends BaseProvider {
 	type: 'mask';
-	options: FakeOptions;
+	options?: MaskOptions;
 }
 
 export type Provider = FakeProvider | MaskProvider;

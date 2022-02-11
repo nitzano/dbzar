@@ -1,5 +1,4 @@
-import {Option} from 'commander';
-import {ProviderType} from '../types/types';
+import {Provider, ProviderType} from '../types/types';
 
 export enum EngineType {
 	PostGres = 'postgres',
@@ -9,17 +8,26 @@ export enum EngineType {
 }
 
 export interface Config {
-	engine: EngineType;
-	tables?: TableConfig[];
+	/**
+	 * Tables to be processed
+	 *
+	 * @items.minimum 1
+	 */
+	tables?: Table[];
 }
 
-export interface TableConfig {
+export interface Table {
+	/**
+	 * Table name
+	 */
 	name: string;
-	columns: ColumnConfig[];
+	columns: Column[];
 }
 
-export interface ColumnConfig {
+export interface Column {
+	/**
+	 * Column Name
+	 */
 	name: string;
-	provider: ProviderType;
-	options?: Option;
+	provider: Provider | ProviderType;
 }

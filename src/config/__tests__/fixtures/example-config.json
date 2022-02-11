@@ -1,0 +1,14 @@
+{
+    "$schema": "../../config.schema.json",
+    "tables": [
+        {
+            "name": "table1",
+            "columns": [
+                {
+                    "name": "column1",
+                    "provider": "mask"
+                }
+            ]
+        }
+    ]
+}
