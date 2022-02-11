@@ -66,7 +66,7 @@
         "db:seed:maria": "ts-node src/test/scripts/db-seed-mariadb.ts dotenv_config_path=.dev.env",
         "commit": "cz",
         "dbzar": "ts-node src/cli/dbzar.ts",
-        "gen-schema": "yarn typescript-json-schema tsconfig.json Config --required -o src/config/schema.json"
+        "gen-schema": "yarn typescript-json-schema tsconfig.json Config --required -o src/config/config.schema.json"
     },
     "lint-staged": {
         "*.ts": "xo --fix"
