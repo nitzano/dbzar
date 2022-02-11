@@ -65,10 +65,33 @@
             ],
             "type": "string"
         },
+        "MaskOptions": {
+            "properties": {
+                "character": {
+                    "type": "string"
+                },
+                "excludeCharacters": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "excludeEndCount": {
+                    "type": "number"
+                },
+                "excludeStartCount": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "character"
+            ],
+            "type": "object"
+        },
         "MaskProvider": {
             "properties": {
                 "options": {
-                    "$ref": "#/definitions/FakeOptions"
+                    "$ref": "#/definitions/MaskOptions"
                 },
                 "type": {
                     "enum": [
