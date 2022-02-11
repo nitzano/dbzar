@@ -67,7 +67,7 @@
         "commit": "cz",
         "dbzar": "ts-node src/cli/dbzar.ts",
         "dbzar:prod": "node dist/cli/dbzar.js",
-        "gen-schema": "yarn typescript-json-schema tsconfig.json Config --required -o src/config/config.schema.json"
+        "gen-schema": "yarn typescript-json-schema tsconfig.json Config --required -o src/config/assets/config.schema.json"
     },
     "lint-staged": {
         "*.ts": "xo --fix"
