@@ -6,9 +6,7 @@
             "columns": [
                 {
                     "name": "column1",
-                    "provider": {
-                        "type": "fake"
-                    }
+                    "provider": "mask"
                 }
             ]
         }
