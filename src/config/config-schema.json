@@ -1,5 +1,5 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "title": "DBZar",
     "description": "DBZar configuration",
     "required": [
@@ -8,9 +8,43 @@
     "type": "object",
     "properties": {
         "tables": {
+            "minItems": 1,
             "types": "array",
             "items": {
-                "type": "string"
+                "type": "object",
+                "required": [
+                    "name"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Table name",
+                        "columns": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "type": "object",
+                                "required": [
+                                    "name",
+                                    "provider"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "String"
+                                    },
+                                    "provider": {
+                                        "type": "string",
+                                        "enum": [
+                                            "fake",
+                                            "mask",
+                                            "scramble"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
