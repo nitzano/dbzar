@@ -32,7 +32,7 @@
                             ],
                             "properties": {
                                 "name": {
-                                    "type": "String"
+                                    "type": "string"
                                 },
                                 "provider": {
                                     "type": "string",

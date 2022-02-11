@@ -3,7 +3,12 @@
     "tables": [
         {
             "name": "table1",
-            "columns": []
+            "columns": [
+                {
+                    "name": "column1",
+                    "provider": "mask"
+                }
+            ]
         }
     ]
 }
