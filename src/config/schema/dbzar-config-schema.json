@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DBZar",
+    "description": "DBZar configuration",
+    "required": [
+        "tables"
+    ],
+    "type": "object",
+    "properties": {
+        "tables": {
+            "minItems": 1,
+            "types": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "name",
+                    "columns"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Table name"
+                    },
+                    "columns": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                            "type": "object",
+                            "required": [
+                                "name",
+                                "provider"
+                            ],
+                            "properties": {
+                                "name": {
+                                    "type": "String"
+                                },
+                                "provider": {
+                                    "type": "string",
+                                    "enum": [
+                                        "fake",
+                                        "mask",
+                                        "scramble"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

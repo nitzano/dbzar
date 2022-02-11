@@ -1,0 +1,9 @@
+{
+    "$schema": "./dbzar-config-schema.json",
+    "tables": [
+        {
+            "name": "table1",
+            "columns": []
+        }
+    ]
+}
