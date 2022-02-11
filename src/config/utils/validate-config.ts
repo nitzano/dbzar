@@ -1,5 +1,5 @@
 import Ajv from 'ajv';
-import configSchema from './config.schema.json';
+import configSchema from '../assets/config.schema.json';
 
 const ajv = new Ajv();
 
