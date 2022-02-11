@@ -1,5 +1,5 @@
 {
-    "$schema": "../../config.schema.json",
+    "$schema": "../../../assets/config.schema.json",
     "tables": [
         {
             "name": "table1",

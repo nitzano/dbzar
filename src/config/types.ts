@@ -11,7 +11,7 @@ export interface Config {
 	/**
 	 * Tables to be processed
 	 *
-	 * @items.minimum 1
+	 * @minItems 1
 	 */
 	tables?: Table[];
 }
@@ -21,6 +21,11 @@ export interface Table {
 	 * Table name
 	 */
 	name: string;
+	/**
+	 * Columns to be processed
+	 *
+	 * @minItems 1
+	 */
 	columns: Column[];
 }
 
