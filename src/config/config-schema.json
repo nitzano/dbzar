@@ -1,0 +1,17 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "DBZar",
+    "description": "DBZar configuration",
+    "required": [
+        "tables"
+    ],
+    "type": "object",
+    "properties": {
+        "tables": {
+            "types": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}

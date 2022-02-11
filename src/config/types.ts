@@ -9,7 +9,6 @@ export enum EngineType {
 }
 
 export interface Config {
-	engine: EngineType;
 	tables?: TableConfig[];
 }
 
