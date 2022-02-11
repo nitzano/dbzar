@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "definitions": {
-        "ColumnConfig": {
+        "Column": {
             "properties": {
                 "name": {
                     "description": "Column Name",
@@ -26,11 +26,11 @@
             ],
             "type": "string"
         },
-        "TableConfig": {
+        "Table": {
             "properties": {
                 "columns": {
                     "items": {
-                        "$ref": "#/definitions/ColumnConfig"
+                        "$ref": "#/definitions/Column"
                     },
                     "type": "array"
                 },
@@ -50,7 +50,7 @@
         "tables": {
             "description": "Tables to be processed",
             "items": {
-                "$ref": "#/definitions/TableConfig"
+                "$ref": "#/definitions/Table"
             },
             "type": "array"
         }

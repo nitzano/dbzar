@@ -13,18 +13,18 @@ export interface Config {
 	 *
 	 * @items.minimum 1
 	 */
-	tables?: TableConfig[];
+	tables?: Table[];
 }
 
-export interface TableConfig {
+export interface Table {
 	/**
 	 * Table name
 	 */
 	name: string;
-	columns: ColumnConfig[];
+	columns: Column[];
 }
 
-export interface ColumnConfig {
+export interface Column {
 	/**
 	 * Column Name
 	 */
