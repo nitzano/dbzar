@@ -8,7 +8,14 @@
                     "type": "string"
                 },
                 "provider": {
-                    "$ref": "#/definitions/ProviderType"
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/FakeProvider"
+                        },
+                        {
+                            "$ref": "#/definitions/MaskProvider"
+                        }
+                    ]
                 }
             },
             "required": [
@@ -17,14 +24,63 @@
             ],
             "type": "object"
         },
-        "ProviderType": {
+        "FakeOptions": {
+            "properties": {
+                "fakeValue": {
+                    "$ref": "#/definitions/FakeType"
+                }
+            },
+            "required": [
+                "fakeValue"
+            ],
+            "type": "object"
+        },
+        "FakeProvider": {
+            "properties": {
+                "options": {
+                    "$ref": "#/definitions/FakeOptions"
+                },
+                "type": {
+                    "enum": [
+                        "fake"
+                    ],
+                    "type": "string"
+                }
+            },
+            "required": [
+                "type"
+            ],
+            "type": "object"
+        },
+        "FakeType": {
             "enum": [
-                "const",
-                "fake",
-                "mask",
-                "scramble"
+                "age",
+                "first",
+                "firstName",
+                "last",
+                "lastName",
+                "letter",
+                "name",
+                "word"
             ],
             "type": "string"
+        },
+        "MaskProvider": {
+            "properties": {
+                "options": {
+                    "$ref": "#/definitions/FakeOptions"
+                },
+                "type": {
+                    "enum": [
+                        "mask"
+                    ],
+                    "type": "string"
+                }
+            },
+            "required": [
+                "type"
+            ],
+            "type": "object"
         },
         "Table": {
             "properties": {

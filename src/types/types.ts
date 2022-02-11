@@ -10,12 +10,12 @@ export interface BaseProvider {
 
 export interface FakeProvider extends BaseProvider {
 	type: 'fake';
-	options: FakeOptions;
+	options?: FakeOptions;
 }
 
 export interface MaskProvider extends BaseProvider {
 	type: 'mask';
-	options: FakeOptions;
+	options?: FakeOptions;
 }
 
 export type Provider = FakeProvider | MaskProvider;

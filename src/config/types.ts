@@ -1,4 +1,4 @@
-import {ProviderType} from '../types/types';
+import {Provider} from '../types/types';
 
 export enum EngineType {
 	PostGres = 'postgres',
@@ -29,5 +29,5 @@ export interface Column {
 	 * Column Name
 	 */
 	name: string;
-	provider: ProviderType;
+	provider: Provider;
 }
