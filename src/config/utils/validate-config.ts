@@ -1,9 +1,14 @@
-import Ajv from 'ajv';
+import Ajv, {ValidateFunction} from 'ajv';
 import configSchema from '../assets/config.schema.json';
 
-const ajv = new Ajv();
+let ajv: Ajv;
+let validate: ValidateFunction;
 
 export function validateConfig(data: any): boolean {
-	const validate = ajv.compile(configSchema);
+	if (!ajv) {
+		ajv = new Ajv();
+		validate = ajv.compile(configSchema);
+	}
+
 	return validate(data);
 }
