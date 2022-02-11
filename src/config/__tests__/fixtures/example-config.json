@@ -1,5 +1,5 @@
 {
-    "$schema": "./dbzar-config-schema.json",
+    "$schema": "../../schema.json",
     "tables": [
         {
             "name": "table1",

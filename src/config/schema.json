@@ -1,0 +1,106 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "ColumnConfig": {
+            "properties": {
+                "name": {
+                    "description": "Column Name",
+                    "type": "string"
+                },
+                "options": {
+                    "$ref": "#/definitions/Option"
+                },
+                "provider": {
+                    "$ref": "#/definitions/ProviderType"
+                }
+            },
+            "type": "object"
+        },
+        "Option": {
+            "properties": {
+                "argChoices": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "defaultValue": {},
+                "defaultValueDescription": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "flags": {
+                    "type": "string"
+                },
+                "hidden": {
+                    "type": "boolean"
+                },
+                "long": {
+                    "type": "string"
+                },
+                "mandatory": {
+                    "type": "boolean"
+                },
+                "negate": {
+                    "type": "boolean"
+                },
+                "optionFlags": {
+                    "type": "string"
+                },
+                "optional": {
+                    "type": "boolean"
+                },
+                "parseArg": {
+                    "type": "object"
+                },
+                "required": {
+                    "type": "boolean"
+                },
+                "short": {
+                    "type": "string"
+                },
+                "variadic": {
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "ProviderType": {
+            "enum": [
+                "const",
+                "fake",
+                "mask",
+                "scramble"
+            ],
+            "type": "string"
+        },
+        "TableConfig": {
+            "properties": {
+                "columns": {
+                    "items": {
+                        "$ref": "#/definitions/ColumnConfig"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "Table name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "properties": {
+        "tables": {
+            "description": "Tables to be processed",
+            "items": {
+                "$ref": "#/definitions/TableConfig"
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
+

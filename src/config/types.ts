@@ -9,21 +9,26 @@ export enum EngineType {
 }
 
 export interface Config {
+	/**
+	 * Tables to be processed
+	 *
+	 * @items.minimum 1
+	 */
 	tables?: TableConfig[];
 }
 
 export interface TableConfig {
-	name: string;
 	/**
-	 * Table columns
-	 *
-	 * @items.minimum 1
+	 * Table name
 	 */
+	name: string;
 	columns: ColumnConfig[];
 }
 
 export interface ColumnConfig {
-	// Column name
+	/**
+	 * Column Name
+	 */
 	name: string;
 	provider: ProviderType;
 	options?: Option;
