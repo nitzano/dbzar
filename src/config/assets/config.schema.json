@@ -117,9 +117,11 @@
         "Table": {
             "properties": {
                 "columns": {
+                    "description": "Columns to be processed",
                     "items": {
                         "$ref": "#/definitions/Column"
                     },
+                    "minItems": 1,
                     "type": "array"
                 },
                 "name": {
@@ -140,6 +142,7 @@
             "items": {
                 "$ref": "#/definitions/Table"
             },
+            "minItems": 1,
             "type": "array"
         }
     },
