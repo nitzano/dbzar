@@ -1,14 +1,23 @@
-import {cosmiconfigSync} from 'cosmiconfig';
+import {cosmiconfig} from 'cosmiconfig';
 import {Config} from '../../../../config/types';
 
-let explorer: any;
-
 const moduleName = 'dbzar';
+const explorer = cosmiconfig(moduleName);
 
-export function loadDbzarConfig(): Config {
-	if (!explorer) {
-		explorer = cosmiconfigSync(moduleName);
+export async function loadDbzarConfig(): Promise<Config | undefined> {
+	const configResult = await explorer.search();
+
+	if (configResult) {
+		const {isEmpty} = configResult;
+
+		if (!isEmpty) {
+			const configData: Record<string, unknown> = configResult.config as Record<
+				string,
+				unknown
+			>;
+			console.log(configData);
+		}
 	}
 
-	throw new Error('not working');
+	return undefined;
 }
