@@ -19,6 +19,7 @@ export async function loadDbzarConfig(): Promise<Config | null> {
 
 			if (configData) {
 				try {
+					// TODO: not checking correctly
 					validateConfig(configData);
 					return configData as Config;
 				} catch (error: unknown) {
