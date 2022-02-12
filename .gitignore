@@ -112,6 +112,9 @@ dist
 
 # dbzar
 db-backup
+.dbzarrc
+
+
 
 # jest
 globalConfig.json
