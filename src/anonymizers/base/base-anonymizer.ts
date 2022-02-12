@@ -1,4 +1,8 @@
+import {ProviderType} from '../../types/types';
+
 export abstract class BaseAnonymizer {
+	abstract name: ProviderType;
+
 	anonymizeString?(value: string): string;
 	anonymizeNumber?(value: number): number;
 	anonymizeBoolean?(value: boolean): boolean;

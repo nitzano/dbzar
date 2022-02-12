@@ -1,3 +1,39 @@
+import {Anonymizer} from '../../anonymizers/types';
+import {createAnonymizer} from '../../anonymizers/utils/create-anonymizer';
+import {Config} from '../../config/types';
+
+interface Collection {
+	dbName: string;
+	tableName: string;
+	columnName: string;
+	anonymizer: Anonymizer;
+}
+
 export class BaseProcessor {
 	constructor(protected readonly uri: string) {}
+
+	getCollections(config: Config): Collection[] {
+		const {name: dbName, tables = []} = config;
+
+		const collections: Collection[] = [];
+
+		// Flat tables
+		for (const {name: tableName, columns = []} of tables) {
+			for (const {name: columnName, provider} of columns) {
+				let anonymizer: Anonymizer | undefined;
+
+				if (typeof provider === 'string') {
+					anonymizer = createAnonymizer(provider);
+				} else if (typeof provider === 'object') {
+					anonymizer = createAnonymizer(provider.type, provider.options);
+				}
+
+				if (anonymizer) {
+					collections.push({dbName, tableName, columnName, anonymizer});
+				}
+			}
+		}
+
+		return collections;
+	}
 }

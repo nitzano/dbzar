@@ -9,7 +9,7 @@ import {Anonymizer} from '../types';
 export function createAnonymizer(
 	type: ProviderType,
 	options?: any,
-): Anonymizer | null {
+): Anonymizer {
 	switch (type) {
 		case 'mask':
 			return new MaskAnonymizer({...defaultMaskOptions, ...options});
@@ -21,5 +21,5 @@ export function createAnonymizer(
 			break;
 	}
 
-	return null;
+	throw new Error('could not match');
 }
