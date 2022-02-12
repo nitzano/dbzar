@@ -64,4 +64,10 @@ describe('validate-config', () => {
 			});
 		}).toThrow();
 	});
+
+	it('should mark empty config as invalid', () => {
+		expect(() => {
+			validateConfig({});
+		}).toThrow();
+	});
 });
