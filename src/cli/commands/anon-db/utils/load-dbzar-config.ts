@@ -1,10 +1,11 @@
 import {cosmiconfig} from 'cosmiconfig';
 import {Config} from '../../../../config/types';
+import {validateConfig} from '../../../../config/utils/validate-config';
 
 const moduleName = 'dbzar';
 const explorer = cosmiconfig(moduleName);
 
-export async function loadDbzarConfig(): Promise<Config | undefined> {
+export async function loadDbzarConfig(): Promise<Config | null> {
 	const configResult = await explorer.search();
 
 	if (configResult) {
@@ -15,9 +16,18 @@ export async function loadDbzarConfig(): Promise<Config | undefined> {
 				string,
 				unknown
 			>;
-			console.log(configData);
+
+			if (configData) {
+				try {
+					validateConfig(configData);
+					return configData as Config;
+				} catch (error: unknown) {
+					console.error(error);
+					return null;
+				}
+			}
 		}
 	}
 
-	return undefined;
+	return null;
 }
