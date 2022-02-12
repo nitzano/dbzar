@@ -9,5 +9,9 @@ const program = new Command();
 
 // Anon column
 program.addCommand(anonColCommand);
-program.addCommand(anonDbCommand);
+
+if (process.env.NODE_ENV === 'development') {
+	program.addCommand(anonDbCommand);
+}
+
 program.parse(process.argv);
