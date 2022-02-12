@@ -3,7 +3,7 @@ import {MaskOptions} from '../anonymizers/mask/mask-options';
 
 export const providers: string[] = ['mask', 'scramble'];
 
-export type ProviderType = 'mask' | 'fake' | 'const' | 'scramble';
+export type ProviderType = 'mask' | 'fake' | 'const' | 'scramble' | 'remove';
 
 export interface BaseProvider {
 	type: ProviderType;

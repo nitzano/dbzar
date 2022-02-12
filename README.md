@@ -19,7 +19,7 @@
 - [🔧 Providers](#-providers)
   - [🎭 Mask](#-mask)
   - [🔀 Scramble](#-scramble)
-  - [🐱‍👤 Fake](#-fake)
+  - [🍀 Fake](#-fake)
   - [Future Support](#future-support)
 
 <br/>
@@ -142,7 +142,7 @@ Changes the word order randomly
 2. numbers - scrambles digits
 3. boolean - generates random boolean
 
-### 🐱‍👤 Fake
+### 🍀 Fake
 
 ```
 { 'firstName': 'John'} => { 'firstName': 'Random'}
