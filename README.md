@@ -105,24 +105,24 @@ Example config:
 ```yaml
 // .dbzarrc
 name: db1
-columns:
-  - table: users
-    name: firstName
-    provider: mask
-  - table: users
-    name: lastName
-    provider:
-      type: mask
-      options:
-        character: "#"
-  - table: products
-    name: name
-    provider: fake
-  - table: products
-    name: price
-    provider: random_number
-      options: { min: 100, max: 999 }
-
+tables:
+  - name: table1
+    columns:
+      - name: firstName
+        provider: mask
+      - name: lastName
+        provider:
+          type: mask
+          options:
+            character: "#"
+  - name: products
+    columns:
+      - name: name
+        provider: fake
+      - name: price
+        provider:
+          type: random_number
+          options: { min: 100, max: 999 }
 ```
 
 ## 🔧 Providers
