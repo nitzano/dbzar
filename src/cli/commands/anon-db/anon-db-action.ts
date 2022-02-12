@@ -4,10 +4,10 @@ import {loadDbzarConfig} from './utils/load-dbzar-config';
 
 export async function anonDbAction(this: Command) {
 	console.log(`loading config`);
-	const config: Config | null = await loadDbzarConfig();
-	if (config) {
+	try {
+		const config: Config = await loadDbzarConfig();
 		console.log(`loaded config: ${JSON.stringify(config, null, 2)}`);
-	} else {
-		console.error(`invalid config, please recheck schema`);
+	} catch (error: unknown) {
+		console.error(`Could not load config: ${(error as Error).message}`);
 	}
 }
