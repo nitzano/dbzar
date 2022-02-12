@@ -28,16 +28,11 @@
                             "type": "string"
                         }
                     ]
-                },
-                "table": {
-                    "description": "Table Name",
-                    "type": "string"
                 }
             },
             "required": [
                 "name",
-                "provider",
-                "table"
+                "provider"
             ],
             "type": "object"
         },
@@ -125,19 +120,39 @@
                 "type"
             ],
             "type": "object"
+        },
+        "Table": {
+            "additionalProperties": false,
+            "properties": {
+                "columns": {
+                    "description": "Tables to be processed",
+                    "items": {
+                        "$ref": "#/definitions/Column"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "type": "object"
         }
     },
     "properties": {
-        "columns": {
+        "name": {
+            "type": "string"
+        },
+        "tables": {
             "description": "Tables to be processed",
             "items": {
-                "$ref": "#/definitions/Column"
+                "$ref": "#/definitions/Table"
             },
             "minItems": 1,
             "type": "array"
-        },
-        "name": {
-            "type": "string"
         }
     },
     "required": [

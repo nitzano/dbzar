@@ -13,8 +13,18 @@ export interface Config {
 	 *
 	 * @minItems 1
 	 */
-	columns?: Column[];
+	tables?: Table[];
 	name: string;
+}
+
+export interface Table {
+	name: string;
+	/**
+	 * Tables to be processed
+	 *
+	 * @minItems 1
+	 */
+	columns?: Column[];
 }
 
 export interface Column {
@@ -22,9 +32,5 @@ export interface Column {
 	 * Column Name
 	 */
 	name: string;
-	/**
-	 * Table Name
-	 */
-	table: string;
 	provider: Provider | ProviderType;
 }
