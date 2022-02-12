@@ -5,5 +5,5 @@ export const anonDbCommand = new Command('anon-db');
 
 anonDbCommand
 	.description('anonymize an entire database')
-	.addCommand(anonDbCommand)
+	.argument('<uri>', 'connection string')
 	.action(anonDbAction);

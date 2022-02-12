@@ -1,13 +1,7 @@
 import {Anonymizer} from '../../anonymizers/types';
 import {createAnonymizer} from '../../anonymizers/utils/create-anonymizer';
 import {Config} from '../../config/types';
-
-interface Collection {
-	dbName: string;
-	tableName: string;
-	columnName: string;
-	anonymizer: Anonymizer;
-}
+import {Collection} from './collection';
 
 export class BaseProcessor {
 	constructor(protected readonly uri: string) {}
