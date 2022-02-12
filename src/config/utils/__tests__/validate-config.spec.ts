@@ -16,17 +16,19 @@ describe('validate-config', () => {
 			],
 		};
 
-		const isValid: boolean = validateConfig(validConfig);
-		expect(isValid).toBe(true);
+		expect(() => {
+			validateConfig(validConfig);
+		}).not.toThrow();
 	});
 
-	it('should allow to revoke an invalid config', () => {
+	it.only('should allow to revoke an invalid config', () => {
 		const invalidConfig: any = {
 			tables: [],
 		};
 
-		const isValid: boolean = validateConfig(invalidConfig);
-		expect(isValid).toBe(false);
+		expect(() => {
+			validateConfig(invalidConfig);
+		}).toThrow();
 	});
 
 	it('should allow to fix  an invalid config', () => {
@@ -44,12 +46,14 @@ describe('validate-config', () => {
 			],
 		};
 
-		let isValid: boolean = validateConfig(config);
-		expect(isValid).toBe(false);
+		expect(() => {
+			validateConfig(config);
+		}).toThrow();
 
 		// Fix it
 		config.tables[0].columns[0].provider = 'mask';
-		isValid = validateConfig(config);
-		expect(isValid).toBe(true);
+		expect(() => {
+			validateConfig(config);
+		}).not.toThrow();
 	});
 });
