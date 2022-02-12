@@ -19,6 +19,6 @@ export function validateConfig(data: any): void | never {
 	logger(`is valid: ${JSON.stringify(valid)}`);
 
 	if (!valid) {
-		throw new Error(ajv.errorsText(validate.errors));
+		throw new Error(ajv.errorsText(validate.errors, {separator: '\n'}));
 	}
 }
