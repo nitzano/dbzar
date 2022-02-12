@@ -56,4 +56,12 @@ describe('validate-config', () => {
 			validateConfig(config);
 		}).not.toThrow();
 	});
+
+	it('should mark config without tables as invalid', () => {
+		expect(() => {
+			validateConfig({
+				test: 'hello',
+			});
+		}).toThrow();
+	});
 });
