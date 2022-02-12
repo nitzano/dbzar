@@ -113,6 +113,13 @@ dist
 # dbzar
 db-backup
 .dbzarrc
+.dbzarrc.json
+.dbzarrc.yaml
+.dbzarrc.yml
+.dbzarrc.js
+.dbzarrc.cjs
+dbzar.config.js
+dbzar.config.cjs
 
 
 
