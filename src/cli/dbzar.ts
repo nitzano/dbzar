@@ -10,9 +10,7 @@ dotenv.config();
 
 const program = new Command();
 
-// Anon column
 program.addCommand(anonColCommand);
-
 program.addCommand(anonDbCommand);
 
 program.parse(process.argv);
