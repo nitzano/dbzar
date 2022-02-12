@@ -20,6 +20,7 @@
                                 "const",
                                 "fake",
                                 "mask",
+                                "remove",
                                 "scramble"
                             ],
                             "type": "string"
@@ -146,6 +147,8 @@
             "type": "array"
         }
     },
-    "type": "object"
+    "type": "object",
+    "required": [
+        "tables"
+    ]
 }
-

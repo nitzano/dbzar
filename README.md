@@ -14,8 +14,9 @@
 - [💻 Install](#-install)
 - [👻 Usage](#-usage)
   - [`anon-col` : anonymize a single column in a table](#anon-col--anonymize-a-single-column-in-a-table)
-  - [`anon-db`: anonymize entire database (future Version)](#anon-db-anonymize-entire-database-future-version)
+  - [`anon-db`: anonymize entire database](#anon-db-anonymize-entire-database)
 - [✅ Supported Databases](#-supported-databases)
+- [⚙ Configuration](#-configuration)
 - [🔧 Providers](#-providers)
   - [🎭 Mask](#-mask)
   - [🔀 Scramble](#-scramble)
@@ -61,12 +62,48 @@ npx dbzar anon-col scramble mongodb://example:example@localhost test users first
 // { "firstName": "John" } => { "firstName": "nhJo" }
 ```
 
-### `anon-db`: anonymize entire database (future Version)
+### `anon-db`: anonymize entire database
 
-1. Create Configuration file:
+1. Create Configuration file (see [Configuration](#Configuration))
+
+2. Run the anonymizer
+
+```
+// postgres
+npx dbzar anon-db postgresql://example:example@localhost test2
+
+// mongo
+npx dbzar anon-db mongodb://example:example@mongo:27017 test1
+```
+
+## ✅ Supported Databases
+
+1. MongoDB
+2. Postgres
+3. MariaDB
+4. MySQL
+
+- Future support
+  - SQLIte
+  - CSV
+
+## ⚙ Configuration
+
+Create any one of these files:
+
+- `.dbzarrc`
+- `.dbzarrc.json`
+- `.dbzarrc.yaml`
+- `.dbzarrc.yml`
+- `.dbzarrc.js`
+- `.dbzarrc.cjs`
+- `dbzar.config.js`
+- `dbzar.config.cjs`
+
+Example config:
 
 ```yaml
-// dbzar.config.yml
+// .dbzarrc
 tables:
     - name: users
       columns:
@@ -89,27 +126,6 @@ tables:
           options: { min: 100, max: 999 }
 
 ```
-
-1. Run the anonymizer
-
-```
-// postgres
-npx dbzar anon-db postgresql://example:example@localhost test2
-
-// mongo
-npx dbzar anon-db mongodb://example:example@mongo:27017 test1
-```
-
-## ✅ Supported Databases
-
-1. MongoDB
-2. Postgres
-3. MariaDB
-4. MySQL
-
-- Future support
-  - SQLIte
-  - CSV
 
 ## 🔧 Providers
 
