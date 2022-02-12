@@ -91,14 +91,14 @@ npx dbzar anon-db mongodb://example:example@mongo:27017 test1
 
 Create any one of these files:
 
-- `.dbzarrc`,
-- `.dbzarrc.json`,
-- `.dbzarrc.yaml`,
-- `.dbzarrc.yml`,
-- `.dbzarrc.js`,
-- `.dbzarrc.cjs`,
-- `dbzar.config.js`,
-- `dbzar.config.cjs`,
+- `.dbzarrc`
+- `.dbzarrc.json`
+- `.dbzarrc.yaml`
+- `.dbzarrc.yml`
+- `.dbzarrc.js`
+- `.dbzarrc.cjs`
+- `dbzar.config.js`
+- `dbzar.config.cjs`
 
 Example config:
 
