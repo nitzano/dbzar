@@ -22,7 +22,6 @@ export async function loadDbzarConfig(): Promise<Config | null> {
 
 			if (configData) {
 				try {
-					// TODO: not checking correctly
 					logger(`processing ${JSON.stringify(configData, null, 2)}`);
 					validateConfig(configData);
 					return configData as Config;
