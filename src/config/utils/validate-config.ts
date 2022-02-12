@@ -4,11 +4,15 @@ import configSchema from '../assets/config.schema.json';
 let ajv: Ajv;
 let validate: ValidateFunction;
 
-export function validateConfig(data: any): boolean {
+export function validateConfig(data: any): void | never {
 	if (!ajv) {
-		ajv = new Ajv();
+		ajv = new Ajv({allErrors: true});
 		validate = ajv.compile(configSchema);
 	}
 
-	return validate(data);
+	const valid = validate(data);
+
+	if (!valid) {
+		throw new Error(ajv.errorsText(validate.errors));
+	}
 }
