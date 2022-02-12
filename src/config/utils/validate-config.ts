@@ -6,9 +6,13 @@ let validate: ValidateFunction;
 
 export function validateConfig(data: any): ErrorObject | void {
 	if (!ajv) {
-		ajv = new Ajv();
+		ajv = new Ajv({allErrors: true});
 		validate = ajv.compile(configSchema);
 	}
 
-	validate(data);
+	const valid = validate(data);
+
+	if (!valid) {
+		throw new Error(ajv.errorsText(validate.errors));
+	}
 }

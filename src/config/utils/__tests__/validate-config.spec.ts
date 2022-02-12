@@ -21,7 +21,7 @@ describe('validate-config', () => {
 		}).not.toThrow();
 	});
 
-	it.only('should allow to revoke an invalid config', () => {
+	it('should allow to revoke an invalid config', () => {
 		const invalidConfig: any = {
 			tables: [],
 		};
