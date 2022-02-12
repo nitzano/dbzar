@@ -106,7 +106,7 @@ Example config:
 // .dbzarrc
 name: db1
 tables:
-  - name: table1
+  - name: users
     columns:
       - name: firstName
         provider: mask
