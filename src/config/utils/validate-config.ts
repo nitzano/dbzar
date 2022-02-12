@@ -1,10 +1,10 @@
-import Ajv, {ErrorObject, ValidateFunction} from 'ajv';
+import Ajv, {ValidateFunction} from 'ajv';
 import configSchema from '../assets/config.schema.json';
 
 let ajv: Ajv;
 let validate: ValidateFunction;
 
-export function validateConfig(data: any): ErrorObject | void {
+export function validateConfig(data: any): void | never {
 	if (!ajv) {
 		ajv = new Ajv({allErrors: true});
 		validate = ajv.compile(configSchema);
