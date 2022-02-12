@@ -8,7 +8,7 @@ const explorer = cosmiconfig(moduleName);
 
 const logger = createLogger(__filename);
 
-export async function loadDbzarConfig(): Promise<Config | null> {
+export async function loadDbzarConfig(): Promise<Config> {
 	const configResult = await explorer.search();
 
 	if (configResult) {
@@ -21,17 +21,12 @@ export async function loadDbzarConfig(): Promise<Config | null> {
 			>;
 
 			if (configData) {
-				try {
-					logger(`processing ${JSON.stringify(configData, null, 2)}`);
-					validateConfig(configData);
-					return configData as Config;
-				} catch (error: unknown) {
-					console.error((error as Error).message);
-					return null;
-				}
+				logger(`processing ${JSON.stringify(configData, null, 2)}`);
+				validateConfig(configData);
+				return configData as Config;
 			}
 		}
 	}
 
-	return null;
+	throw new Error('no config file found');
 }
