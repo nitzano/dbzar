@@ -15,10 +15,7 @@ export async function loadDbzarConfig(): Promise<Config> {
 		const {isEmpty} = configResult;
 
 		if (!isEmpty) {
-			const configData: Record<string, unknown> = configResult.config as Record<
-				string,
-				unknown
-			>;
+			const configData: unknown = configResult.config;
 
 			if (configData) {
 				logger(`processing ${JSON.stringify(configData, null, 2)}`);

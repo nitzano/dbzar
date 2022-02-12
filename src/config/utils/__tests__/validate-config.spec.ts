@@ -3,15 +3,12 @@ import {validateConfig} from '../validate-config';
 describe('validate-config', () => {
 	it('should allow to pass an valid config', () => {
 		const validConfig: any = {
-			tables: [
+			name: 'db1',
+			columns: [
 				{
-					name: 'table1',
-					columns: [
-						{
-							name: 'column1',
-							provider: 'mask',
-						},
-					],
+					name: 'col1',
+					table: 'table1',
+					provider: 'mask',
 				},
 			],
 		};
@@ -33,15 +30,12 @@ describe('validate-config', () => {
 
 	it('should allow to fix  an invalid config', () => {
 		const config: any = {
-			tables: [
+			name: 'db1',
+			columns: [
 				{
-					name: 'table1',
-					columns: [
-						{
-							name: 'column1',
-							provider: 'mask!', // Invalid at first
-						},
-					],
+					name: 'col1',
+					table: 'table1',
+					provider: 'mask1',
 				},
 			],
 		};
@@ -51,7 +45,7 @@ describe('validate-config', () => {
 		}).toThrow();
 
 		// Fix it
-		config.tables[0].columns[0].provider = 'mask';
+		config.columns[0].provider = 'mask';
 		expect(() => {
 			validateConfig(config);
 		}).not.toThrow();
