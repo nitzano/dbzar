@@ -1,4 +1,4 @@
-import {cyan, magenta} from 'chalk';
+import {cyan, magenta, yellow} from 'chalk';
 import ora from 'ora';
 import {providerEmoji} from '../../../anonymizers/consts/provider-emoji';
 import {providerVerb} from '../../../anonymizers/consts/provider-verb';
@@ -36,7 +36,7 @@ export async function processDb(
 	processor: Processor,
 	collections: Collection[],
 ): Promise<void> {
-	console.log(`Processing db ${magenta(dbName)}`);
+	console.log(`\nProcessing db ${yellow(dbName)}\n`);
 
 	for await (const collection of collections) {
 		await processCollection(collection, processor);
