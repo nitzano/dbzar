@@ -2,6 +2,7 @@
 import 'dotenv/config'; // eslint-disable-line import/no-unassigned-import
 import process from 'node:process';
 import {MongoClient} from 'mongodb';
+import {Product, productFactory} from '../factories/product-factory';
 import {User, userFactory} from '../factories/user';
 
 async function run() {
@@ -15,6 +16,9 @@ async function run() {
 			// User
 			const users = db.collection<User>('users');
 			await users.insertMany(userFactory.buildList(10));
+			// Products
+			const products = db.collection<Product>('products');
+			await products.insertMany(productFactory.buildList(10));
 		} catch (error: unknown) {
 			console.error(error);
 		} finally {
