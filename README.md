@@ -19,10 +19,8 @@
 - [⚙ Configuration](#-configuration)
 - [🔧 Providers](#-providers)
   - [🎭 Mask](#-mask)
-    - [Options](#options)
   - [🔀 Scramble](#-scramble)
   - [🍀 Fake](#-fake)
-    - [Options](#options-1)
   - [Future Support](#future-support)
 
 <br/>
@@ -140,7 +138,7 @@ tables:
 2. numbers - does nothing
 3. boolean - does nothing
 
-#### Options
+Options:
 
 1. `character` - Replacing character (default `*`).
 <!-- 2. `excludeStart` - do not mask X chars from start.
@@ -171,7 +169,7 @@ Generates fake data
 2. numbers - generates random numbers
 3. boolean - generates random boolean
 
-#### Options
+Options:
 
 1. `fakeValue` - fake value to replace (default: `word`), options:
    1. `age` - age as a number
