@@ -1,6 +1,6 @@
 import {Command} from 'commander';
 import {Config} from 'cosmiconfig/dist/types';
-import {providerEmoji} from '../../../anonymizers/consts';
+import {providerEmoji} from '../../../anonymizers/consts/provider-emoji';
 import {Processor} from '../../../processors/base-processor/processor';
 import {getProcessor} from '../anon-col/helpers/get-processor';
 import {loadDbzarConfig} from './utils/load-dbzar-config';
