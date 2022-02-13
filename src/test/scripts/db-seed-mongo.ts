@@ -6,8 +6,8 @@ import process from 'node:process';
 import {Product, productFactory} from '../factories/product-factory';
 import {User, userFactory} from '../factories/user';
 
-const usersCount = 10_000;
-const productsCount = 10_000;
+const usersCount = 500;
+const productsCount = 500;
 
 async function run() {
 	const connectionString = process.env.MONGO_DB_URI;
