@@ -23,6 +23,8 @@ export class FakeAnonymizer extends BaseAnonymizer {
 				return chance.word();
 			case 'name':
 				return chance.name();
+			case 'animal':
+				return chance.animal();
 			default:
 				break;
 		}

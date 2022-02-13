@@ -69,6 +69,7 @@
         "FakeType": {
             "enum": [
                 "age",
+                "animal",
                 "first",
                 "firstName",
                 "last",

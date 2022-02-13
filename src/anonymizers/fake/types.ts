@@ -17,4 +17,5 @@ export type FakeType =
 	| 'lastName'
 	| 'letter'
 	| 'name'
-	| 'word';
+	| 'word'
+	| 'animal';
