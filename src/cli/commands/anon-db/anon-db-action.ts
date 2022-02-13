@@ -15,7 +15,6 @@ export async function anonDbAction(this: Command) {
 	let config: Config | undefined;
 	try {
 		config = await loadDbzarConfig();
-		logger(`confing = \n${JSON.stringify(config, null, 2)}`);
 	} catch (error: unknown) {
 		console.error(`Could not load config: ${(error as Error).message}`);
 		return;
