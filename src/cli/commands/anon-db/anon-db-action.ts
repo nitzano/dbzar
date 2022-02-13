@@ -1,11 +1,10 @@
-import {magenta} from 'chalk';
 import {Command} from 'commander';
 import {Config} from 'cosmiconfig/dist/types';
-import {providerEmoji} from '../../../anonymizers/consts/provider-emoji';
 import {Processor} from '../../../processors/base-processor/processor';
 import {getCollections} from '../../../processors/utils/get-collections';
 import {createLogger} from '../../../services/loggers/debug-logger';
 import {getProcessor} from '../anon-col/helpers/get-processor';
+import {processDb} from './process-db';
 import {loadDbzarConfig} from './utils/load-dbzar-config';
 
 const logger = createLogger(__filename);
@@ -25,15 +24,9 @@ export async function anonDbAction(this: Command) {
 	logger(`uri = ${uri}`);
 
 	const processor: Processor | undefined = getProcessor(uri);
+	const collections = getCollections(config);
 
-	if (processor) {
-		const collections = getCollections(config);
-		for (const collection of collections) {
-			console.log(
-				`processing ${magenta(collection.dbName)} ${collection.tableName} ${
-					collection.columnName
-				} ${providerEmoji[collection.anonymizer.name]}`,
-			);
-		}
+	if (processor && collections) {
+		await processDb(config.name, processor, collections);
 	}
 }
