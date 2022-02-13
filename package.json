@@ -66,8 +66,8 @@
         "db:seed:pg": "ts-node src/test/scripts/db-seed-pg.ts dotenv_config_path=.dev.env",
         "db:seed:maria": "ts-node src/test/scripts/db-seed-mariadb.ts dotenv_config_path=.dev.env",
         "commit": "cz",
-        "dbzar": "ts-node src/cli/dbzar.ts",
-        "dbzar:prod": "node dist/cli/dbzar.js",
+        "dbzar": "ts-node -r dotenv/config src/cli/dbzar.ts",
+        "dbzar:prod": "node -r dotenv/config dist/cli/dbzar.js",
         "gen-schema": "yarn typescript-json-schema tsconfig.json Config --noExtraProps --required -o src/config/assets/config.schema.json"
     },
     "lint-staged": {
