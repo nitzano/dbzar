@@ -1,7 +1,7 @@
 import {Anonymizer} from '../../anonymizers/types';
 import {createAnonymizer} from '../../anonymizers/utils/create-anonymizer';
 import {Config} from '../../config/types';
-import {Collection} from './collection';
+import {Collection} from '../types/collection';
 
 export class BaseProcessor {
 	constructor(protected readonly uri: string) {}
