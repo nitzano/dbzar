@@ -11,11 +11,11 @@ export const fakeTypes: string[] = [
 
 export type FakeType =
 	| 'age'
+	| 'animal'
 	| 'first'
 	| 'firstName'
 	| 'last'
 	| 'lastName'
 	| 'letter'
 	| 'name'
-	| 'word'
-	| 'animal';
+	| 'word';

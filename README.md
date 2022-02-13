@@ -19,8 +19,10 @@
 - [⚙ Configuration](#-configuration)
 - [🔧 Providers](#-providers)
   - [🎭 Mask](#-mask)
+    - [Options](#options)
   - [🔀 Scramble](#-scramble)
   - [🍀 Fake](#-fake)
+    - [Options](#options-1)
   - [Future Support](#future-support)
 
 <br/>
@@ -138,12 +140,12 @@ tables:
 2. numbers - does nothing
 3. boolean - does nothing
 
-Options:
+#### Options
 
 1. `character` - Replacing character (default `*`).
-2. `excludeStart` - do not mask X chars from start.
-3. `excludeEnd` - do not mask X chars from end.
-4. `excludeCharacters` - do not mask these characters.
+<!-- 2. `excludeStart` - do not mask X chars from start.
+2. `excludeEnd` - do not mask X chars from end.
+3. `excludeCharacters` - do not mask these characters. -->
 
 ### 🔀 Scramble
 
@@ -169,9 +171,16 @@ Generates fake data
 2. numbers - generates random numbers
 3. boolean - generates random boolean
 
-Options:
+#### Options
 
-1. `fakeValue` - fake value to replace (default: random word)
+1. `fakeValue` - fake value to replace (default: `word`), options:
+   1. `age` - age as a number
+   2. `animal`
+   3. `first` / `firstName`
+   4. `last` / `lastName`
+   5. `letter` - a single letter
+   6. `name` - full name
+   7. `word` - random word
 
 ### Future Support
 
