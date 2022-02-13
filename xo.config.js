@@ -8,6 +8,7 @@ module.exports = {
 		'no-console': [1, {allow: ['debug', 'warn', 'error']}],
 		'no-unused-vars': 'error',
 		'unused-imports/no-unused-imports': 'error',
+		'import/order': 1,
 	},
 	globals: {
 		__MONGO_URI__: true,
