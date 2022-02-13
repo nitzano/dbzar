@@ -21,7 +21,12 @@ async function processCollection(
 	}).start();
 
 	// Process
-	await processor.processColumn(tableName, columnName, anonymizer, dbName);
+	try {
+		await processor.processColumn(tableName, columnName, anonymizer, dbName);
+	} catch (error: unknown) {
+		console.error(error);
+		collectionSpinner.fail();
+	}
 
 	collectionSpinner.succeed();
 }
@@ -31,16 +36,9 @@ export async function processDb(
 	processor: Processor,
 	collections: Collection[],
 ): Promise<void> {
-	const dbSpinner = ora({
-		text: `Processing db ${magenta(dbName)}`,
-		color: 'cyan',
-	});
+	console.log(`Processing db ${magenta(dbName)}`);
 
 	for await (const collection of collections) {
 		await processCollection(collection, processor);
 	}
-
-	setTimeout(() => {
-		dbSpinner.stop();
-	}, 3000);
 }
