@@ -73,7 +73,7 @@ npx dbzar anon-col scramble mongodb://example:example@localhost test users first
 npx dbzar anon-db postgresql://example:example@localhost test2
 
 // mongo
-npx dbzar anon-db mongodb://example:example@mongo:27017 test1
+npx dbzar anon-db mongodb://example:example@localhost test1
 ```
 
 ## ✅ Supported Databases
