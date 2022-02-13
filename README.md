@@ -104,6 +104,7 @@ Example config:
 
 ```yaml
 // .dbzarrc
+uri:  mongodb://example:example@localhost
 name: db1
 tables:
   - name: users
