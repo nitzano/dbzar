@@ -20,7 +20,9 @@ export async function anonDbAction(this: Command) {
 	}
 
 	// Process columns
-	const [uri] = this.args;
+	const [cliUri] = this.args;
+	const uri: string = cliUri ?? config.uri;
+
 	logger(`uri = ${uri}`);
 
 	const processor: Processor | undefined = getProcessor(uri);
