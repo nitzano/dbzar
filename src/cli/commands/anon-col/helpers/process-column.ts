@@ -1,6 +1,6 @@
 import ora from 'ora';
 import {Anonymizer} from '../../../../anonymizers/types';
-import {Processor} from '../../../../processors/base-processor/base-processor';
+import {Processor} from '../../../../processors/base-processor/processor';
 import {getProcessor} from './get-processor';
 import {isUserConfirmed} from './is-user-confirmed';
 

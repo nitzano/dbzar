@@ -69,6 +69,7 @@
         "FakeType": {
             "enum": [
                 "age",
+                "animal",
                 "first",
                 "firstName",
                 "last",
@@ -153,6 +154,9 @@
             },
             "minItems": 1,
             "type": "array"
+        },
+        "uri": {
+            "type": "string"
         }
     },
     "required": [

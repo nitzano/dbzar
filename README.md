@@ -69,11 +69,7 @@ npx dbzar anon-col scramble mongodb://example:example@localhost test users first
 2. Run the anonymizer
 
 ```
-// postgres
-npx dbzar anon-db postgresql://example:example@localhost test2
-
-// mongo
-npx dbzar anon-db mongodb://example:example@mongo:27017 test1
+npx dbzar anon-db
 ```
 
 ## ✅ Supported Databases
@@ -104,6 +100,7 @@ Example config:
 
 ```yaml
 // .dbzarrc
+uri:  mongodb://example:example@localhost
 name: db1
 tables:
   - name: users

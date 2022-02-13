@@ -15,6 +15,7 @@ export interface Config {
 	 */
 	tables?: Table[];
 	name: string;
+	uri?: string;
 }
 
 export interface Table {

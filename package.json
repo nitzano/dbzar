@@ -62,12 +62,12 @@
         "test": "jest",
         "test:watch": "yarn test --watch",
         "prepare": "husky install",
-        "db:seed:mongo": "ts-node src/test/scripts/mongo-db-seed.ts dotenv_config_path=.dev.env",
+        "db:seed:mongo": "ts-node src/test/scripts/db-seed-mongo.ts dotenv_config_path=.dev.env",
         "db:seed:pg": "ts-node src/test/scripts/db-seed-pg.ts dotenv_config_path=.dev.env",
         "db:seed:maria": "ts-node src/test/scripts/db-seed-mariadb.ts dotenv_config_path=.dev.env",
         "commit": "cz",
-        "dbzar": "ts-node src/cli/dbzar.ts",
-        "dbzar:prod": "node dist/cli/dbzar.js",
+        "dbzar": "ts-node -r dotenv/config src/cli/dbzar.ts",
+        "dbzar:prod": "node -r dotenv/config dist/cli/dbzar.js",
         "gen-schema": "yarn typescript-json-schema tsconfig.json Config --noExtraProps --required -o src/config/assets/config.schema.json"
     },
     "lint-staged": {
@@ -82,6 +82,7 @@
         "cosmiconfig": "^7.0.1",
         "debug": "^4.3.3",
         "dotenv": "^15.0.0",
+        "dotenv-expand": "^8.0.1",
         "enquirer": "^2.3.6",
         "knex": "^1.0.1",
         "lodash": "^4.17.21",
