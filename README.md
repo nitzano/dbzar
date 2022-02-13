@@ -68,7 +68,7 @@ npx dbzar anon-col scramble mongodb://example:example@localhost test users first
 Usage: dbzar anon-db [options] [uri]
 ```
 
-1. Create Configuration file (see [Configuration](#Configuration))
+1. Create Configuration file (see [Configuration](#-configuration))
 
 2. Run the anonymizer
 
