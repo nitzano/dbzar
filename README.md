@@ -14,7 +14,7 @@
 - [💻 Install](#-install)
 - [👻 Usage](#-usage)
   - [`anon-col` : anonymize a single column in a table](#anon-col--anonymize-a-single-column-in-a-table)
-  - [`anon-db`: anonymize entire database](#anon-db-anonymize-entire-database)
+  - [`anon-db` : anonymize entire database](#anon-db--anonymize-entire-database)
 - [✅ Supported Databases](#-supported-databases)
 - [⚙ Configuration](#-configuration)
 - [🔧 Providers](#-providers)
@@ -62,7 +62,7 @@ npx dbzar anon-col scramble mongodb://example:example@localhost test users first
 // { "firstName": "John" } => { "firstName": "nhJo" }
 ```
 
-### `anon-db`: anonymize entire database
+### `anon-db` : anonymize entire database
 
 ```
 Usage: dbzar anon-db [options] [uri]
