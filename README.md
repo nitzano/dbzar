@@ -64,12 +64,16 @@ npx dbzar anon-col scramble mongodb://example:example@localhost test users first
 
 ### `anon-db`: anonymize entire database
 
+```
+Usage: dbzar anon-db [options] [uri]
+```
+
 1. Create Configuration file (see [Configuration](#Configuration))
 
 2. Run the anonymizer
 
 ```
-npx dbzar anon-db
+yarn dbzar anon-db mongodb://example:example@localhost
 ```
 
 ## ✅ Supported Databases
