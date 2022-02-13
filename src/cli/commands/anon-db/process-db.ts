@@ -1,8 +1,25 @@
-import {magenta} from 'chalk';
+import {cyan, magenta} from 'chalk';
 import ora from 'ora';
 import {providerEmoji} from '../../../anonymizers/consts/provider-emoji';
+import {providerVerb} from '../../../anonymizers/consts/provider-verb';
 import {Processor} from '../../../processors/base-processor/processor';
 import {Collection} from '../../../processors/types/collection';
+import {ProviderType} from '../../../types/types';
+
+async function processCollection(collection: Collection): Promise<void> {
+	const anonymizerName: ProviderType = collection.anonymizer.name;
+
+	const collectionSpinner = ora({
+		text: `${providerVerb[anonymizerName]} ${magenta(
+			collection.columnName,
+		)} in ${cyan(collection.tableName)}`,
+		prefixText: `${providerEmoji[anonymizerName]}`,
+	}).start();
+
+	// Process
+
+	collectionSpinner.succeed();
+}
 
 export async function processDb(
 	dbName: string,
@@ -12,14 +29,10 @@ export async function processDb(
 	const dbSpinner = ora({
 		text: `Processing db ${magenta(dbName)}`,
 		color: 'cyan',
-	}).start();
+	});
 
-	for (const collection of collections) {
-		console.log(
-			`\n\tprocessing  ${collection.tableName} ${collection.columnName} ${
-				providerEmoji[collection.anonymizer.name]
-			}`,
-		);
+	for await (const collection of collections) {
+		await processCollection(collection);
 	}
 
 	setTimeout(() => {
