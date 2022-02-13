@@ -6,8 +6,12 @@ import {Processor} from '../../../processors/base-processor/processor';
 import {Collection} from '../../../processors/types/collection';
 import {ProviderType} from '../../../types/types';
 
-async function processCollection(collection: Collection): Promise<void> {
+async function processCollection(
+	collection: Collection,
+	processor: Processor,
+): Promise<void> {
 	const anonymizerName: ProviderType = collection.anonymizer.name;
+	const {anonymizer, tableName, columnName, dbName} = collection;
 
 	const collectionSpinner = ora({
 		text: `${providerVerb[anonymizerName]} ${magenta(
@@ -17,13 +21,14 @@ async function processCollection(collection: Collection): Promise<void> {
 	}).start();
 
 	// Process
+	await processor.processColumn(tableName, columnName, anonymizer, dbName);
 
 	collectionSpinner.succeed();
 }
 
 export async function processDb(
 	dbName: string,
-	_processor: Processor,
+	processor: Processor,
 	collections: Collection[],
 ): Promise<void> {
 	const dbSpinner = ora({
@@ -32,7 +37,7 @@ export async function processDb(
 	});
 
 	for await (const collection of collections) {
-		await processCollection(collection);
+		await processCollection(collection, processor);
 	}
 
 	setTimeout(() => {
