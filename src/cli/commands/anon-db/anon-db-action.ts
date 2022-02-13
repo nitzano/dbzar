@@ -2,6 +2,7 @@ import {Command} from 'commander';
 import {Config} from 'cosmiconfig/dist/types';
 import {providerEmoji} from '../../../anonymizers/consts/provider-emoji';
 import {Processor} from '../../../processors/base-processor/processor';
+import {getCollections} from '../../../processors/utils/get-collections';
 import {getProcessor} from '../anon-col/helpers/get-processor';
 import {loadDbzarConfig} from './utils/load-dbzar-config';
 
@@ -23,7 +24,7 @@ export async function anonDbAction(this: Command) {
 	const processor: Processor | undefined = getProcessor(uri);
 
 	if (processor) {
-		const collections = processor.getCollections(config);
+		const collections = getCollections(config);
 		for (const collection of collections) {
 			console.log(
 				`processing ${collection.dbName} ${collection.tableName} ${
