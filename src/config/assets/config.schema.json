@@ -144,7 +144,8 @@
         }
     },
     "properties": {
-        "name": {
+        "dbName": {
+            "description": "Database name",
             "type": "string"
         },
         "tables": {
@@ -160,7 +161,7 @@
         }
     },
     "required": [
-        "name"
+        "dbName"
     ],
     "type": "object"
 }
