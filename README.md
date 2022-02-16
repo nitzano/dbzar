@@ -106,7 +106,7 @@ Example config:
 ```yaml
 // .dbzarrc
 uri:  mongodb://example:example@localhost
-name: db1
+dbName: db1
 tables:
   - name: users
     columns:
@@ -139,7 +139,7 @@ await anonCol("mongodb://localhost", "db1", "table1", "col1", "mask");
 
 const config: Config = {
   uri: "mongodb//localhost",
-  name: "db1",
+  dbName: "db1",
   tables: [
     {
       name: "table1",

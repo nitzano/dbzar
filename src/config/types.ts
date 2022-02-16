@@ -14,7 +14,10 @@ export interface Config {
 	 * @minItems 1
 	 */
 	tables?: Table[];
-	name: string;
+	/**
+	 * Database name
+	 */
+	dbName: string;
 	uri?: string;
 }
 

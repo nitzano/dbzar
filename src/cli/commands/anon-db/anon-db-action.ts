@@ -29,6 +29,6 @@ export async function anonDbAction(this: Command) {
 	const collections = getCollections(config);
 
 	if (processor && collections) {
-		await processDb(config.name, processor, collections);
+		await processDb(config.dbName, processor, collections);
 	}
 }
