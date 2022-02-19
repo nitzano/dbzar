@@ -7,6 +7,7 @@ export type ProviderType = 'mask' | 'fake' | 'const' | 'scramble' | 'remove';
 
 export interface BaseProvider {
 	type: ProviderType;
+	options?: any;
 }
 
 export interface FakeProvider extends BaseProvider {
