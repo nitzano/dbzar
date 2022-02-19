@@ -7,7 +7,6 @@ export type ProviderType = 'mask' | 'fake' | 'const' | 'scramble' | 'remove';
 
 export interface BaseProvider {
 	type: ProviderType;
-	options?: any;
 }
 
 export interface FakeProvider extends BaseProvider {
@@ -22,6 +21,7 @@ export interface MaskProvider extends BaseProvider {
 
 export interface ScrambleProvider extends BaseProvider {
 	type: 'scramble';
+	options: undefined;
 }
 
 export type Provider = FakeProvider | MaskProvider | ScrambleProvider;
