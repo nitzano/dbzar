@@ -13,7 +13,7 @@ const logger = createLogger(__filename);
  * @param {Config} config
  * @return {*}  {Promise<void>}
  */
-export async function anonDbd(config: Config): Promise<void> {
+export async function anonDb(config: Config): Promise<void> {
 	const {uri, dbName} = config;
 
 	if (!uri) {
