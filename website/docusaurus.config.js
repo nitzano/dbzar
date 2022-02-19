@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-	title: 'DBZar Documentation',
-	tagline: 'Agnostic DB Anonymizer',
+	title: 'DBZar',
+	tagline: '👻🔁 Agnostic DB Anonymizer',
 	url: 'https://nitzano.github.io',
 	baseUrl: '/dbzar/',
 	onBrokenLinks: 'throw',
