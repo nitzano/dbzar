@@ -19,21 +19,13 @@ const FeatureList: FeatureItem[] = [
     title: "Extremely  Flexible",
     image: "/img/undraw_control_panel_re_y3ar.svg",
     description: (
-      <>
-        Change columns data by masking, scrambling, replacing with a similar
-        fake input or a constant. Anything goes.
-      </>
+      <>Change columns by masking, scrambling, replacing or a new fake data.</>
     ),
   },
   {
-    title: "CLI, API and Configuration",
+    title: "Use any Way you want",
     image: "/img/undraw_programmer_re_owql.svg",
-    description: (
-      <>
-        Run as a single command, import as an API (Typescript) and use a saved
-        configuration file.
-      </>
-    ),
+    description: <>Use as a CLI command or API straight from your code</>,
   },
 ];
 
