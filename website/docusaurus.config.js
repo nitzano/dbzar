@@ -44,9 +44,9 @@ const config = {
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
 			navbar: {
-				title: 'My Site',
+				title: 'DBZar',
 				logo: {
-					alt: 'My Site Logo',
+					alt: 'DBZar Logo',
 					src: 'img/logo.svg',
 				},
 				items: [
