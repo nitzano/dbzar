@@ -133,7 +133,7 @@ tables:
 import { anonCol, anonDb, Config } from "dbzar";
 
 // anonymize a single column
-await anonCol("mongodb://localhost", "db1", "table1", "col1", "mask");
+await anonCol("mongodb://localhost", "db1", "table1", "col1", { type: "mask" });
 
 // Anonymize an entire database
 
