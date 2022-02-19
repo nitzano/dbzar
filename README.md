@@ -17,7 +17,7 @@
   - [`anon-db` : anonymize entire database](#anon-db--anonymize-entire-database)
 - [✅ Supported Databases](#-supported-databases)
 - [⚙ Configuration](#-configuration)
-- [API](#api)
+- [📄 API](#-api)
 - [🔧 Providers](#-providers)
   - [🎭 Mask](#-mask)
   - [🔀 Scramble](#-scramble)
@@ -127,7 +127,7 @@ tables:
           options: { min: 100, max: 999 }
 ```
 
-## API
+## 📄 API
 
 ```typescript
 import { anonCol, anonDb, Config } from "dbzar";
