@@ -20,7 +20,6 @@ export async function anonDbd(config: Config): Promise<void> {
 	const processor: Processor | undefined = getProcessor(uri);
 
 	if (processor) {
-		// Process db
 		const collections = getCollections(config);
 		const promises = collections.map(
 			async ({tableName, columnName, anonymizer}) =>
