@@ -9,7 +9,7 @@ const config = {
 	title: 'DBZar Documenation',
 	tagline: 'Dinosaurs are cool',
 	url: 'https://nitzano.github.io',
-	baseUrl: '/dbzar',
+	baseUrl: '/dbzar/',
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
 	favicon: 'img/favicon.ico',
