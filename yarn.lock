@@ -966,9 +966,9 @@
   integrity sha512-0fRfA90FWm6KJfw6P9QGyo0HDTCmthZ7cWaBQndITlaWLTZ6njRyKwrwpzpg+n6kBXBIGKeUHEQuBx7bphGJkA==
 
 "@types/node@*", "@types/node@^17.0.8":
-  version "17.0.8"
-  resolved "https://registry.npmjs.org/@types/node/-/node-17.0.8.tgz"
-  integrity sha512-YofkM6fGv4gDJq78g4j0mMuGMkZVxZDgtU0JRdx6FgiJDG+0fY0GKVolOV8WqVmEhLCXkQRjwDdKyPxJp/uucg==
+  version "17.0.18"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.18.tgz#3b4fed5cfb58010e3a2be4b6e74615e4847f1074"
+  integrity sha512-eKj4f/BsN/qcculZiRSujogjvp5O/k4lOW5m35NopjZM/QwLOR075a8pJW5hD+Rtdm2DaCVPENS6KtSQnUD6BA==
 
 "@types/node@^16.9.2":
   version "16.11.24"
@@ -2394,10 +2394,10 @@ dotenv@8.2.0:
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
   integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
 
-dotenv@^15.0.0:
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-15.0.0.tgz#2a585639429bf2c2c62f387f0fffde9c75aafde0"
-  integrity sha512-/l1sXXm79ry34KwwS0y4oVZjB468iw/6u9g1W26dtexKcIJAnVL2pMF+hxQwzZ7LutxOwEgtym9eIxvX33CMKg==
+dotenv@^16.0.0:
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.0.tgz#c619001253be89ebb638d027b609c75c26e47411"
+  integrity sha512-qD9WU0MPM4SWLPJy/r2Be+2WgQj8plChsyrCNQzW/0WjvcJQiKQJ9mH3ZgB3fxbUUxgc/11ZJ0Fi5KiimWGz2Q==
 
 duplexer3@^0.1.4:
   version "0.1.4"
@@ -4845,9 +4845,9 @@ lines-and-columns@^1.1.6:
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
 
 lint-staged@^12.1.5:
-  version "12.3.3"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-12.3.3.tgz#0a465962fe53baa2b4b9da50801ead49a910e03b"
-  integrity sha512-OqcLsqcPOqzvsfkxjeBpZylgJ3SRG1RYqc9LxC6tkt6tNsq1bNVkAixBwX09f6CobcHswzqVOCBpFR1Fck0+ag==
+  version "12.3.4"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-12.3.4.tgz#4b1ff8c394c3e6da436aaec5afd4db18b5dac360"
+  integrity sha512-yv/iK4WwZ7/v0GtVkNb3R82pdL9M+ScpIbJLJNyCXkJ1FGaXvRCOg/SeL59SZtPpqZhE7BD6kPKFLIDUhDx2/w==
   dependencies:
     cli-truncate "^3.1.0"
     colorette "^2.0.16"
@@ -5786,9 +5786,9 @@ pg-int8@1.0.1:
   integrity sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==
 
 pg-mem@^2.2.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/pg-mem/-/pg-mem-2.3.2.tgz#97ae726c001e52188d8fea06b44add7c8d76acfd"
-  integrity sha512-1uBe8lENJaUPwwdJtmiANcweY4UqC5Un45EGmY+5o2iSHwdAH2sSGqTWIPb7ULuZyxjS+PIiH+bZyq/2QMrhuQ==
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/pg-mem/-/pg-mem-2.3.3.tgz#c8c8d58a01a2c58fd7d1ef01e02b1e2dd1b0bd23"
+  integrity sha512-yrAyLHajVd3O6m84sundIm+ae2vT1yrjvPUUB/2vOQ8L77glnNNRqwMWw5U4w1FrvizqOKoCCOFrKvRry3qI/w==
   dependencies:
     "@mikro-orm/core" "^4.5.3"
     "@mikro-orm/postgresql" "^4.5.3"

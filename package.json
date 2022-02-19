@@ -81,7 +81,7 @@
         "connection-string": "^4.3.5",
         "cosmiconfig": "^7.0.1",
         "debug": "^4.3.3",
-        "dotenv": "^15.0.0",
+        "dotenv": "^16.0.0",
         "dotenv-expand": "^8.0.1",
         "enquirer": "^2.3.6",
         "knex": "^1.0.1",
