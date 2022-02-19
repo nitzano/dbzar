@@ -5786,9 +5786,9 @@ pg-int8@1.0.1:
   integrity sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==
 
 pg-mem@^2.2.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/pg-mem/-/pg-mem-2.3.2.tgz#97ae726c001e52188d8fea06b44add7c8d76acfd"
-  integrity sha512-1uBe8lENJaUPwwdJtmiANcweY4UqC5Un45EGmY+5o2iSHwdAH2sSGqTWIPb7ULuZyxjS+PIiH+bZyq/2QMrhuQ==
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/pg-mem/-/pg-mem-2.3.3.tgz#c8c8d58a01a2c58fd7d1ef01e02b1e2dd1b0bd23"
+  integrity sha512-yrAyLHajVd3O6m84sundIm+ae2vT1yrjvPUUB/2vOQ8L77glnNNRqwMWw5U4w1FrvizqOKoCCOFrKvRry3qI/w==
   dependencies:
     "@mikro-orm/core" "^4.5.3"
     "@mikro-orm/postgresql" "^4.5.3"
