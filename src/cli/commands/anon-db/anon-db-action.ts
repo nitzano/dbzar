@@ -1,5 +1,5 @@
 import {Command} from 'commander';
-import {Config} from 'cosmiconfig/dist/types';
+import {Config} from '../../../config/types';
 import {Processor} from '../../../processors/base-processor/processor';
 import {getCollections} from '../../../processors/utils/get-collections';
 import {createLogger} from '../../../services/loggers/debug-logger';
@@ -29,6 +29,6 @@ export async function anonDbAction(this: Command) {
 	const collections = getCollections(config);
 
 	if (processor && collections) {
-		await processDb(config.name, processor, collections);
+		await processDb(config.dbName, processor, collections);
 	}
 }
