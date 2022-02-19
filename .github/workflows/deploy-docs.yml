@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to GitHub Pages
+    name: Deploy dbzar docs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
