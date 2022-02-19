@@ -19,4 +19,9 @@ export interface MaskProvider extends BaseProvider {
 	options?: MaskOptions;
 }
 
-export type Provider = FakeProvider | MaskProvider;
+export interface ScrambleProvider extends BaseProvider {
+	type: 'scramble';
+	options: undefined;
+}
+
+export type Provider = FakeProvider | MaskProvider | ScrambleProvider;

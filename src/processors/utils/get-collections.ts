@@ -4,7 +4,7 @@ import {Config} from '../../config/types';
 import {Collection} from '../types/collection';
 
 export function getCollections(config: Config): Collection[] {
-	const {name: dbName, tables = []} = config;
+	const {dbName, tables = []} = config;
 
 	const collections: Collection[] = [];
 

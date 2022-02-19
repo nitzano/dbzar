@@ -3,7 +3,7 @@ import {validateConfig} from '../validate-config';
 describe('validate-config', () => {
 	it('should allow to pass an valid config', () => {
 		const validConfig: any = {
-			name: 'db1',
+			dbName: 'db1',
 			tables: [
 				{
 					name: 'table1',
@@ -34,7 +34,7 @@ describe('validate-config', () => {
 
 	it('should allow to fix  an invalid config', () => {
 		const config: any = {
-			name: 'db1',
+			dbName: 'db1',
 			tables: [
 				{
 					name: 'table1',

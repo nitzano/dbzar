@@ -17,6 +17,7 @@
   - [`anon-db` : anonymize entire database](#anon-db--anonymize-entire-database)
 - [✅ Supported Databases](#-supported-databases)
 - [⚙ Configuration](#-configuration)
+- [📄 API](#-api)
 - [🔧 Providers](#-providers)
   - [🎭 Mask](#-mask)
   - [🔀 Scramble](#-scramble)
@@ -105,7 +106,7 @@ Example config:
 ```yaml
 // .dbzarrc
 uri:  mongodb://example:example@localhost
-name: db1
+dbName: db1
 tables:
   - name: users
     columns:
@@ -124,6 +125,34 @@ tables:
         provider:
           type: random_number
           options: { min: 100, max: 999 }
+```
+
+## 📄 API
+
+```typescript
+import { anonCol, anonDb, Config } from "dbzar";
+
+// Anonymize a single column
+await anonCol("mongodb://localhost", "db1", "table1", "col1", { type: "mask" });
+
+// Anonymize an entire database
+const config: Config = {
+  uri: "mongodb//localhost",
+  dbName: "db1",
+  tables: [
+    {
+      name: "table1",
+      columns: [
+        {
+          name: "col1",
+          provider: "mask",
+        },
+      ],
+    },
+  ],
+};
+
+await anonDb(config);
 ```
 
 ## 🔧 Providers
