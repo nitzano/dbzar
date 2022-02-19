@@ -31,6 +31,7 @@ export async function anonDb(config: Config): Promise<void> {
 				processor.processColumn(tableName, columnName, anonymizer, dbName),
 		);
 		await Promise.all(promises);
+		return;
 	}
 
 	throw new Error(`could not detect processor for uri`);
