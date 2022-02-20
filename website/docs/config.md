@@ -1,7 +1,13 @@
 ---
 sidebar_position: 5
 sidebar_label: ⚙ Configuration
+hide_title: true
 ---
+
+## Configuration
+
+dbzar can be configured by creating on the configuration
+files below which identifies how to anonymize a database
 
 ## Configuration file
 
@@ -15,6 +21,35 @@ Create any one of these files:
 - `.dbzarrc.cjs`
 - `dbzar.config.js`
 - `dbzar.config.cjs`
+
+## Fields
+
+1. `uri`\* (string) - connection string, where to connect to
+2. `dbName`\* (string) - database name to process
+3. `tables` (list of `Table`) - tables to process within the database
+
+### Table
+
+1. `name`\* (string) - table name
+2. `columns`\* (list of `Column`) - columns to be processed
+
+### Column
+
+- `name`\* (string) - column name
+- `provider` - (`ProviderType` or `Provider`) - how to anonymize the column.
+
+### ProviderType
+
+An enum (string) with one of the fields: `mask`, `fake`, `scramble`
+
+### Provider
+
+Contains a more detailed provider with options
+
+1. `type`\* (`ProviderType`) - type of the provider
+2. `options` - provider options, see the different [providers](/docs/providers) for more info
+
+`*` - required field
 
 ## Example Config
 
