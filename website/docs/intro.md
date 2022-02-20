@@ -41,14 +41,7 @@ Great for:
 
 ## ✅ Supported Databases
 
-1. MongoDB
-2. Postgres
-3. MariaDB
-4. MySQL
 
-- Future support
-  - SQLIte
-  - CSV
 
 ## ⚙ Configuration
 
