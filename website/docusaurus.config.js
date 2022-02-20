@@ -98,9 +98,14 @@ const config = {
 						title: 'More',
 						items: [
 							{
+								label: 'Github',
+								href: 'https://github.com/nitzano/dbzar',
+							},
+							{
 								label: 'NPM',
 								href: 'https://www.npmjs.com/package/dbzar',
 							},
+				
 						],
 					},
 				],
