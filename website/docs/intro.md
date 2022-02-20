@@ -45,16 +45,6 @@ Great for:
 
 ### 🔀 Scramble
 
-```
-{ 'firstName': 'John'} => { 'firstName': 'ohJn'}
-```
-
-Changes the word order randomly
-
-1. strings - scrambles characters
-2. numbers - scrambles digits
-3. boolean - generates random boolean
-
 ### 🍀 Fake
 
 ```
