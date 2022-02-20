@@ -17,9 +17,9 @@ Great for:
 
 ## Highlights
 
-- One line command line tool ([CLI](/docs/usage))
-- Can manipulate data in many ways: mask, scramble, fake and more.
-- [Supports](/docs/supported_dbs) most common databases.
-- Works on single columns and entire databases.
-- Can be used as an [API](/docs/api).
-- [Configuration](/docs/config) file Support (`dbzar.config.js`)
+- One line command for anonymizing ([CLI](/docs/usage)).
+- [Support](/docs/supported_dbs) most common databases.
+- Works both on single columns and entire databases.
+- Manipulate data in many ways: mask, scramble, fake and more.
+- [API](/docs/api) support.
+- [Configurable](/docs/config).
