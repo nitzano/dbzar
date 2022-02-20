@@ -14,10 +14,10 @@
 - [⭐ Highlights](#-highlights)
 - [📃 Documentation](#-documentation)
 - [💻 Install](#-install)
+- [✅ Supported Databases](#-supported-databases)
 - [👻 Basic Usage](#-basic-usage)
   - [`anon-col` : anonymize a single column in a table](#anon-col--anonymize-a-single-column-in-a-table)
   - [`anon-db` : anonymize entire database](#anon-db--anonymize-entire-database)
-- [✅ Supported Databases](#-supported-databases)
 
 <br/>
 
@@ -39,7 +39,7 @@ Great for:
 
 ## 📃 Documentation
 
-See the full documentation here: [Documentation](https://nitzano.github.io/dbzar/)
+See the full documentation here: [Documentation](https://nitzano.github.io/dbzar/).
 
 ## 💻 Install
 
@@ -50,6 +50,19 @@ yarn add -D dbzar
 // OR
 npx dbzar
 ```
+
+## ✅ Supported Databases
+
+1. MongoDB
+2. Postgres
+3. MariaDB
+4. MySQL
+
+Future support:
+
+- SQLite
+- Neo4J
+- CSV
 
 ## 👻 Basic Usage
 
@@ -84,10 +97,3 @@ Usage: dbzar anon-db [options] [uri]
 ```
 yarn dbzar anon-db mongodb://example:example@localhost
 ```
-
-## ✅ Supported Databases
-
-1. MongoDB
-2. Postgres
-3. MariaDB
-4. MySQL
