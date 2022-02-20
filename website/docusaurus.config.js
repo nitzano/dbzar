@@ -84,6 +84,19 @@ const config = {
 								label: 'Usage',
 								to: '/docs/Usage',
 							},
+					
+							{
+								label: 'Providers',
+								to: '/docs/providers',
+							},
+							{
+								label: 'Supported Databases',
+								to: '/docs/supported_dbs',
+							},
+							{
+								label: 'Configuration',
+								to: '/docs/config',
+							},
 						],
 					},
 					{
