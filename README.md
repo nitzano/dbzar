@@ -30,12 +30,12 @@ Great for:
 
 ## ⭐ Highlights
 
-- One line command line tool (CLI)
-- Can manipulate data in many ways: mask, scramble, fake and more.
-- [Supports]() most common databases.
+- One line [command line](https://nitzano.github.io/dbzar/docs/usage) tool (CLI).
+- [Supports](https://nitzano.github.io/dbzar/docs/supported_dbs) most common databases.
 - Works on both single columns and entire databases.
-- Can be used as an API.
-- Configurable (dbzar.config.js)
+- Can manipulate data in many ways: masking, scrambling, faking and more.
+- Can be used as an [API](https://nitzano.github.io/dbzar/docs/api).
+- Highly [Configurable](https://nitzano.github.io/dbzar/docs/config) (`dbar.config.js`)
 
 ## 📃 Documentation
 
