@@ -2,6 +2,7 @@
     "name": "dbzar",
     "version": "0.0.0-development",
     "description": "Agnostic DB Anonymizer",
+    "homepage": "https://nitzano.github.io/dbzar",
     "main": "dist/index.js",
     "repository": "git@github.com:nitzano/dbzar.git",
     "author": "Nitzan Ohana <16689354+nitzano@users.noreply.github.com>",
