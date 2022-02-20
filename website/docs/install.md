@@ -1,9 +1,9 @@
 ---
 sidebar_position: 2
-sidebar_label: 💻 Install
+sidebar_label: 💻 Installation
 ---
 
-# Install
+# Installation
 
 With NPM:
 
