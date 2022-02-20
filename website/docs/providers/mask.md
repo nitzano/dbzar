@@ -5,8 +5,7 @@ sidebar_label: 🎭 Mask
 
 # Mask
 
-Mask let you mask some or all of the fields in a given column.
-It does the following:
+Masks some or all of the letters of the previous value.
 
 1. strings - Masks word with the same character
 2. numbers - does nothing
