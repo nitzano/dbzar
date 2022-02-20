@@ -1,7 +1,7 @@
 ---
 id: intro
 sidebar_position: 1
-sidebar_label: Intro
+sidebar_label: 👋 Intro
 ---
 
 # Intro
