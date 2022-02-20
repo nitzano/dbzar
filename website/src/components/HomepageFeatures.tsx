@@ -25,7 +25,9 @@ const FeatureList: FeatureItem[] = [
   {
     title: "Use in any way",
     image: "/img/undraw_programmer_re_owql.svg",
-    description: <>A single CLI command or API straight from your code.</>,
+    description: (
+      <>Can be used as a single CLI command or straight from your code.</>
+    ),
   },
 ];
 
