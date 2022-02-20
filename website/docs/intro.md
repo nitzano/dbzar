@@ -33,13 +33,7 @@ Great for:
 
 ## 💻 Install
 
-```
-npm i --save-dev dbzar
-// OR
-yarn add -D dbzar
-// OR
-npx dbzar
-```
+
 
 ## 👻 Usage
 
