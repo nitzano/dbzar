@@ -1,5 +1,5 @@
 <h1 align="center">DBZar</h1>
-<h2 align="center">Agnostic DB Anonymizer 🔁👻</h2>
+<h2 align="center">🔁👻 Agnostic DB Anonymizer </h2>
 <div align="center">
 
 [![npm](https://img.shields.io/npm/v/dbzar)](https://www.npmjs.com/package/dbzar)
