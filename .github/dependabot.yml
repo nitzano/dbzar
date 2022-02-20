@@ -22,6 +22,7 @@ updates:
       interval: "monthly"
     labels:
       - deps
+      - docs
     target-branch: master
     commit-message:
       prefix: "docs"
