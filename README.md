@@ -1,6 +1,7 @@
 <h1 align="center">DBZar</h1>
 <h2 align="center">🔁👻 Agnostic DB Anonymizer </h2>
 <div align="center">
+<br/>
 
 [![npm](https://img.shields.io/npm/v/dbzar)](https://www.npmjs.com/package/dbzar)
 [![npm-beta](https://img.shields.io/npm/v/dbzar/beta)](https://www.npmjs.com/package/dbzar)
@@ -8,6 +9,7 @@
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![GitHub Repo stars](https://img.shields.io/github/stars/nitzano/dbzar)
 
 </div>
 
