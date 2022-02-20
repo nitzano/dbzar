@@ -5,9 +5,7 @@ sidebar_label: 🍀 Fake
 
 # Fake
 
-## Examples
-
-Generates fake data
+Generates fake data instead of the previous value
 
 1. strings - generates fake strings
 2. numbers - generates random numbers
@@ -23,6 +21,8 @@ Generates fake data
    5. `letter` - a single letter
    6. `name` - full name
    7. `word` - random word
+
+## Examples
 
 ```
 { 'firstName': 'John'} => { 'firstName': 'Random'}
