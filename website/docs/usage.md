@@ -15,11 +15,20 @@ Anonymize a single column in a table.
 Usage: dbzar anon-col <provider> [options] <uri> <db> <table> <column>
 ```
 
-```
-// postgres
-npx dbzar anon-col mask postgresql://example:example@localhost test users firstName
-// { "firstName": "John" } => { "firstName": "****" }
+For a list of providers: [Providers](/docs/providers).
 
+#### Examples
+
+1. Mask the `firstName` column in the `users` table of the `test` database.
+
+```
+npx dbzar anon-col mask postgresql://example:example@localhost test users firstName in PostgresSQL
+// { "firstName": "John" } => { "firstName": "****" }
+```
+
+2. Scramble the `firstName` column in the `users` table of the `test` database in MongoDB.
+
+```
 // mongo
 npx dbzar anon-col scramble mongodb://example:example@localhost test users firstName
 // { "firstName": "John" } => { "firstName": "nhJo" }
