@@ -5,7 +5,7 @@ sidebar_label: 🔀 Scramble
 
 # Scramble
 
-Scramble the order of characters inside a string randomly.
+Scrambles the order of characters inside a string randomly.
 
 1. strings - scrambles characters.
 2. numbers - scrambles digits.
