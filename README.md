@@ -17,7 +17,6 @@
 - [👻 Basic Usage](#-basic-usage)
   - [`anon-col` : anonymize a single column in a table](#anon-col--anonymize-a-single-column-in-a-table)
   - [`anon-db` : anonymize entire database](#anon-db--anonymize-entire-database)
-- [✅ Supported Databases](#-supported-databases)
 
 <br/>
 
@@ -31,7 +30,7 @@ Great for:
 ## ⭐ Highlights
 
 - One line [command line](https://nitzano.github.io/dbzar/docs/usage) tool (CLI).
-- [Supports](https://nitzano.github.io/dbzar/docs/supported_dbs) most common databases.
+- [Supports](https://nitzano.github.io/dbzar/docs/supported_dbs) many databases out of the box.
 - Works on both single columns and entire databases.
 - Can manipulate data in many ways: masking, scrambling, faking and more.
 - Can be used as an [API](https://nitzano.github.io/dbzar/docs/api).
@@ -84,16 +83,3 @@ Usage: dbzar anon-db [options] [uri]
 ```
 yarn dbzar anon-db mongodb://example:example@localhost
 ```
-
-## ✅ Supported Databases
-
-1. MongoDB
-2. Postgres
-3. MariaDB
-4. MySQL
-
-Future support:
-
-- SQLite
-- Neo4J
-- CSV
