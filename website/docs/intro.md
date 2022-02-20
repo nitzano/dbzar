@@ -5,7 +5,7 @@ sidebar_label: 👋 Introduction
 hide_title: true
 ---
 
-## 👻 DBZar
+## DBZar
 
 **DBZar** (Database + "stranger" in Hebrew) is a a tool for anonymizing databases with a single command.
 
