@@ -11,7 +11,7 @@ title: README
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-- [� Install](#-install)
+- [💻 Install](#-install)
 - [👻 Usage](#-usage)
 - [✅ Supported Databases](#-supported-databases)
 - [⚙ Configuration](#-configuration)
@@ -39,23 +39,9 @@ Great for:
 
 ## 📄 API
 
-
-
 ## 🔧 Providers
 
 ### 🎭 Mask
-
-```
-{ 'firstName': 'John'} => { 'firstName': '****'}
-```
-
-1. strings - Masks word with the same character
-2. numbers - does nothing
-3. boolean - does nothing
-
-Options:
-
-1. `character` - Replacing character (default `*`).
 
 ### 🔀 Scramble
 
