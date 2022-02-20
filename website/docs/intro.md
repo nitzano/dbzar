@@ -51,6 +51,5 @@ Great for:
 
 ### Future Support
 
-- 🧬 `hash` - replace with hash
 - 🧊 `const` - replace with constant string/number
 - ❌`remove` - remove the field from the table
