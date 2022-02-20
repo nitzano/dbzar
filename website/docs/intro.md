@@ -13,8 +13,6 @@ title: README
 
 - [💻 Install](#-install)
 - [👻 Usage](#-usage)
-  - [`anon-col` : anonymize a single column in a table](#anon-col--anonymize-a-single-column-in-a-table)
-  - [`anon-db` : anonymize entire database](#anon-db--anonymize-entire-database)
 - [✅ Supported Databases](#-supported-databases)
 - [⚙ Configuration](#-configuration)
 - [📄 API](#-api)
@@ -45,42 +43,10 @@ Great for:
 
 ## ⚙ Configuration
 
-Create any one of these files:
 
-- `.dbzarrc`
-- `.dbzarrc.json`
-- `.dbzarrc.yaml`
-- `.dbzarrc.yml`
-- `.dbzarrc.js`
-- `.dbzarrc.cjs`
-- `dbzar.config.js`
-- `dbzar.config.cjs`
 
-Example config:
 
-```yaml
-// .dbzarrc
-uri:  mongodb://example:example@localhost
-dbName: db1
-tables:
-  - name: users
-    columns:
-      - name: firstName
-        provider: mask
-      - name: lastName
-        provider:
-          type: mask
-          options:
-            character: "#"
-  - name: products
-    columns:
-      - name: name
-        provider: fake
-      - name: price
-        provider:
-          type: random_number
-          options: { min: 100, max: 999 }
-```
+
 
 ## 📄 API
 
