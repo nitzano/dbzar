@@ -11,13 +11,13 @@
 
 </div>
 
-- [Highlights](#highlights)
+- [⭐ Highlights](#-highlights)
+- [📃 Documentation](#-documentation)
 - [💻 Install](#-install)
-- [👻 Usage](#-usage)
+- [👻 Basic Usage](#-basic-usage)
   - [`anon-col` : anonymize a single column in a table](#anon-col--anonymize-a-single-column-in-a-table)
   - [`anon-db` : anonymize entire database](#anon-db--anonymize-entire-database)
 - [✅ Supported Databases](#-supported-databases)
-- [Documentation](#documentation)
 
 <br/>
 
@@ -28,7 +28,7 @@ Great for:
 1. Anonymizing production servers for local development.
 2. General utility to manipulate existing databases easily.
 
-## Highlights
+## ⭐ Highlights
 
 - One line command line tool (CLI)
 - Can manipulate data in many ways: mask, scramble, fake and more.
@@ -36,6 +36,10 @@ Great for:
 - Works on both single columns and entire databases.
 - Can be used as an API.
 - Configurable (dbzar.config.js)
+
+## 📃 Documentation
+
+See the full documentation here: [Documentation](https://nitzano.github.io/dbzar/)
 
 ## 💻 Install
 
@@ -47,7 +51,7 @@ yarn add -D dbzar
 npx dbzar
 ```
 
-## 👻 Usage
+## 👻 Basic Usage
 
 ### `anon-col` : anonymize a single column in a table
 
@@ -73,7 +77,7 @@ npx dbzar anon-col scramble mongodb://example:example@localhost test users first
 Usage: dbzar anon-db [options] [uri]
 ```
 
-1. Create Configuration file (see [Configuration](#-configuration))
+1. Create Configuration file (see [Configuration](https://nitzano.github.io/dbzar/docs/config))
 
 2. Run the anonymizer
 
@@ -87,7 +91,3 @@ yarn dbzar anon-db mongodb://example:example@localhost
 2. Postgres
 3. MariaDB
 4. MySQL
-
-## Documentation
-
-See the full documentation here: [Documentation](https://nitzano.github.io/dbzar/)
