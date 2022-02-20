@@ -14,4 +14,5 @@ module.exports = {
 		__MONGO_URI__: true,
 	},
 	prettier: true,
+	ignores: ['website'],
 };

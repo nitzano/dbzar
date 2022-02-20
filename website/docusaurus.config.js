@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-	title: 'DBZar Documenation',
-	tagline: 'Dinosaurs are cool',
+	title: 'DBZar',
+	tagline: '🔁👻 Agnostic DB Anonymizer',
 	url: 'https://nitzano.github.io',
 	baseUrl: '/dbzar/',
 	onBrokenLinks: 'throw',
@@ -44,9 +44,9 @@ const config = {
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
 			navbar: {
-				title: 'My Site',
+				title: 'DBZar',
 				logo: {
-					alt: 'My Site Logo',
+					alt: 'DBZar Logo',
 					src: 'img/logo.svg',
 				},
 				items: [
@@ -54,12 +54,16 @@ const config = {
 						type: 'doc',
 						docId: 'intro',
 						position: 'left',
-						label: 'Tutorial',
+						label: 'Docs',
 					},
-					{to: '/blog', label: 'Blog', position: 'left'},
 					{
-						href: 'https://github.com/facebook/docusaurus',
+						href: 'https://github.com/nitzano/dbzar',
 						label: 'GitHub',
+						position: 'right',
+					},
+					{
+						href: 'https://www.npmjs.com/package/dbzar',
+						label: 'NPM',
 						position: 'right',
 					},
 				],
@@ -71,8 +75,12 @@ const config = {
 						title: 'Docs',
 						items: [
 							{
-								label: 'Tutorial',
+								label: 'Intro',
 								to: '/docs/intro',
+							},
+							{
+								label: 'Usage',
+								to: '/docs/Usage',
 							},
 						],
 					},
@@ -80,16 +88,8 @@ const config = {
 						title: 'Community',
 						items: [
 							{
-								label: 'Stack Overflow',
-								href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-							},
-							{
-								label: 'Discord',
-								href: 'https://discordapp.com/invite/docusaurus',
-							},
-							{
-								label: 'Twitter',
-								href: 'https://twitter.com/docusaurus',
+								label: 'Github',
+								href: 'https://github.com/nitzano/dbzar',
 							},
 						],
 					},
@@ -97,17 +97,13 @@ const config = {
 						title: 'More',
 						items: [
 							{
-								label: 'Blog',
-								to: '/blog',
-							},
-							{
-								label: 'GitHub',
-								href: 'https://github.com/facebook/docusaurus',
+								label: 'NPM',
+								href: 'https://www.npmjs.com/package/dbzar',
 							},
 						],
 					},
 				],
-				copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+				copyright: `Copyright © ${new Date().getFullYear()} Nitzan Ohana, Inc. Built with Docusaurus.`,
 			},
 			prism: {
 				theme: lightCodeTheme,

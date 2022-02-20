@@ -1,7 +1,7 @@
-import useBaseUrl from '@docusaurus/useBaseUrl';
-import React from 'react';
-import clsx from 'clsx';
-import styles from './HomepageFeatures.module.css';
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import clsx from "clsx";
+import React from "react";
+import styles from "./HomepageFeatures.module.css";
 
 type FeatureItem = {
   title: string;
@@ -11,40 +11,27 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    image: '/img/undraw_docusaurus_mountain.svg',
+    title: "Works on your favorite Database",
+    image: "/img/undraw_with_love_re_1q3m.svg",
+    description: <>MongoDB, PostgresSQL, MariaDB and more</>,
+  },
+  {
+    title: "Extremely Flexible",
+    image: "/img/undraw_control_panel_re_y3ar.svg",
     description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
+      <>Change data by masking, scrambling, replacing or faking it.</>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    image: '/img/undraw_docusaurus_tree.svg',
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    image: '/img/undraw_docusaurus_react.svg',
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    title: "Use in any way",
+    image: "/img/undraw_programmer_re_owql.svg",
+    description: <>A single CLI command or API straight from your code.</>,
   },
 ];
 
-function Feature({title, image, description}: FeatureItem) {
+function Feature({ title, image, description }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
         <img
           className={styles.featureSvg}
