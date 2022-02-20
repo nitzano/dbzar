@@ -7,7 +7,7 @@ hide_title: true
 
 ## DBZar
 
-**DBZar** (Database + "stranger" in Hebrew) is a NodeJS library which let you anonymize fields in any given database. <br/>
+**DBZar** (Database + "stranger" in Hebrew) is a NodeJS library which let you anonymize fields in any given database with a single command. <br/>
 Just add a connection string and anonymize away!
 
 Great for:
