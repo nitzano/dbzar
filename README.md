@@ -29,7 +29,7 @@ Great for:
 
 ## ⭐ Highlights
 
-- One line [command line](https://nitzano.github.io/dbzar/docs/usage) tool (CLI).
+- Single line [command line](https://nitzano.github.io/dbzar/docs/usage) tool (CLI).
 - [Supports](https://nitzano.github.io/dbzar/docs/supported_dbs) many databases out of the box.
 - Works on both single columns and entire databases.
 - Can manipulate data by masking, scrambling, faking and more.
