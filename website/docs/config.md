@@ -22,7 +22,33 @@ Create any one of these files:
 - `dbzar.config.js`
 - `dbzar.config.cjs`
 
-## Fields
+## Example
+
+```yaml
+// .dbzarrc
+uri:  mongodb://example:example@localhost
+dbName: db1
+tables:
+  - name: users
+    columns:
+      - name: firstName
+        provider: mask
+      - name: lastName
+        provider:
+          type: mask
+          options:
+            character: "#"
+  - name: products
+    columns:
+      - name: name
+        provider: fake
+      - name: price
+        provider:
+          type: random_number
+          options: { min: 100, max: 999 }
+```
+
+## Structure
 
 1. `uri`\* (string) - connection string, where to connect to
 2. `dbName`\* (string) - database name to process
@@ -50,29 +76,3 @@ Contains a more detailed provider with options
 2. `options` - provider options, see the different [providers](/docs/providers) for more info
 
 `*` - required field
-
-## Example Config
-
-```yaml
-// .dbzarrc
-uri:  mongodb://example:example@localhost
-dbName: db1
-tables:
-  - name: users
-    columns:
-      - name: firstName
-        provider: mask
-      - name: lastName
-        provider:
-          type: mask
-          options:
-            character: "#"
-  - name: products
-    columns:
-      - name: name
-        provider: fake
-      - name: price
-        provider:
-          type: random_number
-          options: { min: 100, max: 999 }
-```
