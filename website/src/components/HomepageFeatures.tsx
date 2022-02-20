@@ -16,10 +16,10 @@ const FeatureList: FeatureItem[] = [
     description: <>MongoDB, PostgresSQL, MariaDB and more</>,
   },
   {
-    title: "Extremely  Flexible",
+    title: "Extremely Flexible",
     image: "/img/undraw_control_panel_re_y3ar.svg",
     description: (
-      <>Change columns by masking, scrambling, replacing or a new fake data.</>
+      <>Change data by masking, scrambling, replacing or faking it.</>
     ),
   },
   {
