@@ -16,3 +16,14 @@ updates:
       prefix: "fix"
       prefix-development: "chore"
       include: "scope"
+  - package-ecosystem: "npm" # See documentation for possible values
+    directory: "/website" # Location of package manifests
+    schedule:
+      interval: "monthly"
+    labels:
+      - deps
+    target-branch: master
+    commit-message:
+      prefix: "docs"
+      prefix-development: "docs"
+      include: "scope"
