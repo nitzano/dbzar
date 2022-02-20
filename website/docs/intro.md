@@ -18,7 +18,7 @@ Great for:
 
 ## Highlights
 
-- One line command for anonymizing ([CLI](/docs/usage)).
+- [One line command](/docs/usage) - `anon-col`.
 - [Support](/docs/supported_dbs) most common databases.
 - Works both on single columns and entire databases.
 - Manipulate data in many ways: mask, scramble, fake and more.
