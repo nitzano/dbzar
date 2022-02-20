@@ -15,7 +15,7 @@ Great for:
 
 ## Highlights
 
-- One line command line tool ([CLI](/docs/cli))
+- One line command line tool ([CLI](/docs/usage))
 - Can manipulate data in many ways: mask, scramble, fake and more.
 - [Supports](/docs/supported_dbs) most common databases.
 - Works on single columns and entire databases.

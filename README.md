@@ -11,18 +11,13 @@
 
 </div>
 
+- [Highlights](#highlights)
 - [💻 Install](#-install)
 - [👻 Usage](#-usage)
   - [`anon-col` : anonymize a single column in a table](#anon-col--anonymize-a-single-column-in-a-table)
   - [`anon-db` : anonymize entire database](#anon-db--anonymize-entire-database)
 - [✅ Supported Databases](#-supported-databases)
-- [⚙ Configuration](#-configuration)
-- [📄 API](#-api)
-- [🔧 Providers](#-providers)
-  - [🎭 Mask](#-mask)
-  - [🔀 Scramble](#-scramble)
-  - [🍀 Fake](#-fake)
-  - [Future Support](#future-support)
+- [Documentation](#documentation)
 
 <br/>
 
@@ -32,6 +27,15 @@ Great for:
 
 1. Anonymizing production servers for local development.
 2. General utility to manipulate existing databases easily.
+
+## Highlights
+
+- One line command line tool (CLI)
+- Can manipulate data in many ways: mask, scramble, fake and more.
+- [Supports]() most common databases.
+- Works on both single columns and entire databases.
+- Can be used as an API.
+- Configurable (dbzar.config.js)
 
 ## 💻 Install
 
@@ -84,133 +88,6 @@ yarn dbzar anon-db mongodb://example:example@localhost
 3. MariaDB
 4. MySQL
 
-- Future support
-  - SQLIte
-  - CSV
+## Documentation
 
-## ⚙ Configuration
-
-Create any one of these files:
-
-- `.dbzarrc`
-- `.dbzarrc.json`
-- `.dbzarrc.yaml`
-- `.dbzarrc.yml`
-- `.dbzarrc.js`
-- `.dbzarrc.cjs`
-- `dbzar.config.js`
-- `dbzar.config.cjs`
-
-Example config:
-
-```yaml
-// .dbzarrc
-uri:  mongodb://example:example@localhost
-dbName: db1
-tables:
-  - name: users
-    columns:
-      - name: firstName
-        provider: mask
-      - name: lastName
-        provider:
-          type: mask
-          options:
-            character: "#"
-  - name: products
-    columns:
-      - name: name
-        provider: fake
-      - name: price
-        provider:
-          type: random_number
-          options: { min: 100, max: 999 }
-```
-
-## 📄 API
-
-```typescript
-import { anonCol, anonDb, Config } from "dbzar";
-
-// Anonymize a single column
-await anonCol("mongodb://localhost", "db1", "table1", "col1", { type: "mask" });
-
-// Anonymize an entire database
-const config: Config = {
-  uri: "mongodb//localhost",
-  dbName: "db1",
-  tables: [
-    {
-      name: "table1",
-      columns: [
-        {
-          name: "col1",
-          provider: "mask",
-        },
-      ],
-    },
-  ],
-};
-
-await anonDb(config);
-```
-
-## 🔧 Providers
-
-### 🎭 Mask
-
-```
-{ 'firstName': 'John'} => { 'firstName': '****'}
-```
-
-1. strings - Masks word with the same character
-2. numbers - does nothing
-3. boolean - does nothing
-
-Options:
-
-1. `character` - Replacing character (default `*`).
-<!-- 2. `excludeStart` - do not mask X chars from start.
-2. `excludeEnd` - do not mask X chars from end.
-3. `excludeCharacters` - do not mask these characters. -->
-
-### 🔀 Scramble
-
-```
-{ 'firstName': 'John'} => { 'firstName': 'ohJn'}
-```
-
-Changes the word order randomly
-
-1. strings - scrambles characters
-2. numbers - scrambles digits
-3. boolean - generates random boolean
-
-### 🍀 Fake
-
-```
-{ 'firstName': 'John'} => { 'firstName': 'Random'}
-```
-
-Generates fake data
-
-1. strings - generates fake strings
-2. numbers - generates random numbers
-3. boolean - generates random boolean
-
-Options:
-
-1. `fakeValue` - fake value to replace (default: `word`), options:
-   1. `age` - age as a number
-   2. `animal`
-   3. `first` / `firstName`
-   4. `last` / `lastName`
-   5. `letter` - a single letter
-   6. `name` - full name
-   7. `word` - random word
-
-### Future Support
-
-- 🧬 `hash` - replace with hash
-- 🧊 `const` - replace with constant string/number
-- ❌`remove` - remove the field from the table
+See the full documentation here: [Documentation](https://nitzano.github.io/dbzar/)
