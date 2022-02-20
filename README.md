@@ -32,7 +32,7 @@ Great for:
 - One line [command line](https://nitzano.github.io/dbzar/docs/usage) tool (CLI).
 - [Supports](https://nitzano.github.io/dbzar/docs/supported_dbs) many databases out of the box.
 - Works on both single columns and entire databases.
-- Can manipulate data in many ways: masking, scrambling, faking and more.
+- Can manipulate data by masking, scrambling, faking and more.
 - Can be used as an [API](https://nitzano.github.io/dbzar/docs/api).
 - Highly [Configurable](https://nitzano.github.io/dbzar/docs/config) (`dbar.config.js`).
 
