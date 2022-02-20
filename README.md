@@ -17,6 +17,7 @@
 - [👻 Basic Usage](#-basic-usage)
   - [`anon-col` : anonymize a single column in a table](#anon-col--anonymize-a-single-column-in-a-table)
   - [`anon-db` : anonymize entire database](#anon-db--anonymize-entire-database)
+- [✅ Supported Databases](#-supported-databases)
 
 <br/>
 
@@ -83,3 +84,16 @@ Usage: dbzar anon-db [options] [uri]
 ```
 yarn dbzar anon-db mongodb://example:example@localhost
 ```
+
+## ✅ Supported Databases
+
+1. MongoDB
+1. Postgres
+1. MariaDB
+1. MySL
+
+Future support:
+
+- SQLite
+- Neo4J
+- CSV
