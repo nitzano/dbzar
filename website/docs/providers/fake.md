@@ -3,6 +3,8 @@ sidebar_position: 3
 sidebar_label: 🍀 Fake
 ---
 
+# Fake
+
 ## Examples
 
 Generates fake data
