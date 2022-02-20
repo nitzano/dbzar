@@ -35,7 +35,7 @@ Great for:
 - Works on both single columns and entire databases.
 - Can manipulate data in many ways: masking, scrambling, faking and more.
 - Can be used as an [API](https://nitzano.github.io/dbzar/docs/api).
-- Highly [Configurable](https://nitzano.github.io/dbzar/docs/config) (`dbar.config.js`)
+- Highly [Configurable](https://nitzano.github.io/dbzar/docs/config) (`dbar.config.js`).
 
 ## 📃 Documentation
 
