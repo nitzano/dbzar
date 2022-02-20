@@ -2,9 +2,10 @@
 id: intro
 sidebar_position: 1
 sidebar_label: 👋 Introduction
+hide_title: true
 ---
 
-# Introduction
+## DBZar
 
 **DBZar** (Database + "stranger" in Hebrew) is a NodeJS library which let you mask/scramble/fake fields in any given database, just add a connection string and anonymize away!
 
