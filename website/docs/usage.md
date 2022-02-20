@@ -5,7 +5,9 @@ sidebar_label: 👻 Usage
 
 # Usage
 
-### `anon-col` : anonymize a single column in a table
+### `anon-col`
+
+Anonymize a single column in a table.
 
 (⚠ Changes whichever db provided so use with caution)
 
@@ -23,7 +25,9 @@ npx dbzar anon-col scramble mongodb://example:example@localhost test users first
 // { "firstName": "John" } => { "firstName": "nhJo" }
 ```
 
-### `anon-db` : anonymize entire database
+### `anon-db`
+
+Anonymize entire database.
 
 ```
 Usage: dbzar anon-db [options] [uri]
