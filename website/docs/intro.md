@@ -5,7 +5,7 @@ sidebar_label: 👋 Introduction
 hide_title: true
 ---
 
-## DBZar
+## 👻 DBZar
 
 **DBZar** (Database + "stranger" in Hebrew) is a a tool for anonymizing databases with a single command.
 
@@ -16,7 +16,7 @@ Great for:
 1. Anonymizing production servers for local development.
 2. General utility to manipulate existing databases easily.
 
-## Highlights
+## ⭐ Highlights
 
 - [One line command](/docs/usage) - `anon-col`.
 - [Support](/docs/supported_dbs) most common databases.
