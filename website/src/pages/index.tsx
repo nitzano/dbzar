@@ -30,7 +30,7 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} Documentation`}
+      title={`${siteConfig.title} Home`}
       description="Agnostic DB Anonymizer"
     >
       <HomepageHeader />
