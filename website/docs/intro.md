@@ -6,7 +6,7 @@ sidebar_label: Intro
 
 # Intro
 
-**DBZar** (Database + "stranger" in Hebrew) let you mask/scramble/fake fields in any given database, just add a connection string and anonymize away!
+**DBZar** (Database + "stranger" in Hebrew) is a NodeJS library which let you mask/scramble/fake fields in any given database, just add a connection string and anonymize away!
 
 Great for:
 
@@ -16,8 +16,8 @@ Great for:
 ## Highlights
 
 - One line command line tool ([CLI](/docs/cli))
-- Can manipulate data in many ways: mask, scramble, fake and many more
-- [Supports](/docs/supported_dbs) most common databases: Postgres, MongoDB and more.
+- Can manipulate data in many ways: mask, scramble, fake and more.
+- [Supports](/docs/supported_dbs) most common databases.
 - Works on single columns and entire databases.
-- Type-Checked [API](/docs/api) Support
+- Can be used as an [API](/docs/api).
 - [Configuration](/docs/config) file Support (`dbzar.config.js`)
