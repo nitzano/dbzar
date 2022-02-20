@@ -7,9 +7,7 @@ hide_title: true
 
 ## DBZar
 
-**DBZar** (Database + "stranger" in Hebrew) is a a tool for anonymizing databases with a single command.
-
-Just add a connection string and anonymize away!
+**DBZar** (Database + "stranger" in Hebrew) is a a tool for anonymizing databases with a single command, just add a connection string and anonymize away!
 
 Great for:
 
