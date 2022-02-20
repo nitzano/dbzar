@@ -75,8 +75,12 @@ const config = {
 						title: 'Docs',
 						items: [
 							{
-								label: 'Tutorial',
+								label: 'Intro',
 								to: '/docs/intro',
+							},
+							{
+								label: 'Usage',
+								to: '/docs/Usage',
 							},
 						],
 					},
@@ -84,16 +88,8 @@ const config = {
 						title: 'Community',
 						items: [
 							{
-								label: 'Stack Overflow',
-								href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-							},
-							{
-								label: 'Discord',
-								href: 'https://discordapp.com/invite/docusaurus',
-							},
-							{
-								label: 'Twitter',
-								href: 'https://twitter.com/docusaurus',
+								label: 'Github',
+								href: 'https://github.com/nitzano/dbzar',
 							},
 						],
 					},
@@ -101,12 +97,8 @@ const config = {
 						title: 'More',
 						items: [
 							{
-								label: 'Blog',
-								to: '/blog',
-							},
-							{
-								label: 'GitHub',
-								href: 'https://github.com/facebook/docusaurus',
+								label: 'NPM',
+								href: 'https://www.npmjs.com/package/dbzar',
 							},
 						],
 					},
