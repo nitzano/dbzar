@@ -54,7 +54,7 @@ const config = {
 						type: 'doc',
 						docId: 'intro',
 						position: 'left',
-						label: 'Docs',
+						label: 'Documentation',
 					},
 					{
 						href: 'https://github.com/nitzano/dbzar',
