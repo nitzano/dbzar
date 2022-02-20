@@ -13,7 +13,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: "Works on your favorite Database",
     image: "/img/undraw_with_love_re_1q3m.svg",
-    description: <>MongoDB, PostgresSQL, MariaDB and more</>,
+    description: <>MongoDB, PostgresSQL, MariaDB and more.</>,
   },
   {
     title: "Extremely Flexible",
