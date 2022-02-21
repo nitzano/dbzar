@@ -80,7 +80,6 @@ Usage: dbzar anon-db [options] [uri]
 ```
 
 1. Create Configuration file (see [Configuration](https://nitzano.github.io/dbzar/docs/config))
-
 2. Run the anonymizer
 
 ```
