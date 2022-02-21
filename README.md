@@ -70,7 +70,7 @@ dbzar anon-col mask postgresql:/localhost test users firstName
 
 // scramble "lastName" in mongo
 dbzar anon-col scramble mongodb://localhost test users lastName
-// { "lastName": "Doe" } => { "firstName": "eDo" }
+// { "lastName": "Smith" } => { "firstName": "hSmti" }
 ```
 
 ### `anon-db` : anonymize entire database
