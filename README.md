@@ -80,11 +80,40 @@ Usage: dbzar anon-db [options] [uri]
 ```
 
 1. Create Configuration file (see [Configuration](https://nitzano.github.io/dbzar/docs/config))
+
+Example:
+
+```yaml
+// .dbzarrc
+uri:  mongodb://@localhost
+dbName: db1
+tables:
+  - name: users
+    columns:
+      - name: firstName
+        provider: mask
+      - name: lastName
+        provider:
+          type: mask
+          options:
+            character: "#"
+  - name: products
+    columns:
+      - name: name
+        provider: { type: fake, fakeValue: animal }
+```
+
 2. Run the anonymizer
 
 ```
 dbzar anon-db mongodb://example:example@localhost
 ```
+
+Will:
+
+1. `mask` the `firstName` column in `users` table (replacing letters with default `*`)
+2. `mask` the `lastName` column in `users` table (replacing letters with `#`)
+3. `fake` the `name` column in `products` table (replacing it with a random animal name)
 
 ## ✅ Supported Databases
 
