@@ -100,7 +100,10 @@ tables:
   - name: products
     columns:
       - name: name
-        provider: { type: fake, fakeValue: animal }
+        provider:
+          type: fake
+          options:
+            fakeValue: animal
 ```
 
 2. Running the anonymizer
