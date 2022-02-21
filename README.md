@@ -83,7 +83,7 @@ Usage: dbzar anon-db [options] [uri]
 2. Run the anonymizer
 
 ```
-yarn dbzar anon-db mongodb://example:example@localhost
+dbzar anon-db mongodb://example:example@localhost
 ```
 
 ## ✅ Supported Databases
