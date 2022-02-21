@@ -4,7 +4,7 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-const GithubStarsHtml = `<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/nitzano/dbzar?style=social">`
+const GithubStarsHtml = `<a href=\"https://github.com/nitzano/dbzar/stargazers\"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/nitzano/dbzar?style=social"></a>`
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
