@@ -36,19 +36,47 @@ npx dbzar anon-col scramble mongodb://example:example@localhost test users first
 
 ### `anon-db`
 
-Anonymize entire database.
-
 ```
 Usage: dbzar anon-db [options] [uri]
 ```
 
-1. Create Configuration file (see [Configuration](#-configuration))
+1. Create Configuration file (see [Configuration](https://nitzano.github.io/dbzar/docs/config))
 
-2. Run the anonymizer
+Example:
+
+```yaml
+// .dbzarrc
+dbName: db1
+tables:
+  - name: users
+    columns:
+      - name: firstName
+        provider: mask
+      - name: lastName
+        provider:
+          type: mask
+          options:
+            character: "#"
+  - name: products
+    columns:
+      - name: name
+        provider:
+          type: fake
+          options:
+            fakeValue: animal
+```
+
+2. Running the anonymizer
 
 ```
-npx dbzar anon-db mongodb://example:example@localhost
+dbzar anon-db mongodb://example:example@localhost
 ```
+
+Will:
+
+1. `mask` the `firstName` column in `users` table (replacing letters with default `*`).
+2. `mask` the `lastName` column in `users` table (replacing letters with `#`).
+3. `fake` the `name` column in `products` table (replacing it with a random animal name, for example: "Fish").
 
 #### Demo
 
