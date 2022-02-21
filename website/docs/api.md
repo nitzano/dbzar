@@ -5,13 +5,19 @@ sidebar_label: 📃 API
 
 # API
 
+## Anonymize a single column
+
 ```typescript
-import { anonCol, anonDb, Config } from "dbzar";
+import { anonCol } from "dbzar";
 
-// Anonymize a single column
 await anonCol("mongodb://localhost", "db1", "table1", "col1", { type: "mask" });
+```
 
-// Anonymize an entire database
+## Anonymize database
+
+```typescript
+import { anonDb, Config } from "dbzar";
+
 const config: Config = {
   uri: "mongodb//localhost",
   dbName: "db1",
