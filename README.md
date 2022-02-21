@@ -1,5 +1,8 @@
 <h1 align="center">DBZar</h1>
-<h2 align="center">🔁👻 Agnostic DB Anonymizer </h2>
+<center>
+<img src="https://raw.githubusercontent.com/nitzano/dbzar/master/website/static/img/logo.svg" height="120">
+</center>
+<h2 align="center">Agnostic DB Anonymizer </h2>
 <div align="center">
 <br/>
 
