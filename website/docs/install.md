@@ -5,7 +5,7 @@ sidebar_label: 💻 Installation
 
 # Installation
 
-With NPM:
+NPM:
 
 ```
 npm i --save-dev dbzar
