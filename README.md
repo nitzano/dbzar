@@ -103,7 +103,7 @@ tables:
         provider: { type: fake, fakeValue: animal }
 ```
 
-2. Run the anonymizer
+2. Running the anonymizer
 
 ```
 dbzar anon-db mongodb://example:example@localhost
