@@ -64,13 +64,13 @@ Usage: dbzar anon-col <provider> [options] <uri> <db> <table> <column>
 ```
 
 ```
-// postgres
-npx dbzar anon-col mask postgresql://example:example@localhost test users firstName
+// mask "firstName" in postgres
+dbzar anon-col mask postgresql:/localhost test users firstName
 // { "firstName": "John" } => { "firstName": "****" }
 
-// mongo
-npx dbzar anon-col scramble mongodb://example:example@localhost test users firstName
-// { "firstName": "John" } => { "firstName": "nhJo" }
+// scramble "lastName" in mongo
+dbzar anon-col scramble mongodb://localhost test users lastName
+// { "lastName": "Doe" } => { "firstName": "eDo" }
 ```
 
 ### `anon-db` : anonymize entire database
