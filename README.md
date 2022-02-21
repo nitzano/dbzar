@@ -85,7 +85,6 @@ Example:
 
 ```yaml
 // .dbzarrc
-uri:  mongodb://@localhost
 dbName: db1
 tables:
   - name: users
