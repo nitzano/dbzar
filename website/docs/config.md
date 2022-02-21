@@ -9,8 +9,6 @@ hide_title: true
 dbzar can be configured by creating on the configuration
 files below which identifies how to anonymize a database
 
-## Configuration file
-
 Create any one of these files:
 
 - `.dbzarrc`
