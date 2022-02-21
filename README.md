@@ -111,9 +111,9 @@ dbzar anon-db mongodb://example:example@localhost
 
 Will:
 
-1. `mask` the `firstName` column in `users` table (replacing letters with default `*`)
-2. `mask` the `lastName` column in `users` table (replacing letters with `#`)
-3. `fake` the `name` column in `products` table (replacing it with a random animal name)
+1. `mask` the `firstName` column in `users` table (replacing letters with default `*`).
+2. `mask` the `lastName` column in `users` table (replacing letters with `#`).
+3. `fake` the `name` column in `products` table (replacing it with a random animal name, for example: "Fish").
 
 ## ✅ Supported Databases
 
