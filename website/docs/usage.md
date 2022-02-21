@@ -22,7 +22,7 @@ For a list of providers: [Providers](/docs/providers).
 1. Mask the `firstName` column in the `users` table of the `test` database.
 
 ```
-npx dbzar anon-col mask postgresql://example:example@localhost test users firstName in PostgresSQL
+dbzar anon-col mask postgresql://example:example@localhost test users firstName in PostgresSQL
 // { "firstName": "John" } => { "firstName": "****" }
 ```
 
@@ -30,7 +30,7 @@ npx dbzar anon-col mask postgresql://example:example@localhost test users firstN
 
 ```
 // mongo
-npx dbzar anon-col scramble mongodb://example:example@localhost test users firstName
+dbzar anon-col scramble mongodb://example:example@localhost test users firstName
 // { "firstName": "John" } => { "firstName": "nhJo" }
 ```
 
