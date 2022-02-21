@@ -1,7 +1,7 @@
 <h1 align="center">DBZar</h1>
-<center>
+<div align="center">
 <img src="https://raw.githubusercontent.com/nitzano/dbzar/master/website/static/img/logo.svg" height="120">
-</center>
+</div>
 <h2 align="center">Agnostic DB Anonymizer </h2>
 <div align="center">
 <br/>
