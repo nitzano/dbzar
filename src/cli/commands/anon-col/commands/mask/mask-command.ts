@@ -1,6 +1,6 @@
 import {Command} from 'commander';
 import {defaultMaskOptions} from '../../../../../anonymizers/mask/mask-options';
-import {addConnectionArgs} from '../../helpers/add-connection-args';
+import {addConnectionOptions} from '../../helpers/add-connection-options';
 import {maskAction} from './mask-action';
 
 export const maskCommand = new Command('mask');
@@ -14,4 +14,4 @@ maskCommand
 	)
 	.action(maskAction);
 
-addConnectionArgs(maskCommand);
+addConnectionOptions(maskCommand);
