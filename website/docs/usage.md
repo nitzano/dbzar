@@ -35,7 +35,7 @@ For a list of providers: [Providers](/docs/providers).
 
 #### Examples
 
-1. Mask the `firstName` column in the `users` table of the `test` database.
+1. Mask the `firstName` column in the `users` table of the `test` database in MongoDB.
 
 ```
 dbzar anon-col mask -u postgresql://example:example@localhost -db test -t users -c firstName
