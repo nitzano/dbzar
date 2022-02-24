@@ -96,6 +96,14 @@ dbzar anon-col scramble -u mongodb://localhost -db test -t users -c lastName
 
 ```
 Usage: dbzar anon-db [options] [uri]
+
+Anonymize an entire database
+
+Arguments:
+  uri         connection string
+
+Options:
+  -h, --help  display help for command
 ```
 
 1. Create Configuration file (see [Configuration](https://nitzano.github.io/dbzar/docs/config))
