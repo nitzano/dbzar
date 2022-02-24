@@ -7,7 +7,7 @@ import {addConnectionOptions} from './helpers/add-connection-options';
 export const anonColCommand = new Command('anon-col');
 
 anonColCommand
-	.description('anonymize a single column in a table')
+	.description('Anonymize a single column in a table')
 	.option('-skip --skip-confirm', 'skip confirmation')
 	.addCommand(scrambleCommand)
 	.addCommand(fakeCommand)
