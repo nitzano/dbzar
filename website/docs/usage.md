@@ -38,7 +38,7 @@ For a list of providers: [Providers](/docs/providers).
 1. Mask the `firstName` column in the `users` table of the `test` database.
 
 ```
-dbzar anon-col mask postgresql://example:example@localhost test users firstName in PostgresSQL
+dbzar anon-col mask -u postgresql://example:example@localhost -db test -t users -c firstName
 // { "firstName": "John" } => { "firstName": "****" }
 ```
 
@@ -46,7 +46,7 @@ dbzar anon-col mask postgresql://example:example@localhost test users firstName 
 
 ```
 // mongo
-dbzar anon-col scramble mongodb://example:example@localhost test users firstName
+dbzar anon-col scramble -u mongodb://example:example@localhost -db test -t users -c firstName
 // { "firstName": "John" } => { "firstName": "nhJo" }
 ```
 
