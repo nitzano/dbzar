@@ -4,6 +4,7 @@ import {
 	defaultMaskOptions,
 	MaskOptions,
 } from '../../../../../anonymizers/mask/mask-options';
+import {extractConnectionOptions} from '../../helpers/extract-connection-options';
 import {processColumn} from '../../helpers/process-column';
 
 export async function maskAction(this: Command) {
@@ -12,18 +13,21 @@ export async function maskAction(this: Command) {
 		character: this.opts().character as string,
 	};
 
-	const [connectionString, dbName, tableName, columnName] = this.args;
+	const {connectionString, databaseName, tableName, columnName} =
+		extractConnectionOptions(this);
 
-	// Build anonymizer
-	const anonymizer: MaskAnonymizer = new MaskAnonymizer(maskOptions);
+	if (connectionString && databaseName && tableName && columnName) {
+		// Build anonymizer
+		const anonymizer: MaskAnonymizer = new MaskAnonymizer(maskOptions);
 
-	// Anonymize column
-	await processColumn(
-		connectionString,
-		anonymizer,
-		dbName,
-		tableName,
-		columnName,
-		this.optsWithGlobals().confirm,
-	);
+		// Anonymize column
+		await processColumn(
+			connectionString,
+			anonymizer,
+			databaseName,
+			tableName,
+			columnName,
+			this.optsWithGlobals().confirm,
+		);
+	}
 }
