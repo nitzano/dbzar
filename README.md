@@ -84,11 +84,11 @@ Commands:
 
 ```
 // mask "firstName" in postgres
-dbzar anon-col mask postgresql:/localhost test users firstName
+dbzar anon-col mask -u postgresql:/localhost -db test -t users -c firstName
 // { "firstName": "John" } => { "firstName": "****" }
 
 // scramble "lastName" in mongo
-dbzar anon-col scramble mongodb://localhost test users lastName
+dbzar anon-col scramble -u mongodb://localhost -db test -t users -c lastName
 // { "lastName": "Smith" } => { "firstName": "hSmti" }
 ```
 
