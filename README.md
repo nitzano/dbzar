@@ -63,7 +63,23 @@ npx dbzar
 (⚠ Changes whichever db provided so use with caution)
 
 ```bash
-Usage: dbzar anon-col <provider> [options] <uri> <db> <table> <column>
+Usage: dbzar anon-col [options] [command]
+
+Anonymize a single column in a table
+
+Options:
+  -skip --skip-confirm  skip confirmation
+  -u --uri              Connection string
+  -db --database        Database name
+  -t --table            Table name
+  -c --column           Column name
+  -h, --help            display help for command
+
+Commands:
+  scramble [options]    scramble a single column
+  fake [options]        fake a single column
+  mask [options]        mask a single column
+  help [command]        display help for command
 ```
 
 ```
