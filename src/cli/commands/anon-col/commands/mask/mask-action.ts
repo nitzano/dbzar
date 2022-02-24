@@ -13,21 +13,18 @@ export async function maskAction(this: Command) {
 		character: this.opts().character as string,
 	};
 
-	const {connectionString, databaseName, tableName, columnName} =
-		extractConnectionOptions(this);
+	const {uri, database, table, column} = extractConnectionOptions(this);
 
-	if (connectionString && databaseName && tableName && columnName) {
-		// Build anonymizer
-		const anonymizer: MaskAnonymizer = new MaskAnonymizer(maskOptions);
+	// Build anonymizer
+	const anonymizer: MaskAnonymizer = new MaskAnonymizer(maskOptions);
 
-		// Anonymize column
-		await processColumn(
-			connectionString,
-			anonymizer,
-			databaseName,
-			tableName,
-			columnName,
-			this.optsWithGlobals().confirm,
-		);
-	}
+	// Anonymize column
+	await processColumn(
+		uri,
+		anonymizer,
+		database,
+		table,
+		column,
+		this.optsWithGlobals().confirm,
+	);
 }

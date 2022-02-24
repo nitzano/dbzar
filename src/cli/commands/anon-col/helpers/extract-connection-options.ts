@@ -1,24 +1,20 @@
 import {Command} from 'commander';
 
 export interface ConnectionOptions {
-	connectionString?: string;
-	databaseName?: string;
-	tableName?: string;
-	columnName?: string;
+	uri: string;
+	database: string;
+	table: string;
+	column: string;
 }
 
 export function extractConnectionOptions(command: Command): ConnectionOptions {
-	const {
-		uri: connectionString = undefined,
-		database: databaseName = undefined,
-		table: tableName = undefined,
-		column: columnName = undefined,
-	} = command.optsWithGlobals();
+	const {uri, database, table, column} =
+		command.optsWithGlobals<ConnectionOptions>();
 
 	return {
-		connectionString,
-		databaseName,
-		tableName,
-		columnName,
+		uri,
+		database,
+		table,
+		column,
 	};
 }
