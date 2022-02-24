@@ -8,12 +8,12 @@ sidebar_label: ✅ Supported Databases
 ### Currently supporting
 
 1. MongoDB
-2. Postgres
-3. MariaDB
-4. MySQL
+1. PostgresSQL
+1. MariaDB
+1. MySQL
 
-### Future Support
+Future support:
 
-- SQLIte
-- CSV
 - Neo4J
+- SQLite
+- CSV

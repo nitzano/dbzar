@@ -123,12 +123,12 @@ Will:
 ## ✅ Supported Databases
 
 1. MongoDB
-1. Postgres
+1. PostgresSQL
 1. MariaDB
-1. MySL
+1. MySQL
 
 Future support:
 
-- SQLite
 - Neo4J
+- SQLite
 - CSV
