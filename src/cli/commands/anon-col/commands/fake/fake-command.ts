@@ -1,7 +1,6 @@
 import {Command, Option} from 'commander';
 import {defaultFakeOptions} from '../../../../../anonymizers/fake/fake-options';
 import {fakeTypes} from '../../../../../anonymizers/fake/types';
-import {addConnectionOptions} from '../../helpers/add-connection-options';
 import {fakeAction} from './fake-action';
 
 export const fakeCommand = new Command('fake');
@@ -14,5 +13,3 @@ fakeCommand
 			.default(defaultFakeOptions.fakeValue),
 	)
 	.action(fakeAction);
-
-addConnectionOptions(fakeCommand);
