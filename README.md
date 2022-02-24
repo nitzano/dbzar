@@ -63,16 +63,32 @@ npx dbzar
 (⚠ Changes whichever db provided so use with caution)
 
 ```bash
-Usage: dbzar anon-col <provider> [options] <uri> <db> <table> <column>
+Usage: dbzar anon-col [options] [command]
+
+Anonymize a single column in a table
+
+Options:
+  -skip --skip-confirm  skip confirmation
+  -u --uri              Connection string
+  -db --database        Database name
+  -t --table            Table name
+  -c --column           Column name
+  -h, --help            display help for command
+
+Commands:
+  scramble [options]    scramble a single column
+  fake [options]        fake a single column
+  mask [options]        mask a single column
+  help [command]        display help for command
 ```
 
 ```
 // mask "firstName" in postgres
-dbzar anon-col mask postgresql:/localhost test users firstName
+dbzar anon-col mask -u postgresql:/localhost -db test -t users -c firstName
 // { "firstName": "John" } => { "firstName": "****" }
 
 // scramble "lastName" in mongo
-dbzar anon-col scramble mongodb://localhost test users lastName
+dbzar anon-col scramble -u mongodb://localhost -db test -t users -c lastName
 // { "lastName": "Smith" } => { "firstName": "hSmti" }
 ```
 
