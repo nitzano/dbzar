@@ -102,6 +102,26 @@ Will:
 2. `mask` the `lastName` column in `users` table (replacing letters with `#`).
 3. `fake` the `name` column in `products` table (replacing it with a random animal name, for example: "Fish").
 
+From:
+
+```
+// users table
+{ "firstName": "John", "lastName": "Doe" }
+
+// products table
+{ "name": "Product1", "price": 100 }
+```
+
+To:
+
+```
+// users table
+{ "firstName": "****", "lastName": "###" }
+
+// products table
+{ "name": "Fish", "price": 100 }
+```
+
 #### Demo
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zdowhmstYgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
