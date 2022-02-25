@@ -5,7 +5,8 @@ sidebar_label: 👋 Introduction
 hide_title: true
 ---
 
-## DBZar
+<h1 align="center">DBZar
+</h1>
 
 [![npm](https://img.shields.io/npm/v/dbzar)](https://www.npmjs.com/package/dbzar)
 [![npm-beta](https://img.shields.io/npm/v/dbzar/beta)](https://www.npmjs.com/package/dbzar)
@@ -15,6 +16,8 @@ hide_title: true
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Repo stars](https://img.shields.io/github/stars/nitzano/dbzar?style=flat)](https://github.com/nitzano/dbzar/stargazers)
 ![npm](https://img.shields.io/npm/dm/dbzar)
+
+## Intro
 
 **DBZar** (Database + "stranger" in Hebrew) is a a tool for anonymizing databases with a single command, just add a connection string and anonymize away!
 
