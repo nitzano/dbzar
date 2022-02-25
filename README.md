@@ -20,7 +20,7 @@
 - [📃 Documentation](#-documentation)
 - [💻 Install](#-install)
 - [👻 Basic Usage](#-basic-usage)
-  - [`anon-col` : anonymize a single column in a table](#anon-col--anonymize-a-single-column-in-a-table)
+  - [`anon-col` : anonymize a single column](#anon-col--anonymize-a-single-column)
   - [`anon-db` : anonymize entire database](#anon-db--anonymize-entire-database)
 - [✅ Supported Databases](#-supported-databases)
 
@@ -58,7 +58,7 @@ npx dbzar
 
 ## 👻 Basic Usage
 
-### `anon-col` : anonymize a single column in a table
+### `anon-col` : anonymize a single column
 
 (⚠ Changes whichever db provided so use with caution)
 
@@ -143,6 +143,26 @@ Will:
 1. `mask` the `firstName` column in `users` table (replacing letters with default `*`).
 2. `mask` the `lastName` column in `users` table (replacing letters with `#`).
 3. `fake` the `name` column in `products` table (replacing it with a random animal name, for example: "Fish").
+
+From:
+
+```
+// users table
+{ "firstName": "John", "lastName": "Doe" }
+
+// products table
+{ "name": "Product1", "price": 100 }
+```
+
+To:
+
+```
+// users table
+{ "firstName": "****", "lastName": "###" }
+
+// products table
+{ "name": "Fish", "price": 100 }
+```
 
 ## ✅ Supported Databases
 
