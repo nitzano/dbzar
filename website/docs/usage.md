@@ -7,7 +7,7 @@ sidebar_label: 👻 Usage
 
 ### `anon-col`
 
-Anonymize a single column in a table.
+Anonymize a single column.
 
 (⚠ Changes whichever db provided so use with caution)
 
