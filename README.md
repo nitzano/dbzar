@@ -20,7 +20,7 @@
 - [⭐ Highlights](#-highlights)
 - [📃 Documentation](#-documentation)
 - [💻 Install](#-install)
-- [👻 Basic Usage](#-basic-usage)
+- [👻 Usage](#-usage)
   - [`anon-col` : anonymize a single column](#anon-col--anonymize-a-single-column)
   - [`anon-db` : anonymize entire database](#anon-db--anonymize-entire-database)
 - [✅ Supported Databases](#-supported-databases)
@@ -57,7 +57,7 @@ yarn add -D dbzar
 npx dbzar
 ```
 
-## 👻 Basic Usage
+## 👻 Usage
 
 ### `anon-col` : anonymize a single column
 
