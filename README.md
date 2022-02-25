@@ -45,7 +45,7 @@ Great for:
 
 ## 📃 Documentation
 
-See the full documentation here: [Documentation](https://nitzano.github.io/dbzar/).
+Available here: [Documentation](https://nitzano.github.io/dbzar/).
 
 ## 💻 Install
 
