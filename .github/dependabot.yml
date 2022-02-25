@@ -16,6 +16,9 @@ updates:
       prefix: "fix"
       prefix-development: "chore"
       include: "scope"
+    ignore:
+      - dependency-name: "ora"
+        versions: ["6.x"]
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/website" # Location of package manifests
     schedule:
