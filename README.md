@@ -35,11 +35,11 @@ Great for:
 
 ## ⭐ Highlights
 
-- Single line [command line](https://nitzano.github.io/dbzar/docs/usage) tool (CLI).
+- Single line [CLI](https://nitzano.github.io/dbzar/docs/usage) tool.
 - [Supports](https://nitzano.github.io/dbzar/docs/supported_dbs) many databases out of the box.
 - Works on both single columns and entire databases.
-- Can manipulate data by masking, scrambling, faking and more.
-- Full [API](https://nitzano.github.io/dbzar/docs/api) support (Typescript).
+- Can Manipulate data by masking, scrambling, faking and more.
+- [API](https://nitzano.github.io/dbzar/docs/api) support (Typescript).
 - Highly [Configurable](https://nitzano.github.io/dbzar/docs/config) (`dbar.config.js`).
 
 ## 📃 Documentation
@@ -132,7 +132,7 @@ tables:
             fakeValue: animal
 ```
 
-2. Running the anonymizer
+2. Run the anonymizer
 
 ```
 dbzar anon-db mongodb://example:example@localhost
