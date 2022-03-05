@@ -23,7 +23,6 @@
 - [👻 Usage](#-usage)
   - [CLI](#cli)
     - [`anon-col`](#anon-col)
-      - [Examples](#examples)
     - [`anon-db`](#anon-db)
   - [API](#api)
 - [✅ Supported Databases](#-supported-databases)
@@ -89,7 +88,7 @@ Commands:
   help [command]        display help for command
 ```
 
-##### Examples
+Examples:
 
 1. Mask "firstName" in P1ostgres
 
