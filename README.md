@@ -180,7 +180,7 @@ To:
 
 ### API
 
-See [API](http://localhost:3000/dbzar/docs/usage/api)
+See [API](https://nitzano.github.io/dbzar/docs/usage/api)
 
 ## ✅ Supported Databases
 
