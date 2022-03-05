@@ -18,7 +18,7 @@
 </div>
 
 - [⭐ Highlights](#-highlights)
-- [📃 Documentation](#-documentation)
+- [📃 Full Documentation](#-full-documentation)
 - [💻 Install](#-install)
 - [👻 Usage](#-usage)
   - [`anon-col` : anonymize a single column](#anon-col--anonymize-a-single-column)
@@ -45,7 +45,7 @@ Great for:
 - [API](https://nitzano.github.io/dbzar/docs/api) support (Typescript).
 - Highly [Configurable](https://nitzano.github.io/dbzar/docs/config) (`dbar.config.js`).
 
-## 📃 Documentation
+## 📃 Full Documentation
 
 Available here: [Documentation](https://nitzano.github.io/dbzar/).
 
