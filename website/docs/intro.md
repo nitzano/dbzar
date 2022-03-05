@@ -35,13 +35,13 @@ Great for:
 - [API](/docs/api) support.
 - [Configurable](/docs/config).
 
+## License
+
+MIT
+
 ## ❤ Help the project
 
 - ⭐ us on github: [![GitHub Repo stars](https://img.shields.io/github/stars/nitzano/dbzar?style=social)](https://github.com/nitzano/dbzar/stargazers)
 - 👍 to [Issues](https://github.com/nitzano/dbzar/issues) you would like to see.
 - Open new issues.
 - Contribute code 🙌
-
-## License
-
-MIT
