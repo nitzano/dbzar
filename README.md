@@ -87,14 +87,14 @@ Commands:
 
 #### Examples
 
-1. Mask "firstName" in postgres
+1. Mask "firstName" in Postgres
 
 ```
 dbzar anon-col mask -u postgresql:/localhost -db test -t users -c firstName
 // { "firstName": "John" } => { "firstName": "****" }
 ```
 
-2. Scramble "lastName" in mongo
+2. Scramble "lastName" in MongoDB
 
 ```
 dbzar anon-col scramble -u mongodb://localhost -db test -t users -c lastName
