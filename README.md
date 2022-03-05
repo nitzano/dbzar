@@ -101,7 +101,7 @@ dbzar anon-col mask -u postgresql:/localhost -db test -t users -c firstName
 
 ```
 dbzar anon-col scramble -u mongodb://localhost -db test -t users -c lastName
-// { "lastName": "Smith" } => { "firstName": "hSmti" }
+// { "lastName": "Smith" } => { "lastName": "hSmti" }
 ```
 
 #### `anon-db`
