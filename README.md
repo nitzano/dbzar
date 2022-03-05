@@ -90,7 +90,7 @@ Commands:
 
 Examples:
 
-1. Mask "firstName" in P1ostgres
+1. Mask "firstName" in PostgresSQL
 
 ```
 dbzar anon-col mask -u postgresql:/localhost -db test -t users -c firstName
