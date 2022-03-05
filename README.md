@@ -21,10 +21,11 @@
 - [📃 Full Documentation](#-full-documentation)
 - [💻 Install](#-install)
 - [👻 Usage](#-usage)
-  - [`anon-col` : anonymize a single column](#anon-col--anonymize-a-single-column)
-    - [Examples](#examples)
-  - [`anon-db` : anonymize entire database](#anon-db--anonymize-entire-database)
-- [API](#api)
+  - [CLI](#cli)
+    - [`anon-col` : anonymize a single column](#anon-col--anonymize-a-single-column)
+      - [Examples](#examples)
+    - [`anon-db` : anonymize entire database](#anon-db--anonymize-entire-database)
+  - [API](#api)
 - [✅ Supported Databases](#-supported-databases)
 
 <br/>
@@ -61,7 +62,9 @@ npx dbzar
 
 ## 👻 Usage
 
-### `anon-col` : anonymize a single column
+### CLI
+
+#### `anon-col` : anonymize a single column
 
 (⚠ Changes whichever db provided so use with caution)
 
@@ -85,7 +88,7 @@ Commands:
   help [command]        display help for command
 ```
 
-#### Examples
+##### Examples
 
 1. Mask "firstName" in P1ostgres
 
@@ -101,7 +104,7 @@ dbzar anon-col scramble -u mongodb://localhost -db test -t users -c lastName
 // { "lastName": "Smith" } => { "firstName": "hSmti" }
 ```
 
-### `anon-db` : anonymize entire database
+#### `anon-db` : anonymize entire database
 
 ```
 Usage: dbzar anon-db [options] [uri]
@@ -173,9 +176,9 @@ To:
 { "name": "Fish", "price": 100 }
 ```
 
-## API
+### API
 
-See [API](https://nitzano.github.io/dbzar/docs/api)
+See [API](http://localhost:3000/dbzar/docs/usage/api)
 
 ## ✅ Supported Databases
 
