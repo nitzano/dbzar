@@ -39,12 +39,11 @@ Great for:
 
 ## ⭐ Highlights
 
-- Single line [CLI](https://nitzano.github.io/dbzar/docs/usage) tool.
-- [Supports](https://nitzano.github.io/dbzar/docs/supported_dbs) many databases out of the box.
-- Works on both single columns and entire databases.
+- Use via [CLI](https://nitzano.github.io/dbzar/docs/usage) or [API](https://nitzano.github.io/dbzar/docs/usage/api)
+- Anonymize single columns and entire databases.
 - Can Manipulate data by masking, scrambling, faking and more.
-- [API](https://nitzano.github.io/dbzar/docs/api) support (Typescript).
-- Highly [Configurable](https://nitzano.github.io/dbzar/docs/config) (`dbar.config.js`).
+- [Supports](https://nitzano.github.io/dbzar/docs/supported_dbs) many databases out of the box.
+- Highly [Configurable](https://nitzano.github.io/dbzar/docs/config)
 
 ## 📃 Full Documentation
 
