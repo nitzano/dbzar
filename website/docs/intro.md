@@ -28,11 +28,11 @@ Great for:
 
 ## ⭐ Highlights
 
-- [One line command](/docs/usage) - `anon-col`.
+- [One line command](/docs/usage/cli) - `anon-col`.
 - [Support](/docs/supported_dbs) most common databases.
 - Works both on single columns and entire databases.
 - Manipulate data in many ways: mask, scramble, fake and more.
-- [API](/docs/api) support.
+- [API](/docs/usage/api) support.
 - [Configurable](/docs/config).
 
 ## License
