@@ -22,6 +22,7 @@
 - [💻 Install](#-install)
 - [👻 Usage](#-usage)
   - [`anon-col` : anonymize a single column](#anon-col--anonymize-a-single-column)
+    - [Examples](#examples)
   - [`anon-db` : anonymize entire database](#anon-db--anonymize-entire-database)
 - [✅ Supported Databases](#-supported-databases)
 
@@ -83,12 +84,18 @@ Commands:
   help [command]        display help for command
 ```
 
+#### Examples
+
+1. Mask "firstName" in postgres
+
 ```
-// mask "firstName" in postgres
 dbzar anon-col mask -u postgresql:/localhost -db test -t users -c firstName
 // { "firstName": "John" } => { "firstName": "****" }
+```
 
-// scramble "lastName" in mongo
+2. Scramble "lastName" in mongo
+
+```
 dbzar anon-col scramble -u mongodb://localhost -db test -t users -c lastName
 // { "lastName": "Smith" } => { "firstName": "hSmti" }
 ```
