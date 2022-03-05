@@ -24,6 +24,7 @@
   - [`anon-col` : anonymize a single column](#anon-col--anonymize-a-single-column)
     - [Examples](#examples)
   - [`anon-db` : anonymize entire database](#anon-db--anonymize-entire-database)
+- [API](#api)
 - [✅ Supported Databases](#-supported-databases)
 
 <br/>
@@ -171,6 +172,10 @@ To:
 // products table
 { "name": "Fish", "price": 100 }
 ```
+
+## API
+
+See [API](https://nitzano.github.io/dbzar/docs/api)
 
 ## ✅ Supported Databases
 
