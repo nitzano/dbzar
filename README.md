@@ -87,7 +87,7 @@ Commands:
 
 #### Examples
 
-1. Mask "firstName" in Postgres
+1. Mask "firstName" in P1ostgres
 
 ```
 dbzar anon-col mask -u postgresql:/localhost -db test -t users -c firstName
