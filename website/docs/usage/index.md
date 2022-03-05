@@ -3,6 +3,8 @@ sidebar_position: 1
 sidebar_label: 👻 Usage
 ---
 
+## Usage
+
 You can use currently with:
 
 1. CLI
