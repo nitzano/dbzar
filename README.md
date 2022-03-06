@@ -19,13 +19,13 @@
 
 - [⭐ Highlights](#-highlights)
 - [📃 Full Documentation](#-full-documentation)
+- [✅ Supported Databases](#-supported-databases)
 - [💻 Install](#-install)
 - [👻 Usage](#-usage)
   - [CLI](#cli)
     - [`anon-col`](#anon-col)
     - [`anon-db`](#anon-db)
   - [API](#api)
-- [✅ Supported Databases](#-supported-databases)
 
 <br/>
 
@@ -39,14 +39,27 @@ Great for:
 ## ⭐ Highlights
 
 - Use via [CLI](https://nitzano.github.io/dbzar/docs/usage) or [API](https://nitzano.github.io/dbzar/docs/usage/api)
-- Anonymize single columns and entire databases.
-- Can Manipulate data by masking, scrambling, faking and more.
-- [Supports](https://nitzano.github.io/dbzar/docs/supported_dbs) many databases out of the box.
-- Highly [Configurable](https://nitzano.github.io/dbzar/docs/config)
+- Supports many databases out of the box
+- Anonymize single columns and entire databases
+- Manipulate data by masking, scrambling, faking and more
+- Highly [configurable](https://nitzano.github.io/dbzar/docs/config)
 
 ## 📃 Full Documentation
 
 Available here: [Documentation](https://nitzano.github.io/dbzar/).
+
+## ✅ Supported Databases
+
+1. MongoDB
+1. PostgresSQL
+1. MariaDB
+1. MySQL
+
+Future support:
+
+- Neo4J
+- SQLite
+- CSV
 
 ## 💻 Install
 
@@ -181,16 +194,3 @@ To:
 ### API
 
 See [API](https://nitzano.github.io/dbzar/docs/usage/api)
-
-## ✅ Supported Databases
-
-1. MongoDB
-1. PostgresSQL
-1. MariaDB
-1. MySQL
-
-Future support:
-
-- Neo4J
-- SQLite
-- CSV
