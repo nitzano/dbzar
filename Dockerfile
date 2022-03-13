@@ -9,7 +9,7 @@ COPY . .
 RUN yarn build:prod
 
 
-FROM node:lts as prod
+FROM node:lts-alpine as prod
 
 ENV NODE_ENV=production
 
