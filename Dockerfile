@@ -16,7 +16,6 @@ ENV NODE_ENV=production
 COPY package.json yarn.lock ./
 RUN yarn
 
-
 COPY --from=builder /app/dist ./dist
 
 CMD ["yarn", "start"]
