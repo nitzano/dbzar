@@ -18,5 +18,5 @@ RUN yarn
 
 COPY --from=builder /app/dist ./dist
 
-CMD ["yarn", "start"]
-
+ENTRYPOINT ["yarn", "start"]
+CMD ["help"]
