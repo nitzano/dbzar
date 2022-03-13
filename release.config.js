@@ -9,7 +9,7 @@ module.exports = {
 		[
 			'@semantic-release/exec',
 			{
-				prepareCmd: `docker build -t ${DOCKER_IMAGE_NAME} .`,
+				publishCmd: `docker build -t ${DOCKER_IMAGE_NAME} .`,
 			},
 		],
 		['semantic-release-docker', {name: DOCKER_IMAGE_NAME}],
