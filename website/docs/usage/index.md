@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
 sidebar_label: 👻 Usage
+title: "Usage"
 ---
 
-## Usage
 
 You can use currently with:
 

@@ -25,6 +25,7 @@
     - [`anon-col`](#anon-col)
     - [`anon-db`](#anon-db)
   - [API](#api)
+  - [Docker](#docker)
 - [✅ Supported Databases](#-supported-databases)
 
 <br/>
@@ -180,7 +181,14 @@ To:
 
 ### API
 
-See [API](https://nitzano.github.io/dbzar/docs/usage/api)
+See [usage/API](https://nitzano.github.io/dbzar/docs/usage/api)
+
+### Docker
+
+```
+docker pull nitzano/dbzar
+docker run nitzano/dbzar anon-col ...
+```
 
 ## ✅ Supported Databases
 
