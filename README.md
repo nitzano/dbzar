@@ -186,8 +186,8 @@ See [usage/API](https://nitzano.github.io/dbzar/docs/usage/api)
 ### Docker
 
 ```
-docker pull dbzar
-docker run dbzar anon-col ...
+docker pull nitzano/dbzar
+docker run nitzano/dbzar anon-col ...
 ```
 
 ## ✅ Supported Databases
