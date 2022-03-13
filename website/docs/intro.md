@@ -1,7 +1,7 @@
 ---
 id: intro
 sidebar_position: 1
-sidebar_label: 👋 Introduction
+sidebar_label: 👋 DBZar
 hide_title: true
 ---
 
