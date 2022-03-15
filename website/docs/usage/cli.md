@@ -5,9 +5,7 @@ sidebar_label: 💻 CLI
 
 # CLI
 
-### `anon-col`
-
-Anonymize a single column.
+### `anon-col` - Anonymize a single column
 
 (⚠ Changes whichever db provided so use with caution)
 
@@ -51,6 +49,8 @@ dbzar anon-col scramble -u mongodb://example:example@localhost -db test -t users
 ```
 
 ### `anon-db`
+
+Anonymize entire database
 
 ```
 Usage: dbzar anon-db [options] [uri]
