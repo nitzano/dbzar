@@ -185,8 +185,15 @@ See [usage/API](https://nitzano.github.io/dbzar/docs/usage/api)
 
 ### Docker
 
+Docker Image: [nitzano/dbzar](https://hub.docker.com/r/nitzano/dbzar)
+
+Usage:
+
 ```
+// pull the image
 docker pull nitzano/dbzar
+
+// run command
 docker run nitzano/dbzar anon-col ...
 ```
 
