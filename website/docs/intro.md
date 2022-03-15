@@ -28,12 +28,11 @@ Great for:
 
 ## ⭐ Highlights
 
-- [One line command](/docs/usage/cli) - `anon-col`.
-- [Support](/docs/supported_dbs) most common databases.
-- Works both on single columns and entire databases.
-- Manipulate data in many ways: mask, scramble, fake and more.
-- [API](/docs/usage/api) support.
-- [Configurable](/docs/config).
+- Use via [CLI](https://nitzano.github.io/dbzar/docs/usage) or [API](https://nitzano.github.io/dbzar/docs/usage/api)
+- Supports many databases out of the box
+- Anonymize single columns and entire databases
+- Manipulate data by masking, scrambling, faking and more
+- Highly [configurable](https://nitzano.github.io/dbzar/docs/config)
 
 ## License
 
