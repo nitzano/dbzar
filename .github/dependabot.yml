@@ -19,6 +19,8 @@ updates:
     ignore:
       - dependency-name: "ora"
         versions: ["6.x"]
+      - dependency-name: "chalk"
+        versions: ["5.x"]
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/website" # Location of package manifests
     schedule:
