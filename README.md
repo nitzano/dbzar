@@ -39,11 +39,12 @@ Great for:
 
 ## ⭐ Highlights
 
-- Use via [CLI](https://nitzano.github.io/dbzar/docs/usage) or [API](https://nitzano.github.io/dbzar/docs/usage/api)
-- Supports many databases out of the box
-- Anonymize single columns and entire databases
+- Anonymize single columns (`anon-col`)
+- Anonymize entire databases (`anon-db`)
 - Manipulate data by masking, scrambling, faking and more
-- Highly [configurable](https://nitzano.github.io/dbzar/docs/config)
+- Built-in support to famous databases
+- Use via [CLI](https://nitzano.github.io/dbzar/docs/usage) or [API](https://nitzano.github.io/dbzar/docs/usage/api) and [Docker](https://nitzano.github.io/dbzar/docs/usage/docker)
+- [Configuration](https://nitzano.github.io/dbzar/docs/config) options
 
 ## 📃 Full Documentation
 
