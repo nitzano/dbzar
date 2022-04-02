@@ -4739,6 +4739,13 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "https://registry.npmjs.org/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz"
   integrity sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=
 
+json-stable-stringify@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/json-stable-stringify/-/json-stable-stringify-1.0.1.tgz#9a759d39c5f2ff503fd5300646ed445f88c4f9af"
+  integrity sha1-mnWdOcXy/1A/1TAGRu1EX4jE+a8=
+  dependencies:
+    jsonify "~0.0.0"
+
 json5@2.x, json5@^2.1.2, json5@^2.2.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/json5/-/json5-2.2.0.tgz"
@@ -4768,6 +4775,11 @@ jsonfile@^6.0.1:
     universalify "^2.0.0"
   optionalDependencies:
     graceful-fs "^4.1.6"
+
+jsonify@~0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
+  integrity sha1-LHS27kHZPKUbe1qu6PUDYx0lKnM=
 
 jsonparse@^1.2.0:
   version "1.3.1"
@@ -5865,14 +5877,15 @@ pg-int8@1.0.1:
   integrity sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==
 
 pg-mem@^2.2.2:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/pg-mem/-/pg-mem-2.3.3.tgz#c8c8d58a01a2c58fd7d1ef01e02b1e2dd1b0bd23"
-  integrity sha512-yrAyLHajVd3O6m84sundIm+ae2vT1yrjvPUUB/2vOQ8L77glnNNRqwMWw5U4w1FrvizqOKoCCOFrKvRry3qI/w==
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/pg-mem/-/pg-mem-2.3.5.tgz#5ea316d7df0fdf2ee58eda2c7eddada0e4f3fc3b"
+  integrity sha512-xDqYISzoysFt3hj/i03gQ3p6WKNFarm9w6eYHNOlH151ak5x10gIxoNxjOmxDvqtZxP7b3Lqkd2Nnk/GaQ4yqQ==
   dependencies:
     "@mikro-orm/core" "^4.5.3"
     "@mikro-orm/postgresql" "^4.5.3"
     functional-red-black-tree "^1.0.1"
     immutable "^4.0.0-rc.12"
+    json-stable-stringify "^1.0.1"
     lru-cache "^6.0.0"
     moment "^2.27.0"
     object-hash "^2.0.3"
