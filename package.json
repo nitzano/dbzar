@@ -89,7 +89,7 @@
         "dotenv": "^16.0.0",
         "dotenv-expand": "^8.0.1",
         "enquirer": "^2.3.6",
-        "knex": "^1.0.1",
+        "knex": "^2.0.0",
         "lodash": "^4.17.21",
         "mongodb": "^4.3.0",
         "mysql": "^2.18.1",
