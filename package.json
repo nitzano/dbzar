@@ -41,7 +41,7 @@
         "@types/rosie": "^0.0.40",
         "cz-conventional-changelog": "^3.3.0",
         "eslint-plugin-unused-imports": "^2.0.0",
-        "husky": "^7.0.4",
+        "husky": "^8.0.1",
         "jest": "^27.4.7",
         "lint-staged": "^13.0.0",
         "nodemon": "^2.0.15",
