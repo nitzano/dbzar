@@ -43,7 +43,7 @@
         "eslint-plugin-unused-imports": "^2.0.0",
         "husky": "^7.0.4",
         "jest": "^27.4.7",
-        "lint-staged": "^12.1.5",
+        "lint-staged": "^13.0.0",
         "nodemon": "^2.0.15",
         "pg-mem": "^2.2.2",
         "prettier": "^2.5.1",
