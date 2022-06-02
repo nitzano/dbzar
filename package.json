@@ -27,7 +27,7 @@
         "fake"
     ],
     "devDependencies": {
-        "@commitlint/cli": "^16.1.0",
+        "@commitlint/cli": "^17.0.2",
         "@commitlint/config-conventional": "^16.0.0",
         "@semantic-release/exec": "^6.0.3",
         "@shelf/jest-mongodb": "^2.2.0",
