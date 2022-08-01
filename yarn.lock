@@ -765,12 +765,12 @@
     lodash "^4.17.4"
     parse-json "^5.0.0"
 
-"@shelf/jest-mongodb@^2.2.0":
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/@shelf/jest-mongodb/-/jest-mongodb-2.2.2.tgz#ec0de0e8ac6e68fdb9088e61baa143efc1cfc62b"
-  integrity sha512-trlJCZ0wPWHlsyr6WBDk+DshYwMg7UiXsCCz/XH3jLtEyCKKUOGn8UUI9KCJY/SwCiHmNFSWHrOjVqM/RKC1Iw==
+"@shelf/jest-mongodb@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@shelf/jest-mongodb/-/jest-mongodb-4.0.0.tgz#edbc1e7a8689eab9cab369023d88a8f1174f11aa"
+  integrity sha512-g251WdXUFD1uzT+QVXjmC0msjrcXqDhfIAKDzJNsGoFux0xfqo7PtUIOeguLFnvLD/ZQwSRQf8pQx4+0v2cPCg==
   dependencies:
-    debug "4.3.2"
+    debug "4.3.4"
     mongodb-memory-server "7.6.3"
     uuid "8.3.2"
 
@@ -2185,13 +2185,6 @@ debug@4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
   integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
-  dependencies:
-    ms "2.1.2"
-
-debug@4.3.2:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
-  integrity sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
   dependencies:
     ms "2.1.2"
 
