@@ -25,6 +25,8 @@ export class FakeAnonymizer extends BaseAnonymizer {
 				return chance.name();
 			case 'animal':
 				return chance.animal();
+			case 'email':
+				return chance.email();
 			default:
 				break;
 		}
