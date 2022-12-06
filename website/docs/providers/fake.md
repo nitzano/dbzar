@@ -21,9 +21,11 @@ Generates fake data instead of the previous value
    5. `letter` - a single letter
    6. `name` - full name
    7. `word` - random word
+   8. `email`
 
 ## Examples
 
 ```
 { 'firstName': 'John'} => { 'firstName': 'Random'}
+{ 'email': 'jsmith@business.org'} => { 'email': 'awkir@ptknolyoj.gov'}
 ```
