@@ -3,12 +3,12 @@ import {Factory} from 'rosie';
 
 const chance = Chance(); // eslint-disable-line new-cap
 
-export interface User {
+export type User = {
 	firstName: string;
 	lastName: string;
 	age: number;
 	email: string;
-}
+};
 
 export const userFactory = Factory.define<User>('user')
 	.attr('firstName', () => chance.first())

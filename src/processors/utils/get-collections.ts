@@ -1,7 +1,7 @@
-import {Anonymizer} from '../../anonymizers/types';
+import {type Anonymizer} from '../../anonymizers/types';
 import {createAnonymizer} from '../../anonymizers/utils/create-anonymizer';
-import {Config} from '../../config/types';
-import {Collection} from '../types/collection';
+import {type Config} from '../../config/types';
+import {type Collection} from '../types/collection';
 
 export function getCollections(config: Config): Collection[] {
 	const {dbName, tables = []} = config;

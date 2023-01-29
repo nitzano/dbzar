@@ -1,8 +1,8 @@
-import knex, {Knex} from 'knex';
-import {Anonymizer} from '../../anonymizers/types';
+import knex, {type Knex} from 'knex';
+import {type Anonymizer} from '../../anonymizers/types';
 import {debugLogger} from '../../services/loggers/debug-logger';
 import {BaseProcessor} from '../base-processor/base-processor';
-import {Processor} from '../base-processor/processor';
+import {type Processor} from '../base-processor/processor';
 
 const logger = debugLogger.extend('postgress-processor');
 

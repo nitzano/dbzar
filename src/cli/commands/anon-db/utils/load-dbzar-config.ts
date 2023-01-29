@@ -1,5 +1,5 @@
 import {cosmiconfig} from 'cosmiconfig';
-import {Config} from '../../../../config/types';
+import {type Config} from '../../../../config/types';
 import {validateConfig} from '../../../../config/utils/validate-config';
 import {createLogger} from '../../../../services/loggers/debug-logger';
 

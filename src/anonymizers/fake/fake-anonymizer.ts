@@ -1,7 +1,7 @@
 import {Chance} from 'chance';
-import {ProviderType} from '../../types/types';
+import {type ProviderType} from '../../types/types';
 import {BaseAnonymizer} from '../base/base-anonymizer';
-import {FakeOptions} from './fake-options';
+import {type FakeOptions} from './fake-options';
 
 const chance = new Chance();
 

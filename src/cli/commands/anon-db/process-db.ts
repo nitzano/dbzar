@@ -2,9 +2,9 @@ import {cyan, magenta, yellow} from 'chalk';
 import ora from 'ora';
 import {providerEmoji} from '../../../anonymizers/consts/provider-emoji';
 import {providerVerb} from '../../../anonymizers/consts/provider-verb';
-import {Processor} from '../../../processors/base-processor/processor';
-import {Collection} from '../../../processors/types/collection';
-import {ProviderType} from '../../../types/types';
+import {type Processor} from '../../../processors/base-processor/processor';
+import {type Collection} from '../../../processors/types/collection';
+import {type ProviderType} from '../../../types/types';
 
 async function processCollection(
 	collection: Collection,

@@ -1,6 +1,6 @@
-import Ajv, {ValidateFunction} from 'ajv';
+import Ajv, {type ValidateFunction} from 'ajv';
 import configSchema from '../assets/config.schema.json';
-import {Config} from '../types';
+import {type Config} from '../types';
 
 let ajv: Ajv;
 let validate: ValidateFunction;

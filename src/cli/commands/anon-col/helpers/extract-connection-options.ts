@@ -1,11 +1,11 @@
-import {Command} from 'commander';
+import {type Command} from 'commander';
 
-export interface ConnectionOptions {
+export type ConnectionOptions = {
 	uri: string;
 	database: string;
 	table: string;
 	column: string;
-}
+};
 
 export function extractConnectionOptions(command: Command): ConnectionOptions {
 	const {uri, database, table, column} =

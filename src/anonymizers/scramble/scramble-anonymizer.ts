@@ -1,5 +1,5 @@
 import {shuffle} from 'lodash';
-import {ProviderType} from '../../types/types';
+import {type ProviderType} from '../../types/types';
 import {BaseAnonymizer} from '../base/base-anonymizer';
 
 export class ScrambleAnonymizer extends BaseAnonymizer {

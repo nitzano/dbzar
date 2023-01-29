@@ -1,10 +1,10 @@
-import {Anonymizer} from '../../anonymizers/types';
+import {type Anonymizer} from '../../anonymizers/types';
 
-export interface Processor {
+export type Processor = {
 	processColumn(
 		tableName: string,
 		columnName: string,
 		anonymizer: Anonymizer,
 		dbName?: string,
 	): Promise<void>;
-}
+};

@@ -1,4 +1,4 @@
-import {ProviderType} from '../../types/types';
+import {type ProviderType} from '../../types/types';
 
 export const providerVerb: Record<ProviderType, string> = {
 	mask: 'Masking',

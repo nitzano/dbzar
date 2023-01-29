@@ -1,8 +1,8 @@
-import {Command} from 'commander';
+import {type Command} from 'commander';
 import {MaskAnonymizer} from '../../../../../anonymizers/mask/mask-anonymizer';
 import {
 	defaultMaskOptions,
-	MaskOptions,
+	type MaskOptions,
 } from '../../../../../anonymizers/mask/mask-options';
 import {extractConnectionOptions} from '../../helpers/extract-connection-options';
 import {processColumn} from '../../helpers/process-column';

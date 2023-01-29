@@ -1,6 +1,6 @@
-import {Command} from 'commander';
-import {Config} from '../../../config/types';
-import {Processor} from '../../../processors/base-processor/processor';
+import {type Command} from 'commander';
+import {type Config} from '../../../config/types';
+import {type Processor} from '../../../processors/base-processor/processor';
 import {getCollections} from '../../../processors/utils/get-collections';
 import {createLogger} from '../../../services/loggers/debug-logger';
 import {getProcessor} from '../anon-col/helpers/get-processor';

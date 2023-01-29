@@ -1,4 +1,4 @@
-import {FakeOptions} from './fake/fake-options';
-import {MaskOptions} from './mask/mask-options';
+import {type FakeOptions} from './fake/fake-options';
+import {type MaskOptions} from './mask/mask-options';
 
 export type Options = MaskOptions | FakeOptions;

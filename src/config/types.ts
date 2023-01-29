@@ -1,4 +1,4 @@
-import {Provider, ProviderType} from '../types/types';
+import {type Provider, type ProviderType} from '../types/types';
 
 export enum EngineType {
 	PostGres = 'postgres',
@@ -7,7 +7,7 @@ export enum EngineType {
 	MySQL = 'mysql',
 }
 
-export interface Config {
+export type Config = {
 	/**
 	 * Tables to be processed
 	 *
@@ -19,9 +19,9 @@ export interface Config {
 	 */
 	dbName: string;
 	uri?: string;
-}
+};
 
-export interface Table {
+export type Table = {
 	name: string;
 	/**
 	 * Tables to be processed
@@ -29,12 +29,12 @@ export interface Table {
 	 * @minItems 1
 	 */
 	columns?: Column[];
-}
+};
 
-export interface Column {
+export type Column = {
 	/**
 	 * Column Name
 	 */
 	name: string;
 	provider: Provider | ProviderType;
-}
+};

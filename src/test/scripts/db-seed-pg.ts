@@ -1,7 +1,7 @@
 // Create a fake pg db
 import 'dotenv/config'; // eslint-disable-line import/no-unassigned-import
 import process from 'node:process';
-import knex, {Knex} from 'knex';
+import knex, {type Knex} from 'knex';
 import {userFactory} from '../factories/user';
 
 const sampleTableName = 'users';

@@ -1,4 +1,4 @@
-import {Command} from 'commander';
+import {type Command} from 'commander';
 import {ScrambleAnonymizer} from '../../../../../anonymizers/scramble/scramble-anonymizer';
 import {extractConnectionOptions} from '../../helpers/extract-connection-options';
 import {processColumn} from '../../helpers/process-column';

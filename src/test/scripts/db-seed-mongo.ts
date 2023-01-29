@@ -3,8 +3,8 @@ import {cyan} from 'chalk';
 import 'dotenv/config'; // eslint-disable-line import/no-unassigned-import
 import {MongoClient} from 'mongodb';
 import process from 'node:process';
-import {Product, productFactory} from '../factories/product-factory';
-import {User, userFactory} from '../factories/user';
+import {type Product, productFactory} from '../factories/product-factory';
+import {type User, userFactory} from '../factories/user';
 
 const usersCount = 500;
 const productsCount = 500;

@@ -1,10 +1,10 @@
-import {Command} from 'commander';
+import {type Command} from 'commander';
 import {FakeAnonymizer} from '../../../../../anonymizers/fake/fake-anonymizer';
 import {
 	defaultFakeOptions,
-	FakeOptions,
+	type FakeOptions,
 } from '../../../../../anonymizers/fake/fake-options';
-import {FakeType} from '../../../../../anonymizers/fake/types';
+import {type FakeType} from '../../../../../anonymizers/fake/types';
 import {processColumn} from '../../helpers/process-column';
 
 export async function fakeAction(this: Command) {

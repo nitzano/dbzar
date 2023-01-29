@@ -1,10 +1,10 @@
-import {ProviderType} from '../../types/types';
+import {type ProviderType} from '../../types/types';
 import {FakeAnonymizer} from '../fake/fake-anonymizer';
 import {defaultFakeOptions} from '../fake/fake-options';
 import {MaskAnonymizer} from '../mask/mask-anonymizer';
 import {defaultMaskOptions} from '../mask/mask-options';
 import {ScrambleAnonymizer} from '../scramble/scramble-anonymizer';
-import {Anonymizer} from '../types';
+import {type Anonymizer} from '../types';
 
 export function createAnonymizer(
 	type: ProviderType,

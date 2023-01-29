@@ -1,4 +1,4 @@
-import debug, {Debugger} from 'debug';
+import debug, {type Debugger} from 'debug';
 
 export const debugNamespace = 'dbzar';
 

@@ -1,8 +1,8 @@
-import {FakeType} from './types';
+import {type FakeType} from './types';
 
-export interface FakeOptions {
+export type FakeOptions = {
 	fakeValue: FakeType;
-}
+};
 
 export const defaultFakeOptions: FakeOptions = {
 	fakeValue: 'word',

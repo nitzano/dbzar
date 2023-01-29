@@ -1,4 +1,4 @@
-import {Command} from 'commander';
+import {type Command} from 'commander';
 
 export function addConnectionOptions(cmd: Command): Command {
 	return cmd

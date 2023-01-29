@@ -1,9 +1,9 @@
-import {Anonymizer} from '../anonymizers/types';
+import {type Anonymizer} from '../anonymizers/types';
 import {createAnonymizer} from '../anonymizers/utils/create-anonymizer';
 import {getProcessor} from '../cli/commands/anon-col/helpers/get-processor';
-import {Processor} from '../processors/base-processor/processor';
+import {type Processor} from '../processors/base-processor/processor';
 import {createLogger} from '../services/loggers/debug-logger';
-import {Provider} from '../types/types';
+import {type Provider} from '../types/types';
 
 const logger = createLogger(__filename);
 
