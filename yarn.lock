@@ -3860,7 +3860,7 @@ __metadata:
     chance: ^1.1.8
     commander: ^9.0.0
     connection-string: ^4.3.5
-    cosmiconfig: ^7.0.1
+    cosmiconfig: ^8.0.0
     cz-conventional-changelog: ^3.3.0
     debug: ^4.3.3
     dotenv: ^16.0.0
