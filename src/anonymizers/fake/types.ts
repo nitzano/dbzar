@@ -1,5 +1,6 @@
 export const fakeTypes: string[] = [
 	'age',
+	'email',
 	'first',
 	'firstName',
 	'last',
@@ -12,6 +13,7 @@ export const fakeTypes: string[] = [
 export type FakeType =
 	| 'age'
 	| 'animal'
+	| 'email'
 	| 'first'
 	| 'firstName'
 	| 'last'
