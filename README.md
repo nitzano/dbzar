@@ -54,8 +54,10 @@ Available here: [Documentation](https://nitzano.github.io/dbzar/).
 
 ```
 npm i --save-dev dbzar
+
 // OR
 yarn add -D dbzar
+
 // OR
 npx dbzar
 ```
@@ -96,6 +98,7 @@ Examples:
 
 ```
 dbzar anon-col mask -u postgresql:/localhost -db test -t users -c firstName
+
 // { "firstName": "John" } => { "firstName": "****" }
 ```
 
@@ -103,6 +106,7 @@ dbzar anon-col mask -u postgresql:/localhost -db test -t users -c firstName
 
 ```
 dbzar anon-col scramble -u mongodb://localhost -db test -t users -c lastName
+
 // { "lastName": "Smith" } => { "lastName": "hSmti" }
 ```
 
