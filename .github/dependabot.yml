@@ -11,7 +11,7 @@ updates:
       interval: "monthly"
     labels:
       - deps
-    target-branch: beta
+    target-branch: master
     commit-message:
       prefix: "fix"
       prefix-development: "chore"
