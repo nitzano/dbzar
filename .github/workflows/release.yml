@@ -18,7 +18,7 @@ jobs:
           node-version: "18"
           cache: "yarn"
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: yarn --immutable
       - run: yarn test
       - run: yarn build:prod
       - name: Release
