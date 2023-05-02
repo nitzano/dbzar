@@ -36,7 +36,7 @@
     "@types/node": "^18.11.18",
     "@types/node-emoji": "^1.8.1",
     "@types/pg": "^8.6.4",
-    "@types/rosie": "^0.0.40",
+    "@types/rosie": "^0.0.42",
     "cz-conventional-changelog": "^3.3.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.1",

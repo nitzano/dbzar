@@ -2333,10 +2333,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/rosie@npm:^0.0.40":
-  version: 0.0.40
-  resolution: "@types/rosie@npm:0.0.40"
-  checksum: 4f548c83e3e3322ddced5f50dc55714d07724d7af9f214ccfaaa760995bf7800e54580802c1146f31d0eb16f1d0019d936601e45ecf42ba60b20e676c4c8e20f
+"@types/rosie@npm:^0.0.42":
+  version: 0.0.42
+  resolution: "@types/rosie@npm:0.0.42"
+  checksum: 275f149b5d7cde6f6f8f6345f98cfc49cce58abfc29eeb85a38f36cdfc62a98c8ac946533c6bf776afa7aec76e1fa3f7f14aa3e951064e6a6904ce2a05959397
   languageName: node
   linkType: hard
 
@@ -3962,7 +3962,7 @@ __metadata:
     "@types/node": ^18.11.18
     "@types/node-emoji": ^1.8.1
     "@types/pg": ^8.6.4
-    "@types/rosie": ^0.0.40
+    "@types/rosie": ^0.0.42
     ajv: ^8.10.0
     chalk: 4.1.2
     chance: ^1.1.8
