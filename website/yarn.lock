@@ -1567,13 +1567,13 @@
     react-helmet-async "*"
     react-loadable "npm:@docusaurus/react-loadable@5.5.2"
 
-"@docusaurus/module-type-aliases@^2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-2.3.0.tgz#85861b0e56a3468d82cba76964e08287d1939c84"
-  integrity sha512-DvJtVejgrgIgxSNZ0pRaVu4EndRVBgbtp1LKvIO4xBgKlrsq8o4qkj1HKwH6yok5NoMqGApu8/E0KPOdZBtDpQ==
+"@docusaurus/module-type-aliases@^2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-2.4.1.tgz#38b3c2d2ae44bea6d57506eccd84280216f0171c"
+  integrity sha512-gLBuIFM8Dp2XOCWffUDSjtxY7jQgKvYujt7Mx5s4FCTfoL5dN1EVbnrn+O2Wvh8b0a77D57qoIDY7ghgmatR1A==
   dependencies:
     "@docusaurus/react-loadable" "5.5.2"
-    "@docusaurus/types" "2.3.0"
+    "@docusaurus/types" "2.4.1"
     "@types/history" "^4.7.11"
     "@types/react" "*"
     "@types/react-router-config" "*"
@@ -1806,10 +1806,10 @@
     fs-extra "^10.1.0"
     tslib "^2.4.0"
 
-"@docusaurus/types@2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@docusaurus/types/-/types-2.3.0.tgz#9695a768d3810c8a137a41d7a1116ac67d201ce5"
-  integrity sha512-c5C0nROxVFsgMAm4vWDB1LDv3v4K18Y8eVxazL3dEr7w+7kNLc5koWrW7fWmCnrbItnuTna4nLS2PcSZrkYidg==
+"@docusaurus/types@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@docusaurus/types/-/types-2.4.0.tgz#f94f89a0253778b617c5d40ac6f16b17ec55ce41"
+  integrity sha512-xaBXr+KIPDkIaef06c+i2HeTqVNixB7yFut5fBXPGI2f1rrmEV2vLMznNGsFwvZ5XmA3Quuefd4OGRkdo97Dhw==
   dependencies:
     "@types/history" "^4.7.11"
     "@types/react" "*"
@@ -1820,10 +1820,10 @@
     webpack "^5.73.0"
     webpack-merge "^5.8.0"
 
-"@docusaurus/types@2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@docusaurus/types/-/types-2.4.0.tgz#f94f89a0253778b617c5d40ac6f16b17ec55ce41"
-  integrity sha512-xaBXr+KIPDkIaef06c+i2HeTqVNixB7yFut5fBXPGI2f1rrmEV2vLMznNGsFwvZ5XmA3Quuefd4OGRkdo97Dhw==
+"@docusaurus/types@2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@docusaurus/types/-/types-2.4.1.tgz#d8e82f9e0f704984f98df1f93d6b4554d5458705"
+  integrity sha512-0R+cbhpMkhbRXX138UOc/2XZFF8hiZa6ooZAEEJFp5scytzCw4tC1gChMFXrpa3d2tYE6AX8IrOEpSonLmfQuQ==
   dependencies:
     "@types/history" "^4.7.11"
     "@types/react" "*"
