@@ -214,3 +214,8 @@ Future support:
 - Neo4J
 - SQLite
 - CSV
+- DynamoDB
+- Parquet
+- JSON
+- XML
+- XLSX
