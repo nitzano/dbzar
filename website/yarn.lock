@@ -4377,6 +4377,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clsx@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "clsx@npm:2.0.0"
+  checksum: a2cfb2351b254611acf92faa0daf15220f4cd648bdf96ce369d729813b85336993871a4bf6978ddea2b81b5a130478339c20d9d0b5c6fc287e5147f0c059276e
+  languageName: node
+  linkType: hard
+
 "collapse-white-space@npm:^1.0.2":
   version: 1.0.6
   resolution: "collapse-white-space@npm:1.0.6"
@@ -11149,7 +11156,7 @@ __metadata:
     "@docusaurus/module-type-aliases": ^2.4.1
     "@docusaurus/preset-classic": ^2.4.1
     "@tsconfig/docusaurus": ^2.0.0
-    clsx: ^1.2.1
+    clsx: ^2.0.0
     docusaurus-plugin-hotjar: 0.0.2
     prism-react-renderer: ^2.0.6
     react: ^17.0.1
