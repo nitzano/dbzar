@@ -13,11 +13,13 @@ async function processCollection(
 	const anonymizerName: ProviderType = collection.anonymizer.name;
 	const {anonymizer, tableName, columnName, dbName} = collection;
 
+	const prefixText = providerEmoji[anonymizerName] ?? '';
+
 	const collectionSpinner = ora({
 		text: `${providerVerb[anonymizerName]} ${magenta(
 			collection.columnName,
 		)} in ${cyan(collection.tableName)}`,
-		prefixText: `${providerEmoji[anonymizerName]}`,
+		prefixText,
 	}).start();
 
 	// Process
