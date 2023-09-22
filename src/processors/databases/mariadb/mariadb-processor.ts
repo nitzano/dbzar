@@ -1,8 +1,8 @@
 import knex, {type Knex} from 'knex';
-import {type Anonymizer} from '../../anonymizers/types';
-import {debugLogger} from '../../services/loggers/debug-logger';
-import {BaseProcessor} from '../base-processor/base-processor';
-import {type Processor} from '../base-processor/processor';
+import {type Anonymizer} from '../../../anonymizers/types';
+import {debugLogger} from '../../../services/loggers/debug-logger';
+import {BaseProcessor} from '../../base-processor/base-processor';
+import {type Processor} from '../../base-processor/processor';
 
 const logger = debugLogger.extend('mariadb-processor');
 
