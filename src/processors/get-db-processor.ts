@@ -5,7 +5,7 @@ import {MariaDbProcessor} from './databases/mariadb/mariadb-processor';
 import {MongoProcessor} from './databases/mongo/mongo-processor';
 import {PostgresProcessor} from './databases/postgres/postgres/postgres-processor';
 
-export function getProcessor(
+export function getDatabaseProcessor(
 	connectionStringUri: string,
 ): Processor | undefined {
 	// Parse the engine

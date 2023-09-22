@@ -1,7 +1,7 @@
 import ora from 'ora';
 import {type Anonymizer} from '../../../../anonymizers/types';
 import {type Processor} from '../../../../processors/base-processor/processor';
-import {getProcessor} from '../../../../processors/get-processor';
+import {getDatabaseProcessor} from '../../../../processors/get-db-processor';
 import {isUserConfirmed} from './is-user-confirmed';
 
 export async function processColumn(
@@ -12,7 +12,8 @@ export async function processColumn(
 	columnName: string,
 	checkConfirm = true,
 ) {
-	const processor: Processor | undefined = getProcessor(connectionString);
+	const processor: Processor | undefined =
+		getDatabaseProcessor(connectionString);
 
 	if (processor) {
 		// Check confirm
