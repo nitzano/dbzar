@@ -1,4 +1,4 @@
-import {EngineType} from '../config/types';
+import {DbEngineType} from '../config/types';
 import {getConnectionStringEngine} from '../utils/get-connection-string-engine';
 import {type Processor} from './base-processor/processor';
 import {MariaDbProcessor} from './databases/mariadb/mariadb-processor';
@@ -14,14 +14,14 @@ export function getDatabaseProcessor(
 
 	if (engine) {
 		switch (engine) {
-			case EngineType.Mongo:
+			case DbEngineType.Mongo:
 				processor = new MongoProcessor(connectionStringUri);
 				break;
-			case EngineType.PostGres:
+			case DbEngineType.PostGres:
 				processor = new PostgresProcessor(connectionStringUri);
 				break;
-			case EngineType.MariaDB:
-			case EngineType.MySQL:
+			case DbEngineType.MariaDB:
+			case DbEngineType.MySQL:
 				processor = new MariaDbProcessor(connectionStringUri);
 				break;
 			default:

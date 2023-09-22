@@ -1,6 +1,6 @@
 import {type Provider, type ProviderType} from '../types/types';
 
-export enum EngineType {
+export enum DbEngineType {
 	PostGres = 'postgres',
 	Mongo = 'mongo',
 	MariaDB = 'mariadb',
