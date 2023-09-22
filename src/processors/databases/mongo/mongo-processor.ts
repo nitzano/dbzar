@@ -1,8 +1,8 @@
-import {type Db, MongoClient} from 'mongodb';
-import {type Anonymizer} from '../../anonymizers/types';
-import {debugLogger} from '../../services/loggers/debug-logger';
-import {BaseProcessor} from '../base-processor/base-processor';
-import {type Processor} from '../base-processor/processor';
+import {MongoClient, type Db} from 'mongodb';
+import {type Anonymizer} from '../../../anonymizers/types';
+import {debugLogger} from '../../../services/loggers/debug-logger';
+import {BaseProcessor} from '../../base-processor/base-processor';
+import {type Processor} from '../../base-processor/processor';
 
 const logger = debugLogger.extend('mongo-processor');
 export class MongoProcessor extends BaseProcessor implements Processor {

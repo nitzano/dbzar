@@ -5,10 +5,12 @@ on:
     branches:
       - master
       - beta
+      - "milestone-**"
   pull_request:
     branches:
       - master
       - beta
+      - "milestones-**"
 
 jobs:
   lint:

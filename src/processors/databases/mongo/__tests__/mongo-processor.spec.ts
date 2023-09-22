@@ -1,7 +1,7 @@
 import process from 'process';
-import {type Db, MongoClient, type MongoClientOptions} from 'mongodb';
-import {MaskAnonymizer} from '../../../anonymizers/mask/mask-anonymizer';
-import {type Anonymizer} from '../../../anonymizers/types';
+import {MongoClient, type Db, type MongoClientOptions} from 'mongodb';
+import {MaskAnonymizer} from '../../../../anonymizers/mask/mask-anonymizer';
+import {type Anonymizer} from '../../../../anonymizers/types';
 import {MongoProcessor} from '../mongo-processor';
 
 describe('mongo-processor', () => {
