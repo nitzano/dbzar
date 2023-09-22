@@ -1,9 +1,9 @@
-import {EngineType} from '../../../../config/types';
-import {type Processor} from '../../../../processors/base-processor/processor';
-import {MariaDbProcessor} from '../../../../processors/databases/mariadb/mariadb-processor';
-import {MongoProcessor} from '../../../../processors/databases/mongo/mongo-processor';
-import {PostgresProcessor} from '../../../../processors/databases/postgres/postgres/postgres-processor';
-import {getConnectionStringEngine} from '../../../../utils/get-connection-string-engine';
+import {EngineType} from '../config/types';
+import {getConnectionStringEngine} from '../utils/get-connection-string-engine';
+import {type Processor} from './base-processor/processor';
+import {MariaDbProcessor} from './databases/mariadb/mariadb-processor';
+import {MongoProcessor} from './databases/mongo/mongo-processor';
+import {PostgresProcessor} from './databases/postgres/postgres/postgres-processor';
 
 export function getProcessor(
 	connectionStringUri: string,

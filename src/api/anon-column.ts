@@ -1,7 +1,7 @@
 import {type Anonymizer} from '../anonymizers/types';
 import {createAnonymizer} from '../anonymizers/utils/create-anonymizer';
-import {getProcessor} from '../cli/commands/anon-col/helpers/get-processor';
 import {type Processor} from '../processors/base-processor/processor';
+import {getProcessor} from '../processors/get-processor';
 import {createLogger} from '../services/loggers/debug-logger';
 import {type Provider} from '../types/types';
 

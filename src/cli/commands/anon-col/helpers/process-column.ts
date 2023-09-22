@@ -1,7 +1,7 @@
 import ora from 'ora';
 import {type Anonymizer} from '../../../../anonymizers/types';
 import {type Processor} from '../../../../processors/base-processor/processor';
-import {getProcessor} from './get-processor';
+import {getProcessor} from '../../../../processors/get-processor';
 import {isUserConfirmed} from './is-user-confirmed';
 
 export async function processColumn(

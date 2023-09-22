@@ -1,9 +1,9 @@
 import {type Command} from 'commander';
 import {type Config} from '../../../config/types';
 import {type Processor} from '../../../processors/base-processor/processor';
+import {getProcessor} from '../../../processors/get-processor';
 import {getCollections} from '../../../processors/utils/get-collections';
 import {createLogger} from '../../../services/loggers/debug-logger';
-import {getProcessor} from '../anon-col/helpers/get-processor';
 import {processDb} from './process-db';
 import {loadDbzarConfig} from './utils/load-dbzar-config';
 
