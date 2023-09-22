@@ -1,23 +1,23 @@
 import {ConnectionString} from 'connection-string';
-import {DbEngineType} from '../config/types';
+import {DatabaseEngineType} from '../config/types';
 import {debugLogger} from '../services/loggers/debug-logger';
 
 export function getConnectionStringEngine(
 	connectionStringUri: string,
-): DbEngineType | undefined {
+): DatabaseEngineType | undefined {
 	if (connectionStringUri) {
 		const {protocol} = new ConnectionString(connectionStringUri);
 		if (protocol) {
 			debugLogger(`protocol = ${protocol}`);
 			switch (protocol) {
 				case 'postgresql':
-					return DbEngineType.PostGres;
+					return DatabaseEngineType.PostGres;
 				case 'mongodb':
-					return DbEngineType.Mongo;
+					return DatabaseEngineType.Mongo;
 				case 'mariadb':
-					return DbEngineType.MariaDB;
+					return DatabaseEngineType.MariaDB;
 				case 'mysql':
-					return DbEngineType.MySQL;
+					return DatabaseEngineType.MySQL;
 				default:
 					break;
 			}
