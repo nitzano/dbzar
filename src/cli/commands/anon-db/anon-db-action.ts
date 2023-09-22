@@ -1,8 +1,8 @@
 import {type Command} from 'commander';
 import {type Config} from '../../../config/types';
 import {type Processor} from '../../../processors/base-processor/processor';
+import {getCollections} from '../../../processors/databases/utils/get-collections';
 import {getProcessor} from '../../../processors/get-processor';
-import {getCollections} from '../../../processors/utils/get-collections';
 import {createLogger} from '../../../services/loggers/debug-logger';
 import {processDb} from './process-db';
 import {loadDbzarConfig} from './utils/load-dbzar-config';
