@@ -1,7 +1,7 @@
 import {type Anonymizer} from '../anonymizers/types';
 import {createAnonymizer} from '../anonymizers/utils/create-anonymizer';
-import {getProcessor} from '../cli/commands/anon-col/helpers/get-processor';
 import {type Processor} from '../processors/base-processor/processor';
+import {getDatabaseProcessor} from '../processors/get-db-processor';
 import {createLogger} from '../services/loggers/debug-logger';
 import {type Provider} from '../types/types';
 
@@ -29,7 +29,7 @@ export async function anonColumn(
 		throw new Error('No uri in configuration');
 	}
 
-	const processor: Processor | undefined = getProcessor(uri);
+	const processor: Processor | undefined = getDatabaseProcessor(uri);
 
 	logger(`processing ${dbName}`);
 	if (processor) {

@@ -1,5 +1,5 @@
 import {Command} from 'commander';
-import {anonDbAction} from './anon-db-action';
+import {anonDbAction} from './anon-db.action';
 
 export const anonDbCommand = new Command('anon-db');
 

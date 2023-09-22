@@ -1,12 +1,12 @@
 import knex, {type Knex} from 'knex';
-import {type Anonymizer} from '../../anonymizers/types';
-import {debugLogger} from '../../services/loggers/debug-logger';
-import {BaseProcessor} from '../base-processor/base-processor';
-import {type Processor} from '../base-processor/processor';
+import {type Anonymizer} from '../../../anonymizers/types';
+import {debugLogger} from '../../../services/loggers/debug-logger';
+import {BaseProcessor} from '../../base-processor/base-processor';
+import {type Processor} from '../../base-processor/processor';
 
-const logger = debugLogger.extend('postgress-processor');
+const logger = debugLogger.extend('mariadb-processor');
 
-export class PostgresProcessor extends BaseProcessor implements Processor {
+export class MariaDbProcessor extends BaseProcessor implements Processor {
 	/**
 	 * Process a column (document)
 	 *
@@ -67,7 +67,7 @@ export class PostgresProcessor extends BaseProcessor implements Processor {
 
 	private buildClient(connectionString: string): Knex {
 		return knex({
-			client: 'pg',
+			client: 'mysql',
 			connection: connectionString,
 		});
 	}
