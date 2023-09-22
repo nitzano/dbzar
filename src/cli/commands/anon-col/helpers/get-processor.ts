@@ -2,7 +2,7 @@ import {EngineType} from '../../../../config/types';
 import {type Processor} from '../../../../processors/base-processor/processor';
 import {MariaDbProcessor} from '../../../../processors/databases/mariadb/mariadb-processor';
 import {MongoProcessor} from '../../../../processors/databases/mongo/mongo-processor';
-import {PostgresProcessor} from '../../../../processors/postgres/postgres-processor';
+import {PostgresProcessor} from '../../../../processors/databases/postgres/postgres/postgres-processor';
 import {getConnectionStringEngine} from '../../../../utils/get-connection-string-engine';
 
 export function getProcessor(
