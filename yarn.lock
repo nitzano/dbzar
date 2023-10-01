@@ -3767,9 +3767,9 @@ __metadata:
   linkType: hard
 
 "connection-string@npm:^4.3.5":
-  version: 4.3.6
-  resolution: "connection-string@npm:4.3.6"
-  checksum: 071c81f1e4df53c212f85f3ecdfe4cff7681a4bddbc0b36649e4d5ff030e36bd1941f59c4e56d65180f333de74b9ab85e7ce92c62ece301d3a9b25e5cad524c3
+  version: 4.4.0
+  resolution: "connection-string@npm:4.4.0"
+  checksum: 256b16e9d54ac479fce7e5439fb9372bfac2e2d4b551dfb3d3edf778b226d3bda3db88ff5ea96467992a69789bcb93423e00b15c55f782198206983b0388b825
   languageName: node
   linkType: hard
 
