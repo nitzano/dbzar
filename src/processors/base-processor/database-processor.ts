@@ -1,6 +1,6 @@
 import {type Anonymizer} from '../../anonymizers/types/anonymizer.type';
 
-export type Processor = {
+export type DatabaseProcessor = {
 	processColumn(
 		tableName: string,
 		columnName: string,

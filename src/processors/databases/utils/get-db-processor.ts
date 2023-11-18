@@ -1,5 +1,5 @@
 import {DatabaseEngineType} from '../../../config/types';
-import {type Processor} from '../../base-processor/processor';
+import {type DatabaseProcessor} from '../../base-processor/database-processor';
 import {MariaDbProcessor} from '../mariadb/mariadb-processor';
 import {MongoProcessor} from '../mongo/mongo-processor';
 import {PostgresProcessor} from '../postgres/postgres/postgres-processor';
@@ -7,10 +7,10 @@ import {getConnectionStringEngine} from './get-connection-string-engine/get-conn
 
 export function getDatabaseProcessor(
 	connectionStringUri: string,
-): Processor | undefined {
+): DatabaseProcessor | undefined {
 	// Parse the engine
 	const engine = getConnectionStringEngine(connectionStringUri);
-	let processor: Processor | undefined;
+	let processor: DatabaseProcessor | undefined;
 
 	if (engine) {
 		switch (engine) {

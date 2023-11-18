@@ -2,11 +2,14 @@ import knex, {type Knex} from 'knex';
 import {type Anonymizer} from '../../../anonymizers/types/anonymizer.type';
 import {debugLogger} from '../../../common/services/loggers/debug-logger';
 import {BaseProcessor} from '../../base-processor/base-processor';
-import {type Processor} from '../../base-processor/processor';
+import {type DatabaseProcessor} from '../../base-processor/database-processor';
 
 const logger = debugLogger.extend('mariadb-processor');
 
-export class MariaDbProcessor extends BaseProcessor implements Processor {
+export class MariaDbProcessor
+	extends BaseProcessor
+	implements DatabaseProcessor
+{
 	/**
 	 * Process a column (document)
 	 *

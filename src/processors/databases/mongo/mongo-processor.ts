@@ -2,10 +2,10 @@ import {MongoClient, type Db} from 'mongodb';
 import {type Anonymizer} from '../../../anonymizers/types/anonymizer.type';
 import {debugLogger} from '../../../common/services/loggers/debug-logger';
 import {BaseProcessor} from '../../base-processor/base-processor';
-import {type Processor} from '../../base-processor/processor';
+import {type DatabaseProcessor} from '../../base-processor/database-processor';
 
 const logger = debugLogger.extend('mongo-processor');
-export class MongoProcessor extends BaseProcessor implements Processor {
+export class MongoProcessor extends BaseProcessor implements DatabaseProcessor {
 	/**
 	 * Process a column (document)
 	 *

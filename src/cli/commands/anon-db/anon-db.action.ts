@@ -1,7 +1,7 @@
 import {type Command} from 'commander';
-import {createLogger} from '../../../common/services/loggers/debug-logger';
 import {type Config} from '../../../common/config/types';
-import {type Processor} from '../../../processors/base-processor/processor';
+import {createLogger} from '../../../common/services/loggers/debug-logger';
+import {type DatabaseProcessor} from '../../../processors/base-processor/database-processor';
 import {getCollections} from '../../../processors/databases/utils/get-collections';
 import {getDatabaseProcessor} from '../../../processors/databases/utils/get-db-processor';
 import {processDb} from './process-db';
@@ -25,7 +25,7 @@ export async function anonDbAction(this: Command) {
 
 	logger(`uri = ${uri}`);
 
-	const processor: Processor | undefined = getDatabaseProcessor(uri);
+	const processor: DatabaseProcessor | undefined = getDatabaseProcessor(uri);
 	const collections = getCollections(config);
 
 	if (processor && collections) {

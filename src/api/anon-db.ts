@@ -1,6 +1,6 @@
 import {type Config} from '../common/config/types';
 import {createLogger} from '../common/services/loggers/debug-logger';
-import {type Processor} from '../processors/base-processor/processor';
+import {type DatabaseProcessor} from '../processors/base-processor/database-processor';
 import {getCollections} from '../processors/databases/utils/get-collections';
 import {getDatabaseProcessor} from '../processors/databases/utils/get-db-processor';
 
@@ -20,7 +20,7 @@ export async function anonDb(config: Config): Promise<void> {
 		throw new Error('No uri in configuration');
 	}
 
-	const processor: Processor | undefined = getDatabaseProcessor(uri);
+	const processor: DatabaseProcessor | undefined = getDatabaseProcessor(uri);
 
 	logger(`processing ${dbName}`);
 	if (processor) {
