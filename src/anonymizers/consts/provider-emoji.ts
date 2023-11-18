@@ -1,5 +1,5 @@
 import {get} from 'node-emoji';
-import {type ProviderType} from '../../types/types';
+import {type ProviderType} from '../types/provider.type';
 
 export const providerEmoji: Record<ProviderType, string | undefined> = {
 	mask: get('performing_arts'),

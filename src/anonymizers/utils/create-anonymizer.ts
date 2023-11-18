@@ -4,7 +4,7 @@ import {defaultFakeOptions} from '../fake/fake-options';
 import {MaskAnonymizer} from '../mask/mask-anonymizer';
 import {defaultMaskOptions} from '../mask/mask-options';
 import {ScrambleAnonymizer} from '../scramble/scramble-anonymizer';
-import {type Anonymizer} from '../types';
+import {type Anonymizer} from '../types/anonymizer.type';
 
 export function createAnonymizer(
 	type: ProviderType,

@@ -1,6 +1,6 @@
 import {Chance} from 'chance';
-import {type ProviderType} from '../../types/types';
 import {BaseAnonymizer} from '../base/base-anonymizer';
+import {type ProviderType} from '../types/provider.type';
 import {type FakeOptions} from './fake-options';
 
 const chance = new Chance();

@@ -1,4 +1,4 @@
-import {type ProviderType} from '../../types/types';
+import {type ProviderType} from '../types/provider.type';
 
 export abstract class BaseAnonymizer {
 	abstract name: ProviderType;

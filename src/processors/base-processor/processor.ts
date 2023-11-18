@@ -1,4 +1,4 @@
-import {type Anonymizer} from '../../anonymizers/types';
+import {type Anonymizer} from '../../anonymizers/types/anonymizer.type';
 
 export type Processor = {
 	processColumn(

@@ -1,4 +1,4 @@
-import {type Anonymizer} from '../../../anonymizers/types';
+import {type Anonymizer} from '../../../anonymizers/types/anonymizer.type';
 import {createAnonymizer} from '../../../anonymizers/utils/create-anonymizer';
 import {type Config} from '../../../config/types';
 import {type Collection} from '../types/collection';

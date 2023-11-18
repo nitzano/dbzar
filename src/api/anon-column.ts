@@ -1,4 +1,4 @@
-import {type Anonymizer} from '../anonymizers/types';
+import {type Anonymizer} from '../anonymizers/types/anonymizer.type';
 import {createAnonymizer} from '../anonymizers/utils/create-anonymizer';
 import {type Processor} from '../processors/base-processor/processor';
 import {getDatabaseProcessor} from '../processors/get-db-processor';

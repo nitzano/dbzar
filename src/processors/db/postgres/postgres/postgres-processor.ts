@@ -1,5 +1,5 @@
 import knex, {type Knex} from 'knex';
-import {type Anonymizer} from '../../../../anonymizers/types';
+import {type Anonymizer} from '../../../../anonymizers/types/anonymizer.type';
 import {debugLogger} from '../../../../services/loggers/debug-logger';
 import {BaseProcessor} from '../../../base-processor/base-processor';
 import {type Processor} from '../../../base-processor/processor';

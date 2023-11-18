@@ -1,6 +1,6 @@
 import {shuffle} from 'lodash';
-import {type ProviderType} from '../../types/types';
 import {BaseAnonymizer} from '../base/base-anonymizer';
+import {type ProviderType} from '../types/provider.type';
 
 export class ScrambleAnonymizer extends BaseAnonymizer {
 	name: ProviderType = 'scramble';

@@ -1,6 +1,6 @@
 import {replace} from 'lodash';
-import {type ProviderType} from '../../types/types';
 import {BaseAnonymizer} from '../base/base-anonymizer';
+import {type ProviderType} from '../types/provider.type';
 import {defaultMaskOptions, type MaskOptions} from './mask-options';
 
 export class MaskAnonymizer extends BaseAnonymizer {

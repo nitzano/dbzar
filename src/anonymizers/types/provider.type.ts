@@ -1,5 +1,5 @@
-import {type FakeOptions} from '../anonymizers/fake/fake-options';
-import {type MaskOptions} from '../anonymizers/mask/mask-options';
+import {type FakeOptions} from '../fake/fake-options';
+import {type MaskOptions} from '../mask/mask-options';
 
 export const providers: string[] = ['mask', 'scramble'];
 
