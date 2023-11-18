@@ -1,7 +1,7 @@
 import {
 	type Provider,
 	type ProviderType,
-} from '../anonymizers/types/provider.type';
+} from '../../anonymizers/types/provider.type';
 
 export enum DatabaseEngineType {
 	PostGres = 'postgres',
