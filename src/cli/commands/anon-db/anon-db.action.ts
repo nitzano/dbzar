@@ -1,7 +1,7 @@
 import {type Command} from 'commander';
 import {type Config} from '../../../config/types';
 import {type Processor} from '../../../processors/base-processor/processor';
-import {getCollections} from '../../../processors/db/utils/get-collections';
+import {getCollections} from '../../../processors/databases/utils/get-collections';
 import {getDatabaseProcessor} from '../../../processors/get-db-processor';
 import {createLogger} from '../../../services/loggers/debug-logger';
 import {processDb} from './process-db';

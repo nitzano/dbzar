@@ -4,7 +4,7 @@ import {providerEmoji} from '../../../anonymizers/consts/provider-emoji';
 import {providerVerb} from '../../../anonymizers/consts/provider-verb';
 import {type ProviderType} from '../../../anonymizers/types/provider.type';
 import {type Processor} from '../../../processors/base-processor/processor';
-import {type Collection} from '../../../processors/db/types/collection';
+import {type Collection} from '../../../processors/databases/types/collection';
 
 async function processCollection(
 	collection: Collection,
