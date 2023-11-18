@@ -1,8 +1,8 @@
 import {type Anonymizer} from '../anonymizers/types/anonymizer.type';
 import {createAnonymizer} from '../anonymizers/utils/create-anonymizer';
+import {createLogger} from '../common/services/loggers/debug-logger';
 import {type Processor} from '../processors/base-processor/processor';
 import {getDatabaseProcessor} from '../processors/databases/utils/get-db-processor';
-import {createLogger} from '../services/loggers/debug-logger';
 import {type Provider} from '../types/types';
 
 const logger = createLogger(__filename);

@@ -1,6 +1,6 @@
 import {ConnectionString} from 'connection-string';
-import {DatabaseEngineType} from '../../../../config/types';
-import {debugLogger} from '../../../../services/loggers/debug-logger';
+import {debugLogger} from '../../../../common/services/loggers/debug-logger';
+import {DatabaseEngineType} from '../../../../common/config/types';
 
 export function getConnectionStringEngine(
 	connectionStringUri: string,

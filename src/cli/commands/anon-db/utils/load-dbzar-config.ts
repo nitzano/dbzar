@@ -1,7 +1,7 @@
 import {cosmiconfig} from 'cosmiconfig';
-import {type Config} from '../../../../config/types';
-import {validateConfig} from '../../../../config/utils/validate-config';
-import {createLogger} from '../../../../services/loggers/debug-logger';
+import {type Config} from '../../../../common/config/types';
+import {validateConfig} from '../../../../common/config/utils/validate-config';
+import {createLogger} from '../../../../common/services/loggers/debug-logger';
 
 const moduleName = 'dbzar';
 const explorer = cosmiconfig(moduleName);

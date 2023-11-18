@@ -1,6 +1,6 @@
 import {extname} from 'path';
 import {type Command} from 'commander';
-import {createLogger} from '../../../services/loggers/debug-logger';
+import {createLogger} from '../../../common/services/loggers/debug-logger';
 
 const logger = createLogger(__filename);
 
