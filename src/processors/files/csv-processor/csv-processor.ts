@@ -1,3 +1,3 @@
-import {FileProcessor} from '../file-processor/file-processor';
+import {FileProcessor} from '../common/file-processor/file-processor';
 
 export class CsvProcessor extends FileProcessor {}

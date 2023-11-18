@@ -1,4 +1,4 @@
-import {BaseProcessor} from '../../base-processor/base-processor';
+import {BaseProcessor} from '../../../base-processor/base-processor';
 
 export class FileProcessor extends BaseProcessor {
 	constructor(
