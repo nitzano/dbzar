@@ -1,7 +1,7 @@
 import {type Config} from '../config/types';
 import {type Processor} from '../processors/base-processor/processor';
 import {getCollections} from '../processors/databases/utils/get-collections';
-import {getDatabaseProcessor} from '../processors/get-db-processor';
+import {getDatabaseProcessor} from '../processors/databases/utils/get-db-processor';
 import {createLogger} from '../services/loggers/debug-logger';
 
 const logger = createLogger(__filename);
