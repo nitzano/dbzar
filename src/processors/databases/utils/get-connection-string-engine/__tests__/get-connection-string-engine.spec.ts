@@ -1,4 +1,4 @@
-import {DatabaseEngineType} from '../../config/types';
+import {DatabaseEngineType} from '../../../../../config/types';
 import {getConnectionStringEngine} from '../get-connection-string-engine';
 
 describe('getConnectionStringEngine', () => {
